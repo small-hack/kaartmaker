@@ -1,0 +1,28 @@
+[tool.poetry]
+name        = "kaartmaker"
+version     = "0.1.0"
+description = "world map making tool"
+authors     = ["jesse hitch"]
+license     = "AGPL-3.0-or-later"
+readme      = "README.md"
+packages    = [{include = "kaartmaker"}]
+include     = ["./kaartmaker/geojson/europe.geo.json",
+               "./kaartmaker/geojson/world.geo.json"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^1.26.3"
+pandas = "^2.2.0"
+seaborn = "^0.13.2"
+geopandas = "^0.14.2"
+matplotlib = "^3.8.2"
+
+[tool.poetry.plugins."kaartmaker.application.plugin"]
+"kaartmaker" = "kaartmaker:main"
+
+[tool.poetry.scripts]
+kaartmaker = "kaartmaker:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
