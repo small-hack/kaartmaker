@@ -1,0 +1,184 @@
+COUNTRY,Cease Fire,Cut Unrwa Funding,CODE
+Afghanistan,TRUE,FALSE,AFG
+Albania,TRUE,FALSE,ALB
+Algeria,TRUE,FALSE,DZA
+Andorra,TRUE,FALSE,AND
+Angola,TRUE,FALSE,AGO
+Antigua and Barbuda,TRUE,FALSE,ATG
+Argentina,Abstention,FALSE,ARG
+Armenia,TRUE,FALSE,ARM
+Australia,TRUE,TRUE,AUS
+Austria,FALSE,TRUE,AUT
+Azerbaijan,TRUE,FALSE,AZE
+"Bahamas, The",TRUE,FALSE,BHM
+Bahrain,TRUE,FALSE,BHR
+Bangladesh,TRUE,FALSE,BGD
+Barbados,TRUE,FALSE,BRB
+Belarus,TRUE,FALSE,BLR
+Belgium,TRUE,FALSE,BEL
+Belize,TRUE,FALSE,BLZ
+Benin,TRUE,FALSE,BEN
+Bhutan,TRUE,FALSE,BTN
+Bolivia,TRUE,FALSE,BOL
+Bosnia and Herzegovina,TRUE,FALSE,BIH
+Botswana,TRUE,FALSE,BWA
+Brazil,TRUE,FALSE,BRA
+Brunei,TRUE,FALSE,BRN
+Bulgaria,Abstention,FALSE,BGR
+Burundi,TRUE,FALSE,BDI
+Cabo Verde,Abstention,FALSE,CPV
+Cambodia,TRUE,FALSE,KHM
+Cameroon,Abstention,FALSE,CMR
+Canada,TRUE,TRUE,CAN
+Central African Republic,TRUE,FALSE,CAF
+Chad,TRUE,FALSE,TCD
+Chile,TRUE,FALSE,CHL
+China,TRUE,FALSE,CHN
+Colombia,TRUE,FALSE,COL
+Comoros,TRUE,FALSE,COM
+"Congo, Democratic Republic of the",TRUE,FALSE,COD
+"Congo, Republic of the",TRUE,FALSE,COG
+Costa Rica,TRUE,FALSE,CRI
+Cote d'Ivoire,TRUE,FALSE,CIV
+Croatia,TRUE,FALSE,HRV
+Cuba,TRUE,FALSE,CUB
+Cyprus,TRUE,FALSE,CYP
+Czech Republic,FALSE,FALSE,CZE
+Denmark,TRUE,FALSE,DNK
+Djibouti,TRUE,FALSE,DJI
+Dominica,TRUE,FALSE,DMA
+Dominican Republic,TRUE,FALSE,DOM
+Ecuador,TRUE,FALSE,ECU
+Egypt,TRUE,FALSE,EGY
+El Salvador,TRUE,FALSE,SLV
+Equatorial Guinea,Abstention,FALSE,GNQ
+Eritrea,TRUE,FALSE,ERI
+Estonia,TRUE,TRUE,EST
+Ethiopia,TRUE,FALSE,ETH
+Fiji,TRUE,FALSE,FJI
+Finland,TRUE,TRUE,FIN
+France,TRUE,FALSE,FRA
+Gabon,TRUE,FALSE,GAB
+"Gambia, The",TRUE,FALSE,GMB
+Georgia,Abstention,FALSE,GEO
+Germany,Abstention,TRUE,DEU
+Ghana,TRUE,FALSE,GHA
+Greece,TRUE,FALSE,GRC
+Grenada,TRUE,FALSE,GRD
+Guatemala,FALSE,FALSE,GTM
+Guinea-Bissau,TRUE,FALSE,GNB
+Guinea,TRUE,FALSE,GIN
+Guyana,TRUE,FALSE,GUY
+Honduras,TRUE,FALSE,HND
+Hungary,Abstention,FALSE,HUN
+Iceland,TRUE,FALSE,ISL
+India,TRUE,FALSE,IND
+Indonesia,TRUE,FALSE,IDN
+Iran,TRUE,FALSE,IRN
+Iraq,TRUE,FALSE,IRQ
+Ireland,TRUE,FALSE,IRL
+Israel,FALSE,FALSE,ISR
+Italy,Abstention,TRUE,ITA
+Jamaica,TRUE,FALSE,JAM
+Japan,TRUE,TRUE,JPN
+Jordan,TRUE,FALSE,JOR
+Kazakhstan,TRUE,FALSE,KAZ
+Kenya,TRUE,FALSE,KEN
+"Korea, North",TRUE,FALSE,PRK
+"Korea, South",TRUE,FALSE,KOR
+Kuwait,TRUE,FALSE,KWT
+Kyrgyzstan,TRUE,FALSE,KGZ
+Laos,TRUE,FALSE,LAO
+Latvia,TRUE,FALSE,LVA
+Lebanon,TRUE,FALSE,LBN
+Lesotho,TRUE,FALSE,LSO
+Liberia,FALSE,FALSE,LBR
+Libya,TRUE,FALSE,LBY
+Liechtenstein,TRUE,FALSE,LIE
+Lithuania,Abstention,FALSE,LTU
+Luxembourg,TRUE,FALSE,LUX
+Madagascar,TRUE,FALSE,MDG
+Malawi,Abstention,FALSE,MWI
+Malaysia,TRUE,FALSE,MYS
+Maldives,TRUE,FALSE,MDV
+Mali,TRUE,FALSE,MLI
+Malta,TRUE,FALSE,MLT
+Marshall Islands,Abstention,FALSE,MHL
+Mauritania,TRUE,FALSE,MRT
+Mauritius,TRUE,FALSE,MUS
+Mexico,TRUE,FALSE,MEX
+"Micronesia, Federated States of",FALSE,FALSE,FSM
+Moldova,TRUE,FALSE,MDA
+Monaco,TRUE,FALSE,MCO
+Mongolia,TRUE,FALSE,MNG
+Montenegro,TRUE,FALSE,MNE
+Morocco,TRUE,FALSE,MAR
+Mozambique,TRUE,FALSE,MOZ
+Namibia,TRUE,FALSE,NAM
+Nauru,FALSE,FALSE,
+Nepal,TRUE,FALSE,NPL
+Netherlands,Abstention,TRUE,NLD
+New Zealand,TRUE,FALSE,NZL
+Nicaragua,TRUE,FALSE,NIC
+Nigeria,TRUE,FALSE,NGA
+Niger,TRUE,FALSE,NER
+Norway,TRUE,FALSE,NOR
+Oman,TRUE,FALSE,OMN
+Pakistan,TRUE,FALSE,PAK
+Palau,Abstention,FALSE,PLW
+Panama,Abstention,FALSE,PAN
+Papua New Guinea,FALSE,FALSE,PNG
+Paraguay,FALSE,FALSE,PRY
+Peru,TRUE,FALSE,PER
+Philippines,TRUE,FALSE,PHL
+Poland,TRUE,FALSE,POL
+Portugal,TRUE,FALSE,PRT
+Qatar,TRUE,FALSE,QAT
+Romania,Abstention,TRUE,ROU
+Russia,TRUE,FALSE,RUS
+Rwanda,TRUE,FALSE,RWA
+Saint Kitts and Nevis,TRUE,FALSE,KNA
+Saint Lucia,TRUE,FALSE,LCA
+Saint Vincent and the Grenadines,TRUE,FALSE,VCT
+Samoa,TRUE,FALSE,WSM
+San Marino,TRUE,FALSE,SMR
+Saudi Arabia,TRUE,FALSE,SAU
+Senegal,TRUE,FALSE,SEN
+Serbia,TRUE,FALSE,SRB
+Seychelles,TRUE,FALSE,SYC
+Sierra Leone,TRUE,FALSE,SLE
+Singapore,TRUE,FALSE,SGP
+Slovakia,Abstention,FALSE,SVK
+Slovenia,TRUE,FALSE,SVN
+Solomon Islands,TRUE,FALSE,SLB
+Somalia,TRUE,FALSE,SOM
+South Africa,TRUE,FALSE,ZAF
+South Sudan,Abstention,FALSE,SSD
+Spain,TRUE,FALSE,ESP
+Sri Lanka,TRUE,FALSE,LKA
+Sudan,TRUE,FALSE,SDN
+Suriname,TRUE,FALSE,SUR
+Sweden,TRUE,FALSE,SWE
+Switzerland,TRUE,TRUE,CHE
+Syria,TRUE,FALSE,SYR
+Tajikistan,TRUE,FALSE,TJK
+Tanzania,TRUE,FALSE,TZA
+Thailand,TRUE,FALSE,THA
+Togo,Abstention,FALSE,TGO
+Tonga,Abstention,FALSE,TON
+Trinidad and Tobago,TRUE,FALSE,TTO
+Tunisia,TRUE,FALSE,TUN
+Turkey,TRUE,FALSE,TUR
+Tuvalu,TRUE,FALSE,TUV
+Uganda,TRUE,FALSE,UGA
+Ukraine,Abstention,FALSE,UKR
+United Arab Emirates,TRUE,FALSE,ARE
+United Kingdom,Abstention,TRUE,GBR
+United States,FALSE,FALSE,USA
+Uruguay,Abstention,FALSE,URY
+Uzbekistan,TRUE,FALSE,UZB
+Vanuatu,TRUE,FALSE,VUT
+Vietnam,TRUE,FALSE,VNM
+Yemen,TRUE,FALSE,YEM
+Zambia,TRUE,FALSE,ZMB
+Zimbabwe,TRUE,FALSE,ZWE
