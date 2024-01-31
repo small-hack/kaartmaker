@@ -17,5 +17,14 @@ docker run \
            /outputs/subunits.geojson /maps/ne_10m_admin_0_map_subunits.shp
 ```
 
+And then I also grabbed disputed areas here:
+https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-breakaway-disputed-areas/
+
+
+And again with the docker command:
+```bash
+docker run --volume ./ne_10m_admin_0_disputed_areas:/maps --volume ./outputs:/outputs ghcr.io/osgeo/gdal:ubuntu-full-latest ogr2ogr -f GeoJSON -s_srs /maps/ne_10m_admin_0_disputed_areas.prj -t_srs EPSG:4326 /outputs/disputed.geojson /maps/ne_10m_admin_0_disputed_areas.shp
+```
+
 Thanks to this article for helping me understand how to do gdal conversions:
 https://lvngd.com/blog/using-ogr2ogr-convert-shapefiles-geojson/
