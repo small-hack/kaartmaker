@@ -16,6 +16,7 @@ pandas = "^2.2.0"
 seaborn = "^0.13.2"
 geopandas = "^0.14.2"
 matplotlib = "^3.8.2"
+pyqt5-sip = "^12.11.1"
 
 [tool.poetry.plugins."kaartmaker.application.plugin"]
 "kaartmaker" = "kaartmaker:main"

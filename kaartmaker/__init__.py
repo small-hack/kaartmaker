@@ -1,14 +1,13 @@
 #!python3.12
 # https://en.wikipedia.org/wiki/GeoJSON
-import numpy as np
-import pandas as pd
-import seaborn as sns
 import geopandas as gpd
 from os import environ, path, uname
-
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects
 from matplotlib.patches import Polygon
+import numpy as np
+import pandas as pd
+import seaborn as sns
 
 
 # grabs the default packaged config file from default dot files
@@ -53,9 +52,33 @@ def draw_map(
         )
 
     # Additional functions below this comment
-    set_limits(ax, maps_to_draw[boundry_map_index], **padding)
+    # set_limits(ax, maps_to_draw[boundry_map_index], **padding)
     
     return ax
+
+
+def add_label(ax,
+              label,
+              fontsize=24,
+              fontweight="bold", 
+              va="center", 
+              ha="center"):            
+    """
+    Add label to each country
+    """
+
+    annotation = plt.annotate(
+        label["label"], 
+        xy=label["xytext"] if "xypin" not in label.keys() else label["xypin"], 
+        xytext=None if "xypin" not in label.keys() else label["xytext"], 
+        xycoords="data", fontsize=fontsize, va=va, ha=ha,
+        linespacing=1.3, color=label["color"], fontweight=fontweight, 
+        arrowprops={
+            "arrowstyle": "-",
+            "linewidth": 2,
+        })
+    
+    annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
 
 def main():
@@ -71,14 +94,17 @@ def main():
         "text.color": text_color,
     })
 
-    world = gpd.read_file(WORLD_JSON)
+    world = gpd.read_file(EURO_JSON)
     world["color"] = "#f0f0f0"
     world["edgecolor"] = "#c0c0c0"
 
-    europe = world[world.CONTINENT == "Europe"].reset_index(drop=True)
-    europe["edgecolor"] = "#000000"
+    #world.loc[world.name_en == "french giuana", "CONTINENT"] = "Africa"
 
-    ax = draw_map(maps_to_draw=[world, europe],
+    # europe = gpd.read_file(EURO_JSON)
+    # europe["color"] = "#f0f0f0"
+    # europe["edgecolor"] = "#000000"
+
+    ax = draw_map(maps_to_draw=[world],
                   boundry_map_index=1,
                   padding={"pad_bottom": -0.08,
                            "pad_top": 0.07,
@@ -88,7 +114,8 @@ def main():
 
     # hide most standard chart components when drawing maps
     plt.axis("off")
-    plt.show()
+    # plt.show()
+    plt.savefig('europe.png')
 
 if __name__ == '__main__':
     main()
