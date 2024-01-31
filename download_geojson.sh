@@ -17,7 +17,7 @@ docker run \
         -f GeoJSON \
         -s_srs /maps/ne_10m_admin_0_map_subunits.prj \
         -t_srs EPSG:4326 \
-        /geojson/world_with_countries.geojson \
+        /geojson/world.geojson \
         /maps/ne_10m_admin_0_map_subunits.shp
 
 # download disputed territories

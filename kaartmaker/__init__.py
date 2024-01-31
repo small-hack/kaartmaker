@@ -12,8 +12,7 @@ import seaborn as sns
 
 # grabs the default packaged config file from default dot files
 PWD = path.dirname(__file__)
-EURO_JSON = path.join(PWD, 'geojson/europe.geo.json')
-WORLD_JSON = path.join(PWD, 'geojson/world.geo.json')
+WORLD_JSON = path.join(PWD, 'geojson/world.geojson')
 
 
 def set_limits(ax, data, pad_left=0, pad_right=0, pad_top=0, pad_bottom=0):
@@ -35,7 +34,6 @@ def draw_map(
     boundry_map_index: int = 0,
     use_hatch_for_indexes: list = [],
     padding: dict = {},
-    labels: list = [],
     figsize: tuple|list = (40, 40)
     ):
     
@@ -52,7 +50,7 @@ def draw_map(
         )
 
     # Additional functions below this comment
-    # set_limits(ax, maps_to_draw[boundry_map_index], **padding)
+    set_limits(ax, maps_to_draw[boundry_map_index], **padding)
     
     return ax
 
@@ -94,19 +92,18 @@ def main():
         "text.color": text_color,
     })
 
-    world = gpd.read_file(EURO_JSON)
+    world = gpd.read_file(WORLD_JSON)
     world["color"] = "#f0f0f0"
     world["edgecolor"] = "#c0c0c0"
 
-    #world.loc[world.name_en == "french giuana", "CONTINENT"] = "Africa"
+    # parse out just europe
+    europe = world[world.CONTINENT == "Europe"].reset_index(drop=True)
+    europe["color"] = "#f0f0f0"
+    europe["edgecolor"] = "#000000"
 
-    # europe = gpd.read_file(EURO_JSON)
-    # europe["color"] = "#f0f0f0"
-    # europe["edgecolor"] = "#000000"
-
-    ax = draw_map(maps_to_draw=[world],
+    ax = draw_map(maps_to_draw=[world, europe],
                   boundry_map_index=1,
-                  padding={"pad_bottom": -0.08,
+                  padding={"pad_bottom": 0,
                            "pad_top": 0.07,
                            "pad_left": 0.07,
                            "pad_right": 0.05},
