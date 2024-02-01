@@ -1,5 +1,7 @@
+from matplotlib.patches import Polygon
 import matplotlib.patheffects as PathEffects
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 country_labels = {
@@ -79,3 +81,20 @@ def add_label(ax,
         })
     
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
+
+
+def draw_legend_geometry(ax, row, x_loc, y_loc, height):
+    x = np.array(row.geometry.boundary.coords.xy[0])
+    y = np.array(row.geometry.boundary.coords.xy[1])
+    
+    x = x - (row.geometry.centroid.x - x_loc)
+    y = y - (row.geometry.centroid.y - y_loc)
+    
+    ratio = height / (y.max() - y.min())
+    x = x * ratio + (x_loc - x_loc * ratio)
+    y = y * ratio + (y_loc - y_loc * ratio)
+    
+    ax.add_artist(Polygon(np.stack([x, y], axis=1),
+                          facecolor=row.color,
+                          edgecolor=row.edgecolor,
+                          hatch=row.hatch))

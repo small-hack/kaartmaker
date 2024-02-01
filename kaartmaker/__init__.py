@@ -1,11 +1,9 @@
 #!python3.12
 
 import geopandas as gpd
-from kaartmaker.country_labels import add_label, country_labels
+from kaartmaker.labeling import add_label, country_labels, draw_legend_geometry
 from os import path
 import matplotlib.pyplot as plt
-# from matplotlib.patches import Polygon
-# import numpy as np
 import pandas as pd
 import seaborn as sns
 
@@ -141,6 +139,39 @@ def main(
                            "pad_right": -0.3},
                   use_hatch_for_indexes=[2],
                   labels=country_labels[continent])
+
+    legend = pd.concat([map_data[map_data.NAME_EN.isin([
+        "France", "Spain", "Germany"
+        ])]
+    ])
+
+    legend = legend.sort_values("color")
+
+    # for i, row in legend.reset_index().iterrows():
+    #     ax = draw_legend_geometry(ax, row, -25, -20 - 3.5*i, 2.5)
+    #     ax.annotate(row.color[3:],
+    #                 (-22, -20 - 3.5*i),
+    #                 fontsize=28,
+    #                 fontweight="bold",
+    #                 va="center")
+
+    # fontstyles = {"fontweight": "bold", "ha": "left"}
+    # plt.annotate("Data source:",
+    #              xy=(0.05, 0.32),
+    #              fontsize=24,
+    #              xycoords="axes fraction",
+    #              **fontstyles)
+    # plt.annotate("naturalearthdata.com and gadebate.un.org",
+    #              xy=(0.133, -0.32),
+    #              fontsize=24,
+    #              xycoords="axes fraction",
+    #              color="#1B998B",
+    #              **fontstyles)
+    # plt.title(f"UN votes on Ceasefire in Gaza in {continent}",
+    #           x=0.05,
+    #           y=0.29,
+    #           fontsize=42,
+    #           **fontstyles)
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:
