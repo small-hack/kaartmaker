@@ -34,7 +34,7 @@ def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
         elif cease_fire == "IN FAVOR":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#648FFF"
         elif cease_fire == "AGAINST":
-            data_frame.loc[data_frame.NAME_EN == index, "color"] = "#DC267F"
+            data_frame.loc[data_frame.NAME_EN == index, "color"] = "#FFB000"
 
     return data_frame
 
