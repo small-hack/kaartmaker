@@ -1,19 +1,30 @@
 #!python3.12
 # https://en.wikipedia.org/wiki/GeoJSON
 import geopandas as gpd
-from os import environ, path, uname
+# from os import environ, path, uname
+from os import path
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as PathEffects
-from matplotlib.patches import Polygon
-import numpy as np
+# from matplotlib.patches import Polygon
+# import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from kaartmaker.plotly import plot_stuff
 
 # grabs the default packaged config file from default dot files
 PWD = path.dirname(__file__)
-WORLD_JSON = path.join(PWD, 'geojson/world.geojson')
+EUROPE_JSON = path.join(PWD, 'geojson/europe.geojson')
+WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
+CEASEFIRE_CSV= path.join(PWD, 'datasets/world_palestine_votes_minus_unknown.csv')
+
+
+def process_csv(dataset: str = CEASEFIRE_CSV):
+    """
+    process csv
+    fields: NAME_EN, cease_fire, suspended_unrwa_aid
+    """
+    df = pd.read_csv(dataset, index_col="NAME_EN")
+    return df
 
 
 def set_limits(ax, data, pad_left=0, pad_right=0, pad_top=0, pad_bottom=0):
@@ -131,20 +142,11 @@ def main():
                            "pad_right": -0.3},
                   use_hatch_for_indexes=[2])
 
+    europe.to_file(EUROPE_JSON, driver="GeoJSON")  
+
     # # hide most standard chart components when drawing maps
     plt.axis("off")
     plt.savefig('europe.png')
-
-
-def process_csv():
-    """
-    process csv
-    fields: NAME_EN, cease_fire, suspended_unrwa_aid
-    """
-    csv_file = path.join(PWD,
-                         'datasets/world_palestine_votes_minus_unknown.csv')
-    df = pd.read_csv(csv_file, index_col="NAME_EN")
-    return df
 
 
 if __name__ == '__main__':
