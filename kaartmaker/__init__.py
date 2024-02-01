@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+from kaartmaker.plotly import plot_stuff
 
 # grabs the default packaged config file from default dot files
 PWD = path.dirname(__file__)
@@ -16,6 +17,9 @@ WORLD_JSON = path.join(PWD, 'geojson/world.geojson')
 
 
 def set_limits(ax, data, pad_left=0, pad_right=0, pad_top=0, pad_bottom=0):
+    """
+    defines borders and sizes of map
+    """
     xmin_ = data.bounds.minx.min()
     ymin_ = data.bounds.miny.min()
     xmax_ = data.bounds.maxx.max()
@@ -41,11 +45,14 @@ def draw_map(
     assert "edgecolor" in maps_to_draw[0].columns, "Missing edgecolor column in map dataframe"
     
     fig = plt.figure(figsize=figsize)
+    fig.suptitle('europe', fontsize="xx-large", fontweight="bold")
     ax = fig.add_subplot()
     
     for map_index, map_to_draw in enumerate(maps_to_draw):
         map_to_draw.plot(
-            ax=ax, color=map_to_draw.color, edgecolor=map_to_draw.edgecolor,
+            ax=ax,
+            color=map_to_draw.color,
+            edgecolor=map_to_draw.edgecolor,
             hatch="//" if map_index in use_hatch_for_indexes else "",
         )
 
@@ -64,7 +71,6 @@ def add_label(ax,
     """
     Add label to each country
     """
-
     annotation = plt.annotate(
         label["label"], 
         xy=label["xytext"] if "xypin" not in label.keys() else label["xypin"], 
@@ -96,23 +102,50 @@ def main():
     world["color"] = "#f0f0f0"
     world["edgecolor"] = "#c0c0c0"
 
+    # process country properties to add to the world geojson dataframe
+    country_traits = process_csv()
+
     # parse out just europe
     europe = world[world.CONTINENT == "Europe"].reset_index(drop=True)
-    europe["color"] = "#f0f0f0"
+
+    # set europe's outline to be darker
     europe["edgecolor"] = "#000000"
+    europe["color"] = "#f0f0f0"
+
+    # update the geojson with cease fire info
+    for index, row in country_traits.iterrows():
+        cease_fire = row["cease_fire"]
+
+        if cease_fire == "ABSTENTION":
+            europe.loc[europe.NAME_EN == index, "color"] = "#FFB000"
+        elif cease_fire == "IN FAVOR":
+            europe.loc[europe.NAME_EN == index, "color"] = "#648FFF"
+        elif cease_fire == "AGAINST":
+            europe.loc[europe.NAME_EN == index, "color"] = "#DC267F"
 
     ax = draw_map(maps_to_draw=[world, europe],
                   boundry_map_index=1,
-                  padding={"pad_bottom": 0,
-                           "pad_top": 0.07,
-                           "pad_left": 0.07,
-                           "pad_right": 0.05},
+                  padding={"pad_bottom": -0.03,
+                           "pad_top": -0.34,
+                           "pad_left": -0.03,
+                           "pad_right": -0.3},
                   use_hatch_for_indexes=[2])
 
-    # hide most standard chart components when drawing maps
+    # # hide most standard chart components when drawing maps
     plt.axis("off")
-    # plt.show()
     plt.savefig('europe.png')
+
+
+def process_csv():
+    """
+    process csv
+    fields: NAME_EN, cease_fire, suspended_unrwa_aid
+    """
+    csv_file = path.join(PWD,
+                         'datasets/world_palestine_votes_minus_unknown.csv')
+    df = pd.read_csv(csv_file, index_col="NAME_EN")
+    return df
+
 
 if __name__ == '__main__':
     main()
