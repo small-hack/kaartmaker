@@ -2,6 +2,7 @@
 
 from click import option, command
 import geopandas as gpd
+from kaartmaker.constants import VERSION
 from kaartmaker.labeling import add_label, country_labels
 from os import path
 import matplotlib.pyplot as plt
@@ -14,28 +15,29 @@ HELP = options_help()
 HELP_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 PWD = path.dirname(__file__)
-CEASEFIRE_CSV = path.join(PWD, 'datasets/world_palestine_votes_minus_unknown.csv')
+PALESTINE_CSV = path.join(PWD, 'datasets/world_palestine_votes.csv')
 WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
 
 
 def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
     """
     take dataframe and process a process csv into it
-    fields: NAME_EN, cease_fire, suspended_unrwa_aid
+    fields: NAME_EN, vote, suspended_unrwa_aid
     """
     if not dataset_csv_file:
-        dataset_csv_file = CEASEFIRE_CSV
+        dataset_csv_file = PALESTINE_CSV
+
     df = pd.read_csv(dataset_csv_file, index_col="NAME_EN")
 
     # update the geojson with cease fire info
     for index, row in df.iterrows():
-        cease_fire = row["cease_fire"]
+        vote = row["vote"]
 
-        if cease_fire == "ABSTENTION":
+        if vote == "ABSTENTION":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#999999"
-        elif cease_fire == "IN FAVOR":
+        elif vote == "IN FAVOR":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#648FFF"
-        elif cease_fire == "AGAINST":
+        elif vote == "AGAINST":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#FFB000"
 
     return data_frame
@@ -106,6 +108,7 @@ def draw_map(
 @option("--continent", "-c",
         metavar="CONTINENT",
         type=str,
+        default="Europe",
         help=HELP['continent'])
 @option("--csv", "-C",
         metavar="CSV_FILE",
@@ -116,6 +119,7 @@ def draw_map(
         help=HELP['save_geojson'])
 @option("--save-png", "-S",
         is_flag=True,
+        default=True,
         help=HELP['save_png'])
 @option("--version", "-v",
         is_flag=True,
@@ -124,8 +128,13 @@ def main(
         continent: str = "Europe",
         csv: str = "",
         save_geojson: bool = False,
-        save_png: bool = True
+        save_png: bool = True,
+        version: bool = True
         ):
+
+    if version:
+        print(VERSION)
+
     # seaborn style
     font_family = "sans"
     background_color = "#D4F1F4"

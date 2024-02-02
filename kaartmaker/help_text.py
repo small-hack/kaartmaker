@@ -16,14 +16,26 @@ from rich.theme import Theme
 RECORD = environ.get("KAARTMAKER_SCREENSHOT", False)
 
 
+def pretty_choices(default_list: list):
+    """
+    Takes a list of default choices and surrounds them with a meta markup tag
+    and join them with a comma for a pretty return "Choices" string.
+    Example: pretty_choices(['beep', 'boop']) returns:
+             'Choices: [meta]beep[/meta], [meta]boop[/meta]'
+    """
+    defaults = '[/meta], [meta]'.join(default_list)
+    return 'Choices: [meta]' + defaults + '[/meta]'
+
+
 def options_help():
     """
     Help text for all the options/switches for main()
     Returns a dict.
     """
+    continent_choices = pretty_choices(["Europe", "Africa"])
     help_dict = {
         'continent':
-        'Continent to generate map for. Options: Europe',
+        f'Continent for map generation. {continent_choices}',
 
         'csv':
         'pass in a csv file with columns: NAME_EN and VOTES',
