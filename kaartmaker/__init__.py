@@ -51,13 +51,24 @@ def determine_regional_area(world_map_data, region):
     if region == "Middle East":
         region = "Western Asia"
 
+    if region == "Central Asia":
+        region = "Southern Asia"
+
     if region == "Western Asia":
         # for the purposes of the "Middle East" we also include Iran and Egypt
         world_map_data.loc[world_map_data.NAME_EN == "Iran", "SUBREGION"] = "Western Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Egypt", "SUBREGION"] = "Western Asia"
 
+    if region == "Southern Asia":
+        # for southern asia we include burma and Turkmenistan so it gets included somewhere
+        world_map_data.loc[world_map_data.NAME_EN == "Myanmar", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Turkmenistan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "China", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Kyrgyzstan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Kazakhstan", "SUBREGION"] = "Southern Asia"
+
     # verify if this is a continent or subregion
-    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean"]:
+    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean", "Southern Asia"]:
         map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
     else:
         map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)

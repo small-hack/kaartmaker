@@ -42,13 +42,35 @@ continent_boundaries = {"Europe":
                         {"pad_bottom": -0.02,
                          "pad_top": -0.02,
                          "pad_left": -0.15,
-                         "pad_right": -0.08}
+                         "pad_right": -0.08},
+                        "Southern Asia": 
+                        {"pad_bottom": -0.15,
+                         "pad_top": -0.2,
+                         "pad_left": -0.2,
+                         "pad_right": 0},
                         }
 
 country_labels = {
         "Asia": [
-            {"label": "China", "xytext": (81.68, 38.74), "font_size": 22},
+            {"label": "China", "xytext": (81.68, 38.74)},
             ],
+        "Southern Asia": [
+            {"label": "Afghanistan", "xytext": (65.80, 33.28), "font_size": 28},
+            {"label": "Bangladesh", "xytext": (89.86, 24.46), "font_size": 20},
+            {"label": "Bhutan", "xytext": (90.46, 27.56), "font_size": 18},
+            {"label": "China", "xytext": (83.15, 32.97), "font_size": 28},
+            {"label": "India", "xytext": (78.08, 21.39), "font_size": 28},
+            {"label": "Iran", "xytext": (57.84, 31.0), "font_size": 28},
+            {"label": "Kazakhstan", "xytext": (68.32, 43.37), "font_size": 28},
+            {"label": "Kyrgyzstan", "xytext": (74.35, 41.05)},
+            {"label": "Myanmar\n(Burma)", "xytext": (96.26, 21.43), "font_size": 22},
+            {"label": "Nepal", "xytext": (83.38, 28.39), "font_size": 22},
+            {"label": "Pakistan", "xytext": (67.51,28.30)},
+            {"label": "Sri Lanka", "xypin": (80.71, 7.56), "xytext": (83.17, 9.27)},
+            {"label": "Tajikistan", "xytext": (70.66, 38.73)},
+            {"label": "Turkmenistan", "xytext": (60.69, 38.49)},
+            {"label": "Uzbekistan", "xytext": (62.56, 42.34)},
+                        ],
         "Caribbean": [
             {"label": "Aruba", "xypin": (-69.97, 12.50), "xytext": (-70.04, 13.05), "font_size": 22},
             {"label": "Antigua\nand\nBarbuda", "xypin": (-61.79, 17.08), "xytext": (-61.09, 17.15), "font_size": 22},

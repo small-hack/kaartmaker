@@ -8,7 +8,6 @@ Antigua,IN FAVOR,NO
 Aruba,ABSTENTION,NO
 Barbuda,IN FAVOR,NO
 Curaçao,ABSTENTION,NO
-China,IN FAVOR,NO
 Argentina,ABSTENTION,NO
 Armenia,IN FAVOR,NO
 Australia,IN FAVOR,YES
@@ -42,7 +41,7 @@ Canada,IN FAVOR,YES
 Central African Republic,IN FAVOR,NO
 Chad,IN FAVOR,NO
 Chile,IN FAVOR,NO
-China,IN FAVOR,NO
+People's Republic of China,IN FAVOR,NO
 Colombia,IN FAVOR,NO
 Comoros,IN FAVOR,NO
 Democratic Republic of the Congo,IN FAVOR,NO
@@ -101,6 +100,7 @@ Israel,AGAINST,NO
 Italy,ABSTENTION,YES
 Jamaica,IN FAVOR,NO
 Japan,IN FAVOR,YES
+Honshu,IN FAVOR,YES
 Jordan,IN FAVOR,NO
 Kazakhstan,IN FAVOR,NO
 Kenya,IN FAVOR,NO
@@ -134,6 +134,7 @@ Mongolia,IN FAVOR,NO
 Montenegro,IN FAVOR,NO
 Morocco,IN FAVOR,NO
 Mozambique,IN FAVOR,NO
+Myanmar,IN FAVOR,NO
 Namibia,IN FAVOR,NO
 Nauru,AGAINST,NO
 Nepal,IN FAVOR,NO
