@@ -19,6 +19,8 @@ geopandas = "^0.14.2"
 matplotlib = "^3.8.2"
 pyqt5-sip = "^12.11.1"
 plotly = "^5.18.0"
+click = "^8.1.7"
+rich = "^13.7.0"
 
 [tool.poetry.plugins."kaartmaker.application.plugin"]
 "kaartmaker" = "kaartmaker:main"

@@ -1,8 +1,10 @@
-# plotly stuff
+# plotly stuff taken from their docs
 from urllib.request import urlopen
 import json
 import pandas as pd
 import plotly.express as px
+
+
 URL = 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
 CSV_URL = "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
 

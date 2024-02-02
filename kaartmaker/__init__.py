@@ -1,17 +1,21 @@
 #!python3.12
 
+from click import option, command
 import geopandas as gpd
-from kaartmaker.labeling import add_label, country_labels, draw_legend_geometry
+from kaartmaker.labeling import add_label, country_labels
 from os import path
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from kaartmaker.help_text import RichCommand, options_help
 
 
-# grabs the default packaged config file from default dot files
+HELP = options_help()
+HELP_SETTINGS = dict(help_option_names=["-h", "--help"])
+
 PWD = path.dirname(__file__)
-WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
 CEASEFIRE_CSV = path.join(PWD, 'datasets/world_palestine_votes_minus_unknown.csv')
+WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
 
 
 def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
@@ -98,6 +102,24 @@ def draw_map(
     return ax
 
 
+@command(cls=RichCommand, context_settings=HELP_SETTINGS)
+@option("--continent", "-c",
+        metavar="CONTINENT",
+        type=str,
+        help=HELP['continent'])
+@option("--csv", "-C",
+        metavar="CSV_FILE",
+        type=str,
+        help=HELP['csv'])
+@option("--save-geojson", "-s",
+        is_flag=True,
+        help=HELP['save_geojson'])
+@option("--save-png", "-S",
+        is_flag=True,
+        help=HELP['save_png'])
+@option("--version", "-v",
+        is_flag=True,
+        help=HELP['version'])
 def main(
         continent: str = "Europe",
         csv: str = "",
@@ -139,39 +161,6 @@ def main(
                            "pad_right": -0.3},
                   use_hatch_for_indexes=[2],
                   labels=country_labels[continent])
-
-    legend = pd.concat([map_data[map_data.NAME_EN.isin([
-        "France", "Spain", "Germany"
-        ])]
-    ])
-
-    legend = legend.sort_values("color")
-
-    # for i, row in legend.reset_index().iterrows():
-    #     ax = draw_legend_geometry(ax, row, -25, -20 - 3.5*i, 2.5)
-    #     ax.annotate(row.color[3:],
-    #                 (-22, -20 - 3.5*i),
-    #                 fontsize=28,
-    #                 fontweight="bold",
-    #                 va="center")
-
-    # fontstyles = {"fontweight": "bold", "ha": "left"}
-    # plt.annotate("Data source:",
-    #              xy=(0.05, 0.32),
-    #              fontsize=24,
-    #              xycoords="axes fraction",
-    #              **fontstyles)
-    # plt.annotate("naturalearthdata.com and gadebate.un.org",
-    #              xy=(0.133, -0.32),
-    #              fontsize=24,
-    #              xycoords="axes fraction",
-    #              color="#1B998B",
-    #              **fontstyles)
-    # plt.title(f"UN votes on Ceasefire in Gaza in {continent}",
-    #           x=0.05,
-    #           y=0.29,
-    #           fontsize=42,
-    #           **fontstyles)
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:

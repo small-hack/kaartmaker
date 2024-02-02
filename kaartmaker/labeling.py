@@ -83,6 +83,41 @@ def add_label(ax,
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
 
+def do_legend(ax, map_data):
+    legend = pd.concat([map_data[map_data.NAME_EN.isin([
+        "France", "Spain", "Germany"
+        ])]
+    ])
+
+    legend = legend.sort_values("color")
+
+    for i, row in legend.reset_index().iterrows():
+        ax = draw_legend_geometry(ax, row, -25, -20 - 3.5*i, 2.5)
+        ax.annotate(row.color[3:],
+                    (-22, -20 - 3.5*i),
+                    fontsize=28,
+                    fontweight="bold",
+                    va="center")
+
+    fontstyles = {"fontweight": "bold", "ha": "left"}
+    plt.annotate("Data source:",
+                 xy=(0.05, 0.32),
+                 fontsize=24,
+                 xycoords="axes fraction",
+                 **fontstyles)
+    plt.annotate("naturalearthdata.com and gadebate.un.org",
+                 xy=(0.133, -0.32),
+                 fontsize=24,
+                 xycoords="axes fraction",
+                 color="#1B998B",
+                 **fontstyles)
+    plt.title(f"UN votes on Ceasefire in Gaza in {continent}",
+              x=0.05,
+              y=0.29,
+              fontsize=42,
+              **fontstyles)
+
+
 def draw_legend_geometry(ax, row, x_loc, y_loc, height):
     x = np.array(row.geometry.boundary.coords.xy[0])
     y = np.array(row.geometry.boundary.coords.xy[1])
