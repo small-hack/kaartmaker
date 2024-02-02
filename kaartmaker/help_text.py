@@ -32,10 +32,10 @@ def options_help():
     Help text for all the options/switches for main()
     Returns a dict.
     """
-    continent_choices = pretty_choices(["Europe", "Africa"])
+    region_choices = pretty_choices(["Europe", "Africa", "Western Asia"])
     help_dict = {
-        'continent':
-        f'Continent for map generation. {continent_choices}',
+        'region':
+        f'Region for map generation. {region_choices}',
 
         'csv':
         'pass in a csv file with columns: NAME_EN and VOTES',

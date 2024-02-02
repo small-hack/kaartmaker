@@ -2,8 +2,8 @@
 
 from click import option, command
 import geopandas as gpd
-from kaartmaker.constants import VERSION
-from kaartmaker.labeling import add_label, country_labels
+from kaartmaker.constants import VERSION, country_labels, continent_boundaries
+from kaartmaker.labeling import add_label
 from os import path
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -105,11 +105,11 @@ def draw_map(
 
 
 @command(cls=RichCommand, context_settings=HELP_SETTINGS)
-@option("--continent", "-c",
-        metavar="CONTINENT",
+@option("--region", "-r",
+        metavar="REGION",
         type=str,
         default="Europe",
-        help=HELP['continent'])
+        help=HELP['region'])
 @option("--csv", "-C",
         metavar="CSV_FILE",
         type=str,
@@ -125,7 +125,7 @@ def draw_map(
         is_flag=True,
         help=HELP['version'])
 def main(
-        continent: str = "Europe",
+        region: str = "Europe",
         csv: str = "",
         save_geojson: bool = False,
         save_png: bool = True,
@@ -152,7 +152,10 @@ def main(
     world_map_data["edgecolor"] = "#c0c0c0"
 
     # parse out just europe
-    map_data = world_map_data[world_map_data.CONTINENT == continent].reset_index(drop=True)
+    if region == "Western Asia":
+        map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
+    else:
+        map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)
 
     # set map_data's outline to be darker
     map_data["edgecolor"] = "#000000"
@@ -162,25 +165,25 @@ def main(
     map_data = process_csv(map_data, csv)
 
     ax = draw_map(maps_to_draw=[world_map_data, map_data],
-                  title=f"Map of Continental {continent} UN votes",
+                  title=f"Map of Continental {region} UN votes",
                   boundry_map_index=1,
-                  padding={"pad_bottom": -0.03,
-                           "pad_top": -0.37,
-                           "pad_left": -0.04,
-                           "pad_right": -0.3},
+                  padding=continent_boundaries[region],
                   use_hatch_for_indexes=[2],
-                  labels=country_labels[continent])
+                  labels=country_labels[region])
+
+
+    region = region.replace(" ", "_")
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:
-        json_file = path.join(PWD, f'geojson/{continent}.geojson')
+        json_file = path.join(PWD, f'geojson/{region}.geojson')
         map_data.to_file(json_file, driver="GeoJSON")  
 
     # assumably we want to save this as a png
     if save_png:
         # hide most standard chart components when drawing maps
         plt.axis("off")
-        plt.savefig(f'{continent}.png')
+        plt.savefig(f'{region}.png')
 
 
 if __name__ == '__main__':
