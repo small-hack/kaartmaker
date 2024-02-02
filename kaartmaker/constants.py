@@ -12,12 +12,89 @@ continent_boundaries = {"Europe":
                         {"pad_bottom": 0,
                          "pad_top": 0.04,
                          "pad_left": 0.07,
-                         "pad_right": 0.02}
+                         "pad_right": 0.02},
+                        "Asia": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": 0,
+                         "pad_right": 0},
+                        "Central America": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": 0,
+                         "pad_right": 0},
+                        "Caribbean": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": -0.2,
+                         "pad_right": 0},
+                        "South America": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": 0,
+                         "pad_right": 0},
+                        "Central Asia": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": 0,
+                         "pad_right": 0},
+                        "Western Asia": 
+                        {"pad_bottom": -0.02,
+                         "pad_top": -0.02,
+                         "pad_left": -0.15,
+                         "pad_right": -0.08}
                         }
 
 country_labels = {
+        "Asia": [
+            {"label": "China", "xytext": (81.68, 38.74), "font_size": 22},
+            ],
+        "Caribbean": [
+            {"label": "Aruba", "xypin": (-69.97, 12.50), "xytext": (-70.04, 13.05), "font_size": 22},
+            {"label": "Antigua\nand\nBarbuda", "xypin": (-61.79, 17.08), "xytext": (-61.09, 17.15), "font_size": 22},
+            {"label": "Antigua\nand\nBarbuda", "xypin": (-61.78, 17.67), "xytext": (-61.09, 17.15), "font_size": 22},
+            {"label": "Bahamas", "xytext": (-76.99, 24.94)},
+            {"label": "Barbados", "xypin": (-59.56, 13.16), "xytext": (-59.08, 13.45)},
+            {"label": "BES\nIslands", "xypin": (-68.1, 12.19), "xytext": (-68.30, 12.57)},
+            {"label": "Curaçao", "xypin": (-69.10, 12.31), "xytext": (-69.01, 12.94)},
+            {"label": "Cuba", "xytext": (-76.19, 20.51)},
+            {"label": "Dominican Republic", "xypin": (-70.55, 19.12), "xytext": (-69.89, 20.44)},
+            {"label": "Dominica", "xypin": (-61.35, 15.45), "xytext": (-60.37, 15.58)},
+            {"label": "Guadeloupe", "xypin": (-61.47, 16.27), "xytext": (-62.64, 16.01)},
+            {"label": "Grenada", "xypin": (-61.67, 12.12), "xytext": (-60.93, 12.16)},
+            {"label": "Haiti", "xypin": (-72.24, 19.13), "xytext": (-72.44, 17.41)},
+            {"label": "Jamaica", "xypin": (-77.31, 18.19), "xytext": (-78.73, 19.21)},
+            {"label": "Martinique", "xypin": (-61.04, 14.71), "xytext": (-62.27, 14.78)},
+            {"label": "Puerto Rico", "xypin": (-66.53, 18.21), "xytext": (-66.84, 19.09)},
+            {"label": "Saint Lucia", "xypin": (-60.95, 13.91), "xytext": (-60.02, 14.09)},
+            {"label": "Saint Vincent\nand\nthe Grenadines", "xypin": (-61.18, 13.27), "xytext": (-62.43, 13.61), "font_size": 18},
+            {"label": "Trinidad\nand\nTobago", "xypin": (-61.21, 10.47), "xytext": (-61.90, 11.14)},
+            {"label": "Trinidad\nand\nTobago", "xypin": (-60.67, 11.25), "xytext": (-61.90, 11.14)},
+    ],
+        "Central Asia": [
+    {"label": "Kazakhstan", "xytext": (69.20, 45.36)},
+    ],
         "Western Asia": [
-    {"label": "Cyprus", "xytext": (33.18, 34.96)}
+    {"label": "Armenia", "xytext": (44.59, 40.53)},
+    {"label": "Azerbaijan", "xytext": (47.62, 40.44)},
+    {"label": "Cyprus", "xytext": (31.4, 35.5), "xypin": (33.18, 34.96)},
+    {"label": "Egypt", "xytext": (32.34, 30.65), "font_size": 28},
+    {"label": "Georgia", "xytext": (43.39, 42.17)},
+    {"label": "Iran", "xytext": (53.72, 32.47), "font_size": 28},
+    {"label": "Iraq", "xytext": (42.53, 33.17), "font_size": 28},
+    {"label": "Israel", "xytext": (33.57, 33.19), "xypin": (35.30, 32.72)},
+    {"label": "Jordan", "xytext": (36.41, 30.93)},
+    {"label": "Kuwait", "xytext": (49.58, 28.71), "xypin": (47.65, 29.44)},
+    {"label": "Lebanon", "xypin": (35.82, 33.95), "xytext": (34.5, 34.18)},
+    {"label": "Oman", "xytext": (56.52, 20.58), "font_size": 28},
+    {"label": "Palestine", "xytext": (32.81, 32.62), "xypin": (35.30, 31.97)},
+    {"label": "Palestine", "xytext": (32.81, 32.62), "xypin": (34.46, 31.50)},
+    {"label": "Qatar", "xytext": (50.96, 26.98), "xypin": (51.34, 25.70)},
+    {"label": "Saudi Arabia", "xytext": (44.02, 24.31), "font_size": 28},
+    {"label": "Syria", "xytext": (38.55, 35.20), "font_size": 28},
+    {"label": "Turkey", "xytext": (34.44, 38.77), "font_size": 28},
+    {"label": "United\nArab Emirates", "xytext": (53.44, 25.64), "xypin": (54.03, 23.67)},
+    {"label": "Yemen", "xytext": (46.72, 15.77), "font_size": 28}
     ],
         "Africa": [
     {"label": "Algeria", "xytext": (2.0, 27.5)},
@@ -75,7 +152,7 @@ country_labels = {
     {"label": "Zimbawe", "xytext": (29.7, -19.1)}
             ],
         "Europe": [
-    {"label": "Albania", "xytext": (20.16, 40.73), "font_size": 18},
+    {"label": "Albania", "xytext": (19.2, 39.23), "xypin": (20.16, 40.73), "font_size": 18},
     {"label": "Austria", "xytext": (14.65, 47.58)},
     {"label": "Czechia", "xytext": (14.71, 49.84)},
     {"label": "Croatia", "xytext": (16.76, 45.57), "font_size": 22},
@@ -96,12 +173,12 @@ country_labels = {
     {"label": "Latvia", "xytext": (25.26, 56.7)},
     {"label": "Lithuania", "xytext": (23.91, 55.38)},
     {"label": "Poland", "xytext": (19.2, 52.2), "font_size": 28},
-    {"label": "Portugal", "xytext": (-8.61, 40.061)},
-    {"label": "Moldova", "xytext": (28.6, 47.17), "font_size": 18},
+    {"label": "Portugal", "xytext": (-10.48, 39.85), "xypin": (-8.55, 40.061)},
+    {"label": "Moldova", "xytext": (31.02, 44.85), "xypin": (28.6, 47.17), "font_size": 22},
     {"label": "Montenegro", "xytext": (19.25, 42.7), "font_size": 18},
-    {"label": "Netherlands", "xytext": (5.45, 52.33), "font_size": 18},
+    {"label": "Netherlands", "xytext": (3.91, 53.90), "xypin": (5.45, 52.33), "font_size": 22},
     {"label": "Norway", "xytext": (9.56, 61.15), "font_size": 28},
-    {"label": "North\nMacedonia", "xytext": (21.61, 41.64), "font_size": 16},
+    {"label": "North\nMacedonia", "xytext": (18.27, 41.20), "xypin": (21.61, 41.64), "font_size": 16},
     {"label": "Romania", "xytext": (24.86, 45.95), "font_size": 28},
     {"label": "Russia", "xytext": (34.38, 55.0), "font_size": 32},
     {"label": "Serbia", "xytext": (20.89, 43.61)},
@@ -112,5 +189,25 @@ country_labels = {
     {"label": "Sweden", "xytext": (15.184, 59.82), "font_size": 28},
     {"label": "Ukraine", "color": "", "xytext": (31.06, 49.36), "font_size": 28},
     {"label": "United\nKingdom", "xytext": (-1.37, 52.83)}
+    ],
+        "South America": [
+    {"label": "Agentina", "xytext": (-64.59, -35.23)},
+    {"label": "Bolivia", "xytext": (-64.68, -16.80)},
+    {"label": "Brazil", "xytext": (-54.13, -9.28)},
+    {"label": "Chile", "xytext": (-75.23, -23.71), "xypin": (-69.13, -23.45)},
+    {"label": "Colombia", "xytext": (-73.64, 4.15)},
+    {"label": "Ecuador", "xypin": (-78.58, -1.04), "xytext": (-82.70, 1.49)},
+    {"label": "Ecuador", "xypin": (-91.04, -0.74), "xytext": (-82.70, 1.49)},
+    {"label": "Falkland Islands", "xypin": (-58.86, -51.60), "xytext": (-59.49, -50.12)},
+    {"label": "French Guiana", "xypin": (-52.76, 4.62), "xytext": (-50.10, 6.53)},
+    {"label": "Guyana", "xypin": (-58.97, 5.97), "xytext": (-57.13, 9.47)},
+    {"label": "Paraguay", "xytext": (-58.22, -22.96)},
+    {"label": "Peru", "xytext": (-76.03, -9.31)},
+    {"label": "Suriname", "xytext": (-54.01, 8.26), "xypin": (-55.59, 4.85)},
+    {"label": "Uruguay", "xytext": (-55.96, -32.81)},
+    {"label": "Venezuela", "xytext": (-65.73, 8.36)}
+    ],
+        "Central America": [
+    {"label": "Honduras", "xytext": (-85.45, 16.49), "xypin": (-86.88, 14.89)},
     ],
                   }

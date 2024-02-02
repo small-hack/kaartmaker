@@ -4,7 +4,11 @@ Albania,IN FAVOR,NO
 Algeria,IN FAVOR,NO
 Andorra,IN FAVOR,NO
 Angola,IN FAVOR,NO
-Antigua and Barbuda,IN FAVOR,NO
+Antigua,IN FAVOR,NO
+Aruba,ABSTENTION,NO
+Barbuda,IN FAVOR,NO
+Curaçao,ABSTENTION,NO
+China,IN FAVOR,NO
 Argentina,ABSTENTION,NO
 Armenia,IN FAVOR,NO
 Australia,IN FAVOR,YES
@@ -18,6 +22,7 @@ Belarus,IN FAVOR,NO
 Belgium,IN FAVOR,NO
 Brussels Capital Region,IN FAVOR,NO
 Flemish Brabant,IN FAVOR,NO
+Falkland Islands,ABSTENTION,NO
 Walloon Brabant,IN FAVOR,NO
 Belize,IN FAVOR,NO
 Benin,IN FAVOR,NO
@@ -43,7 +48,8 @@ Comoros,IN FAVOR,NO
 Democratic Republic of the Congo,IN FAVOR,NO
 Republic of the Congo,IN FAVOR,NO
 Costa Rica,IN FAVOR,NO
-Cote d'Ivoire,IN FAVOR,NO
+Haiti,ABSTENTION,NO
+Ivory Coast,IN FAVOR,NO
 Croatia,IN FAVOR,NO
 Cuba,IN FAVOR,NO
 Cyprus,IN FAVOR,NO
@@ -54,6 +60,7 @@ Djibouti,IN FAVOR,NO
 Dominica,IN FAVOR,NO
 Dominican Republic,IN FAVOR,NO
 Ecuador,IN FAVOR,NO
+Galápagos Province,IN FAVOR,NO
 Egypt,IN FAVOR,NO
 El Salvador,IN FAVOR,NO
 Equatorial Guinea,ABSTENTION,NO
@@ -63,10 +70,14 @@ Ethiopia,IN FAVOR,NO
 Fiji,IN FAVOR,NO
 Finland,IN FAVOR,YES
 France,IN FAVOR,NO
+Guadeloupe,IN FAVOR,NO
+Martinique,IN FAVOR,NO
+French Guiana,IN FAVOR,NO
 Corsica,IN FAVOR,NO
 Gabon,IN FAVOR,NO
 The Gambia,IN FAVOR,NO
 Georgia,ABSTENTION,NO
+Adjara,ABSTENTION,NO
 Germany,ABSTENTION,YES
 Ghana,IN FAVOR,NO
 Greece,IN FAVOR,NO
@@ -82,6 +93,7 @@ India,IN FAVOR,NO
 Indonesia,IN FAVOR,NO
 Iran,IN FAVOR,NO
 Iraq,IN FAVOR,NO
+Kurdistan Region,IN FAVOR,NO
 Ireland,IN FAVOR,NO
 Isle of Man,ABSTENTION,NO
 Northern Ireland,ABSTENTION,NO
@@ -126,6 +138,7 @@ Namibia,IN FAVOR,NO
 Nauru,AGAINST,NO
 Nepal,IN FAVOR,NO
 Netherlands,ABSTENTION,YES
+Caribbean Netherlands,ABSTENTION,YES
 New Zealand,IN FAVOR,NO
 Nicaragua,IN FAVOR,NO
 Nigeria,IN FAVOR,NO
@@ -167,6 +180,8 @@ Slovakia,ABSTENTION,NO
 Slovenia,IN FAVOR,NO
 Solomon Islands,IN FAVOR,NO
 Somalia,IN FAVOR,NO
+Puntland,IN FAVOR,NO
+Sint Maarten,ABSTENTION,NO
 South Africa,IN FAVOR,NO
 South Sudan,ABSTENTION,NO
 Spain,IN FAVOR,NO
@@ -182,15 +197,20 @@ Tanzania,IN FAVOR,NO
 Thailand,IN FAVOR,NO
 Togo,ABSTENTION,NO
 Tonga,ABSTENTION,NO
-Trinidad and Tobago,IN FAVOR,NO
+Tobago,IN FAVOR,NO
+Trinidad,IN FAVOR,NO
 Tunisia,IN FAVOR,NO
 Turkey,IN FAVOR,NO
+Turkish Republic of Northern Cyprus,IN FAVOR,NO
 Tuvalu,IN FAVOR,NO
 Uganda,IN FAVOR,NO
 Ukraine,ABSTENTION,NO
 Crimea,ABSTENTION,NO
 United Arab Emirates,IN FAVOR,NO
 United Kingdom,ABSTENTION,YES
+British Virgin Islands,ABSTENTION,YES
+Virgin Islands,AGAINST,YES
+Montserrat,ABSTENTION,YES
 England,ABSTENTION,YES
 United States,AGAINST,NO
 Uruguay,ABSTENTION,NO

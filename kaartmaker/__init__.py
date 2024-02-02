@@ -43,6 +43,32 @@ def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
     return data_frame
 
 
+def determine_regional_area(world_map_data, region):
+    """
+    determine what the actual name of the region is and which counries should
+    be displayed. Returns dataframe with only the selected region
+    """
+    if region == "Middle East":
+        region = "Western Asia"
+
+    if region == "Western Asia":
+        # for the purposes of the "Middle East" we also include Iran and Egypt
+        world_map_data.loc[world_map_data.NAME_EN == "Iran", "SUBREGION"] = "Western Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Egypt", "SUBREGION"] = "Western Asia"
+
+    # verify if this is a continent or subregion
+    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean"]:
+        map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
+    else:
+        map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)
+
+    # set map_data's outline to be darker
+    map_data["edgecolor"] = "#000000"
+    map_data["color"] = "#f0f0f0"
+
+    return map_data
+
+
 def set_limits(ax,
                data,
                pad_left: int = 0,
@@ -151,15 +177,8 @@ def main(
     world_map_data["color"] = "#f0f0f0"
     world_map_data["edgecolor"] = "#c0c0c0"
 
-    # parse out just europe
-    if region == "Western Asia":
-        map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
-    else:
-        map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)
-
-    # set map_data's outline to be darker
-    map_data["edgecolor"] = "#000000"
-    map_data["color"] = "#f0f0f0"
+    # process out which countries should be shown on the map per region
+    map_data = determine_regional_area(world_map_data, region)
 
     # process country properties to add to the world_map_data geojson dataframe
     map_data = process_csv(map_data, csv)
@@ -170,7 +189,6 @@ def main(
                   padding=continent_boundaries[region],
                   use_hatch_for_indexes=[2],
                   labels=country_labels[region])
-
 
     region = region.replace(" ", "_")
 
