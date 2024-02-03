@@ -33,43 +33,40 @@ continent_boundaries = {"Europe":
                          "pad_top": 0,
                          "pad_left": 0,
                          "pad_right": 0},
-                        "Central Asia": 
-                        {"pad_bottom": 0,
-                         "pad_top": 0,
-                         "pad_left": 0,
-                         "pad_right": 0},
                         "Western Asia": 
                         {"pad_bottom": -0.02,
                          "pad_top": -0.02,
                          "pad_left": -0.15,
                          "pad_right": -0.08},
-                        "Southern Asia": 
-                        {"pad_bottom": -0.15,
-                         "pad_top": -0.2,
-                         "pad_left": -0.2,
-                         "pad_right": 0},
+                        "Central Asia": 
+                        {"pad_bottom": -0.08,
+                         "pad_top": -0.36,
+                         "pad_left": -0.65,
+                         "pad_right": -0.23},
                         }
 
 country_labels = {
         "Asia": [
             {"label": "China", "xytext": (81.68, 38.74)},
             ],
-        "Southern Asia": [
-            {"label": "Afghanistan", "xytext": (65.80, 33.28), "font_size": 28},
-            {"label": "Bangladesh", "xytext": (89.86, 24.46), "font_size": 20},
-            {"label": "Bhutan", "xytext": (90.46, 27.56), "font_size": 18},
-            {"label": "China", "xytext": (83.15, 32.97), "font_size": 28},
-            {"label": "India", "xytext": (78.08, 21.39), "font_size": 28},
-            {"label": "Iran", "xytext": (57.84, 31.0), "font_size": 28},
-            {"label": "Kazakhstan", "xytext": (68.32, 43.37), "font_size": 28},
-            {"label": "Kyrgyzstan", "xytext": (74.35, 41.05)},
-            {"label": "Myanmar\n(Burma)", "xytext": (96.26, 21.43), "font_size": 22},
-            {"label": "Nepal", "xytext": (83.38, 28.39), "font_size": 22},
-            {"label": "Pakistan", "xytext": (67.51,28.30)},
+        "Central Asia": [
+            {"label": "Afghanistan", "xytext": (65.80, 33.3), "font_size": 28},
+            {"label": "Bangladesh", "xytext": (89.89, 24.51), "font_size": 20},
+            {"label": "Bhutan", "xytext": (90.46, 27.49), "font_size": 18},
+            {"label": "China", "xytext": (87, 37), "font_size": 28},
+            {"label": "India", "xytext": (78.08, 21.4), "font_size": 28},
+            {"label": "Iran", "xytext": (57.8, 31.0), "font_size": 28},
+            {"label": "Kazakhstan", "xytext": (68.32, 45), "font_size": 28},
+            {"label": "Kyrgyzstan", "xytext": (74.52, 41.53)},
+            {"label": "Mongolia", "xytext": (92.98, 47.99)},
+            {"label": "Myanmar\n(Burma)", "xytext": (95.17, 21.43), "font_size": 22},
+            {"label": "Nepal", "xytext": (83.38, 28.385), "font_size": 22},
+            {"label": "Pakistan", "xytext": (67.51,28.30), "font_size": 28},
+            {"label": "Russia", "xytext": (86.98, 51.16), "font_size": 28},
             {"label": "Sri Lanka", "xypin": (80.71, 7.56), "xytext": (83.17, 9.27)},
             {"label": "Tajikistan", "xytext": (70.66, 38.73)},
-            {"label": "Turkmenistan", "xytext": (60.69, 38.49)},
-            {"label": "Uzbekistan", "xytext": (62.56, 42.34)},
+            {"label": "Turkmenistan", "xytext": (60.69, 38.57)},
+            {"label": "Uzbekistan", "xytext": (62.66, 42.1)},
                         ],
         "Caribbean": [
             {"label": "Aruba", "xypin": (-69.97, 12.50), "xytext": (-70.04, 13.05), "font_size": 22},
@@ -92,9 +89,6 @@ country_labels = {
             {"label": "Saint Vincent\nand\nthe Grenadines", "xypin": (-61.18, 13.27), "xytext": (-62.43, 13.61), "font_size": 18},
             {"label": "Trinidad\nand\nTobago", "xypin": (-61.21, 10.47), "xytext": (-61.90, 11.14)},
             {"label": "Trinidad\nand\nTobago", "xypin": (-60.67, 11.25), "xytext": (-61.90, 11.14)},
-    ],
-        "Central Asia": [
-    {"label": "Kazakhstan", "xytext": (69.20, 45.36)},
     ],
         "Western Asia": [
     {"label": "Armenia", "xytext": (44.59, 40.53)},

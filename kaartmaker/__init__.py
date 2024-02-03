@@ -61,11 +61,16 @@ def determine_regional_area(world_map_data, region):
 
     if region == "Southern Asia":
         # for southern asia we include burma and Turkmenistan so it gets included somewhere
+        world_map_data.loc[world_map_data.NAME_EN == "Baikonur", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Mongolia", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Myanmar", "SUBREGION"] = "Southern Asia"
-        world_map_data.loc[world_map_data.NAME_EN == "Turkmenistan", "SUBREGION"] = "Southern Asia"
-        world_map_data.loc[world_map_data.NAME_EN == "China", "SUBREGION"] = "Southern Asia"
-        world_map_data.loc[world_map_data.NAME_EN == "Kyrgyzstan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Russia", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "People's Republic of China", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Kazakhstan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Kyrgyzstan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Tajikistan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Turkmenistan", "SUBREGION"] = "Southern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Uzbekistan", "SUBREGION"] = "Southern Asia"
 
     # verify if this is a continent or subregion
     if region in ["Central Asia", "Western Asia", "Central America", "Caribbean", "Southern Asia"]:
