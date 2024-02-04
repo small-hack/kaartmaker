@@ -1,13 +1,11 @@
 from importlib.metadata import version as get_version
+from os import path
+PWD = path.dirname(__file__)
 
 # version of kaartmaker
 VERSION = get_version('kaartmaker')
 
-continent_boundaries = {"Europe": 
-                        {"pad_bottom": -0.03,
-                         "pad_top": -0.37,
-                         "pad_left": -0.04,
-                         "pad_right": -0.3},
+continent_boundaries = {
                         "Africa": 
                         {"pad_bottom": 0,
                          "pad_top": 0.04,
@@ -18,26 +16,16 @@ continent_boundaries = {"Europe":
                          "pad_top": 0,
                          "pad_left": 0,
                          "pad_right": 0},
+                        "Caribbean": 
+                        {"pad_bottom": -0.01,
+                         "pad_top": 0,
+                         "pad_left": -0.25,
+                         "pad_right": 0},
                         "Central America": 
                         {"pad_bottom": 0,
                          "pad_top": 0,
                          "pad_left": 0,
                          "pad_right": 0},
-                        "Caribbean": 
-                        {"pad_bottom": 0,
-                         "pad_top": 0,
-                         "pad_left": -0.2,
-                         "pad_right": 0},
-                        "South America": 
-                        {"pad_bottom": 0,
-                         "pad_top": 0,
-                         "pad_left": 0,
-                         "pad_right": 0},
-                        "Western Asia": 
-                        {"pad_bottom": -0.02,
-                         "pad_top": -0.02,
-                         "pad_left": -0.15,
-                         "pad_right": -0.08},
                         "Central Asia": 
                         {"pad_bottom": -0.08,
                          "pad_top": -0.36,
@@ -48,6 +36,36 @@ continent_boundaries = {"Europe":
                          "pad_top": -0.381,
                          "pad_left": -0.763,
                          "pad_right": -0.07},
+                        "Europe": 
+                        {"pad_bottom": -0.03,
+                         "pad_top": -0.37,
+                         "pad_left": -0.04,
+                         "pad_right": -0.3},
+                        "North America": 
+                        {"pad_bottom": -0.23,
+                         "pad_top": -0.2,
+                         "pad_left": -0.15,
+                         "pad_right": -0.58},
+                        "Oceania": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": -0.87,
+                         "pad_right": 0.05},
+                        "South America": 
+                        {"pad_bottom": 0,
+                         "pad_top": 0,
+                         "pad_left": 0,
+                         "pad_right": 0},
+                        "Western Asia": 
+                        {"pad_bottom": -0.02,
+                         "pad_top": -0.02,
+                         "pad_left": -0.15,
+                         "pad_right": -0.08},
+                        "world": 
+                        {"pad_bottom": -0.2,
+                         "pad_top": -0.06,
+                         "pad_left": -0.03,
+                         "pad_right": 0},
                         }
 
 country_labels = {
@@ -115,6 +133,17 @@ country_labels = {
             {"label": "Trinidad\nand\nTobago", "xypin": (-61.21, 10.47), "xytext": (-61.90, 11.14)},
             {"label": "Trinidad\nand\nTobago", "xypin": (-60.67, 11.25), "xytext": (-61.90, 11.14)},
     ],
+        "Oceania": [
+            {"label": "Australia", "xytext": (146.32, -27.04)},
+            {"label": "Fiji", "xytext": (178.02, -17.81)},
+            {"label": "New Caledonia", "xypin": (165.50, -21.36), "xytext": (163.68, -22.65)},
+            {"label": "New Zealand", "xypin": (170.50, -43.86), "xytext": (162.31, -40.63)},
+            {"label": "Palau", "xytext": (135.86, 7.11), "xypin": (134.55, 7.50)},
+            {"label": "Papua New Guinea", "xytext": (143.84, -6.1)},
+            {"label": "Soloman Islands", "xypin": (160.01, -9.58), "xytext": (157.60, -10.94)},
+            {"label": "Vanuatu", "xypin": (167.57, -16.36), "xytext": (170.90, -16.24)},
+            {"label": "Tonga", "xypin": (-175.21, -21.15), "xytext": (-176.80, -20.89)},
+            ],
         "Western Asia": [
     {"label": "Armenia", "xytext": (44.59, 40.53)},
     {"label": "Azerbaijan", "xytext": (47.62, 40.44)},
@@ -249,6 +278,30 @@ country_labels = {
     {"label": "Venezuela", "xytext": (-65.73, 8.36)}
     ],
         "Central America": [
-    {"label": "Honduras", "xytext": (-85.45, 16.49), "xypin": (-86.88, 14.89)},
+    {"label": "Belize", "xypin": (-89.0, 17.16), "xytext": (-86.9, 17.25)},
+    {"label": "Costa Rica", "xytext": (-85.1, 8.9), "xypin": (-84.20, 10.17)},
+    {"label": "El Salvador", "xypin": (-88.99, 13.64), "xytext": (-89.16, 12.61)},
+    {"label": "Guatemala", "xytext": (-90.42, 15.39)},
+    {"label": "Honduras", "xytext": (-86.88, 14.89)},
+    {"label": "Mexico", "xytext": (-102.12, 22.99), "font_size": 28},
+    {"label": "Nicaragua", "xytext": (-85.2, 12.58)},
+    {"label": "Panama", "xypin": (-81.0, 8.61), "xytext": (-80.94, 10.22)},
+    ],
+        "North America": [
+    {"label": "Bahamas", "xytext": (-76.99, 24.94)},
+    {"label": "Canada", "xytext": (-108.93, 54.68), "font_size": 32},
+    {"label": "Greenland", "xytext": (-46.18, 66.5), "font_size": 28},
+    {"label": "Mexico", "xytext": (-103, 26), "font_size": 32},
+    {"label": "United States", "xytext": (-100.90, 38.37), "font_size": 32},
+    ],
+        "world": [
+    {"label": "Australia", "xytext": (133.64, -24.99), "font_size": 32},
+    {"label": "Brazil", "xytext": (-52.41, -10.67), "font_size": 32},
+    {"label": "Canada", "xytext": (-108.93, 54.68), "font_size": 32},
+    {"label": "China", "xytext": (101.93, 34.85), "font_size": 32},
+    {"label": "India", "xytext": (78.25, 22.82)},
+    {"label": "Mexico", "xytext": (-103, 26), "font_size": 18},
+    {"label": "Russia", "xytext": (93.42, 63.12), "font_size": 32},
+    {"label": "United States", "xytext": (-100.90, 38.37), "font_size": 28},
     ],
                   }

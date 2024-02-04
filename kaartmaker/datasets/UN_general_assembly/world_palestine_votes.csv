@@ -70,6 +70,7 @@ Ethiopia,IN FAVOR,NO
 Fiji,IN FAVOR,NO
 Finland,IN FAVOR,YES
 France,IN FAVOR,NO
+New Caledonia,IN FAVOR,NO
 Guadeloupe,IN FAVOR,NO
 Martinique,IN FAVOR,NO
 French Guiana,IN FAVOR,NO
@@ -146,6 +147,8 @@ Nepal,IN FAVOR,NO
 Netherlands,ABSTENTION,YES
 Caribbean Netherlands,ABSTENTION,YES
 New Zealand,IN FAVOR,NO
+North Island,IN FAVOR,NO
+South Island,IN FAVOR,NO
 Nicaragua,IN FAVOR,NO
 Nigeria,IN FAVOR,NO
 Niger,IN FAVOR,NO
@@ -218,7 +221,8 @@ British Virgin Islands,ABSTENTION,YES
 Virgin Islands,AGAINST,YES
 Montserrat,ABSTENTION,YES
 England,ABSTENTION,YES
-United States,AGAINST,NO
+United States of America,AGAINST,NO
+Alaska,AGAINST,NO
 Uruguay,ABSTENTION,NO
 Uzbekistan,IN FAVOR,NO
 Vanuatu,IN FAVOR,NO

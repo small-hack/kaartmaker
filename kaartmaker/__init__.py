@@ -1,12 +1,11 @@
 #!python3.12
-
 from click import option, command
 import geopandas as gpd
-from kaartmaker.constants import VERSION, country_labels, continent_boundaries
+from kaartmaker.constants import VERSION, country_labels, continent_boundaries, PWD
+from kaartmaker.process_dataset import process_csv 
 from kaartmaker.labeling import add_label
 from os import path
 import matplotlib.pyplot as plt
-import pandas as pd
 import seaborn as sns
 from kaartmaker.help_text import RichCommand, options_help
 
@@ -14,33 +13,7 @@ from kaartmaker.help_text import RichCommand, options_help
 HELP = options_help()
 HELP_SETTINGS = dict(help_option_names=["-h", "--help"])
 
-PWD = path.dirname(__file__)
-PALESTINE_CSV = path.join(PWD, 'datasets/world_palestine_votes.csv')
 WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
-
-
-def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
-    """
-    take dataframe and process a process csv into it
-    fields: NAME_EN, vote, suspended_unrwa_aid
-    """
-    if not dataset_csv_file:
-        dataset_csv_file = PALESTINE_CSV
-
-    df = pd.read_csv(dataset_csv_file, index_col="NAME_EN")
-
-    # update the geojson with cease fire info
-    for index, row in df.iterrows():
-        vote = row["vote"]
-
-        if vote == "ABSTENTION":
-            data_frame.loc[data_frame.NAME_EN == index, "color"] = "#999999"
-        elif vote == "IN FAVOR":
-            data_frame.loc[data_frame.NAME_EN == index, "color"] = "#648FFF"
-        elif vote == "AGAINST":
-            data_frame.loc[data_frame.NAME_EN == index, "color"] = "#FFB000"
-
-    return data_frame
 
 
 def determine_regional_area(world_map_data, region):
@@ -48,21 +21,14 @@ def determine_regional_area(world_map_data, region):
     determine what the actual name of the region is and which counries should
     be displayed. Returns dataframe with only the selected region
     """
-    if region == "Middle East":
+    if region == "Middle East" or region == "West Asia" or region == "Western Asia":
         region = "Western Asia"
-
-    if region == "Central Asia":
-        region = "Southern Asia"
-
-    if region == "East Asia":
-        region = "Eastern Asia"
-
-    if region == "Western Asia":
         # for the purposes of the "Middle East" we also include Iran and Egypt
         world_map_data.loc[world_map_data.NAME_EN == "Iran", "SUBREGION"] = "Western Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Egypt", "SUBREGION"] = "Western Asia"
 
-    if region == "Southern Asia":
+    if region == "Central Asia" or region == "Southern Asia":
+        region = "Southern Asia"
         # for southern asia we include all of central asia
         world_map_data.loc[world_map_data.NAME_EN == "Baikonur", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Mongolia", "SUBREGION"] = "Southern Asia"
@@ -75,7 +41,8 @@ def determine_regional_area(world_map_data, region):
         world_map_data.loc[world_map_data.NAME_EN == "Turkmenistan", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Uzbekistan", "SUBREGION"] = "Southern Asia"
 
-    if region == "Eastern Asia":
+    if region == "East Asia" or region == "Eastern Asia":
+        region = "Eastern Asia"
         # for southern asia we include all of south east asia as well 
         world_map_data.loc[world_map_data.NAME_EN == "Brunei", "SUBREGION"] = "Eastern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Philippines", "SUBREGION"] = "Eastern Asia"
@@ -90,7 +57,8 @@ def determine_regional_area(world_map_data, region):
         world_map_data.loc[world_map_data.NAME_EN == "Indonesia", "SUBREGION"] = "Eastern Asia"
 
     # verify if this is a continent or subregion
-    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean", "Southern Asia", "Eastern Asia"]:
+    if region in ["Central Asia", "Western Asia", "Central America",
+                  "Caribbean", "Southern Asia", "Eastern Asia"]:
         map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
     else:
         map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)
@@ -140,8 +108,7 @@ def draw_map(
     assert "color" in maps_to_draw[0].columns, "Missing color column in map dataframe"
     assert "edgecolor" in maps_to_draw[0].columns, "Missing edgecolor column in map dataframe"
     
-    fig = plt.figure(figsize=figsize)
-    fig.suptitle(title, fontsize=72, fontweight="bold")
+    fig = plt.figure(figsize=figsize, layout="compressed")
     ax = fig.add_subplot()
     
     for map_index, map_to_draw in enumerate(maps_to_draw):
@@ -184,7 +151,7 @@ def draw_map(
         is_flag=True,
         help=HELP['version'])
 def main(
-        region: str = "Europe",
+        region: str = "world",
         csv: str = "",
         save_geojson: bool = False,
         save_png: bool = True,
@@ -210,18 +177,29 @@ def main(
     world_map_data["color"] = "#f0f0f0"
     world_map_data["edgecolor"] = "#c0c0c0"
 
-    # process out which countries should be shown on the map per region
-    map_data = determine_regional_area(world_map_data, region)
+    if region != "world":
+        # process out which countries should be shown on the map per region
+        map_data = determine_regional_area(world_map_data, region)
 
-    # process country properties to add to the world_map_data geojson dataframe
-    map_data = process_csv(map_data, csv)
+        # process country properties to add to the world_map_data geojson dataframe
+        map_data = process_csv(map_data, csv)
 
-    ax = draw_map(maps_to_draw=[world_map_data, map_data],
-                  title=f"Map of Continental {region} UN votes",
-                  boundry_map_index=1,
+        # do different colors for world
+        maps = [world_map_data, map_data]
+        boundary_index = 1
+        labels = country_labels[region]
+    else:
+        world_map_data = process_csv(world_map_data, csv)
+        maps = [world_map_data]
+        boundary_index = 0
+        labels = []
+
+    ax = draw_map(maps_to_draw=maps,
+                  title=f"Map of {region} UN votes",
+                  boundry_map_index=boundary_index,
                   padding=continent_boundaries[region],
                   use_hatch_for_indexes=[2],
-                  labels=country_labels[region])
+                  labels=labels)
 
     region = region.replace(" ", "_")
 
