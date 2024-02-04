@@ -54,13 +54,16 @@ def determine_regional_area(world_map_data, region):
     if region == "Central Asia":
         region = "Southern Asia"
 
+    if region == "East Asia":
+        region = "Eastern Asia"
+
     if region == "Western Asia":
         # for the purposes of the "Middle East" we also include Iran and Egypt
         world_map_data.loc[world_map_data.NAME_EN == "Iran", "SUBREGION"] = "Western Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Egypt", "SUBREGION"] = "Western Asia"
 
     if region == "Southern Asia":
-        # for southern asia we include burma and Turkmenistan so it gets included somewhere
+        # for southern asia we include all of central asia
         world_map_data.loc[world_map_data.NAME_EN == "Baikonur", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Mongolia", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Myanmar", "SUBREGION"] = "Southern Asia"
@@ -72,8 +75,22 @@ def determine_regional_area(world_map_data, region):
         world_map_data.loc[world_map_data.NAME_EN == "Turkmenistan", "SUBREGION"] = "Southern Asia"
         world_map_data.loc[world_map_data.NAME_EN == "Uzbekistan", "SUBREGION"] = "Southern Asia"
 
+    if region == "Eastern Asia":
+        # for southern asia we include all of south east asia as well 
+        world_map_data.loc[world_map_data.NAME_EN == "Brunei", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Philippines", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Vietnam", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Cambodia", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Laos", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Thailand", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Malaysia", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Myanmar", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Russia", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Singapore", "SUBREGION"] = "Eastern Asia"
+        world_map_data.loc[world_map_data.NAME_EN == "Indonesia", "SUBREGION"] = "Eastern Asia"
+
     # verify if this is a continent or subregion
-    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean", "Southern Asia"]:
+    if region in ["Central Asia", "Western Asia", "Central America", "Caribbean", "Southern Asia", "Eastern Asia"]:
         map_data = world_map_data[world_map_data.SUBREGION == region].reset_index(drop=True)
     else:
         map_data = world_map_data[world_map_data.CONTINENT == region].reset_index(drop=True)

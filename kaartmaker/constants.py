@@ -43,11 +43,17 @@ continent_boundaries = {"Europe":
                          "pad_top": -0.36,
                          "pad_left": -0.65,
                          "pad_right": -0.23},
+                        "Eastern Asia": 
+                        {"pad_bottom": 0,
+                         "pad_top": -0.381,
+                         "pad_left": -0.763,
+                         "pad_right": -0.07},
                         }
 
 country_labels = {
         "Asia": [
             {"label": "China", "xytext": (81.68, 38.74)},
+            {"label": "Japan", "xytext": (138.40, 36.04)},
             ],
         "Central Asia": [
             {"label": "Afghanistan", "xytext": (65.80, 33.3), "font_size": 28},
@@ -62,12 +68,31 @@ country_labels = {
             {"label": "Myanmar\n(Burma)", "xytext": (95.17, 21.43), "font_size": 22},
             {"label": "Nepal", "xytext": (83.38, 28.385), "font_size": 22},
             {"label": "Pakistan", "xytext": (67.51,28.30), "font_size": 28},
-            {"label": "Russia", "xytext": (86.98, 51.16), "font_size": 28},
+            {"label": "Russia", "xytext": (87.0, 51.2), "font_size": 28},
             {"label": "Sri Lanka", "xypin": (80.71, 7.56), "xytext": (83.17, 9.27)},
             {"label": "Tajikistan", "xytext": (70.66, 38.73)},
             {"label": "Turkmenistan", "xytext": (60.69, 38.57)},
             {"label": "Uzbekistan", "xytext": (62.66, 42.1)},
                         ],
+        "Eastern Asia": [
+            {"label": "Brunei", "xypin": (114.59, 4.48), "xytext": (113.88, 6.06)},
+            {"label": "China", "xytext": (108.4, 29.7)},
+            {"label": "Cambodia", "xytext": (104.84, 12.79)},
+            {"label": "Indonesia", "xytext": (113.92, -0.78), "xypin": (101.76, -0.62)},
+            {"label": "Indonesia", "xytext": (113.92, -0.78), "xypin": (138.87, -4.41)},
+            {"label": "Japan", "xytext": (138.40, 36.04)},
+            {"label": "Laos", "xytext": (102.46, 19.96)},
+            {"label": "Malaysia", "xypin": (102, 4.19), "xytext": (105.5, 4.5)},
+            {"label": "Mongolia", "xytext": (105.4, 44.8)},
+            {"label": "Myanmar\n(Burma)", "xytext": (97.15, 21.43)},
+            {"label": "North Korea", "xypin": (126.69, 39.89), "xytext": (131.94, 39.96)},
+            {"label": "Philippines", "xypin": (121.19, 15.86), "xytext": (124.95, 16.55)},
+            {"label": "Russia", "xytext": (132.9, 44.1)},
+            {"label": "Singapore", "xypin": (103.9, 1.36), "xytext": (106.71, 1.9), "font_size": 22},
+            {"label": "South Korea", "xypin": (127.94, 36.50), "xytext": (123.06, 35.33)},
+            {"label": "Thailand", "xytext": (101.1, 16.18)},
+            {"label": "Vietnam", "xypin": (108.6, 13.9), "xytext": (111.4, 14.0)},
+            ],
         "Caribbean": [
             {"label": "Aruba", "xypin": (-69.97, 12.50), "xytext": (-70.04, 13.05), "font_size": 22},
             {"label": "Antigua\nand\nBarbuda", "xypin": (-61.79, 17.08), "xytext": (-61.09, 17.15), "font_size": 22},
