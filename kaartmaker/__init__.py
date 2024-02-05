@@ -3,7 +3,7 @@ from click import option, command
 import geopandas as gpd
 from kaartmaker.constants import VERSION, country_labels, continent_boundaries, PWD
 from kaartmaker.process_dataset import process_csv 
-from kaartmaker.labeling import add_label
+from kaartmaker.labeling import add_label, do_legend
 from os import path
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -134,7 +134,7 @@ def draw_map(
 @option("--region", "-r",
         metavar="REGION",
         type=str,
-        default="Europe",
+        default="world",
         help=HELP['region'])
 @option("--csv", "-C",
         metavar="CSV_FILE",
@@ -157,7 +157,6 @@ def main(
         save_png: bool = True,
         version: bool = True
         ):
-
     if version:
         print(VERSION)
 
@@ -177,9 +176,9 @@ def main(
     world_map_data["color"] = "#f0f0f0"
     world_map_data["edgecolor"] = "#c0c0c0"
 
-    if region != "world":
+    if region.title() != "World":
         # process out which countries should be shown on the map per region
-        map_data = determine_regional_area(world_map_data, region)
+        map_data = determine_regional_area(world_map_data, region.title())
 
         # process country properties to add to the world_map_data geojson dataframe
         map_data = process_csv(map_data, csv)
@@ -187,7 +186,7 @@ def main(
         # do different colors for world
         maps = [world_map_data, map_data]
         boundary_index = 1
-        labels = country_labels[region]
+        labels = country_labels[region.lower()]
     else:
         world_map_data = process_csv(world_map_data, csv)
         maps = [world_map_data]
@@ -195,13 +194,15 @@ def main(
         labels = []
 
     ax = draw_map(maps_to_draw=maps,
-                  title=f"Map of {region} UN votes",
                   boundry_map_index=boundary_index,
-                  padding=continent_boundaries[region],
+                  title=region.title(),
+                  padding=continent_boundaries[region.lower()],
                   use_hatch_for_indexes=[2],
                   labels=labels)
 
-    region = region.replace(" ", "_")
+    region = region.lower().replace(" ", "_")
+
+    do_legend(ax, region, map_data)
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:

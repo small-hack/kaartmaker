@@ -1,9 +1,20 @@
 from matplotlib.patches import Polygon
+from matplotlib import axes
 import matplotlib.patheffects as PathEffects
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+legend_area = {
+        "europe": {
+            "legend_geometry": [-17.2, 40],
+            "legend": [-15.5, 40],
+            "title": [0.03, -0.05],
+            "subtitle": [0.03, -0.06],
+            "subtitle_source": [0.1, -0.06],
+            "countries": ["Slovenia", "Hungary", "Austria"]
+            }
+        }
 
 def add_label(ax,
               label: dict,
@@ -43,43 +54,54 @@ def add_label(ax,
     
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
+def do_legend(ax: axes, continent: str, map_data):
+    """ 
+    draw a legend and the title and subtitle
+    """
+    # specific locations for this region
+    legend_xy = legend_area[continent]["legend_geometry"]
+    legend_title_xy = legend_area[continent]["legend"]
+    title = legend_area[continent]["title"]
+    subtitle = legend_area[continent]["subtitle"]
+    subtitle_source = legend_area[continent]["subtitle_source"]
+    countries = legend_area[continent]['countries']
 
-def do_legend(ax, continent, map_data):
-    legend = pd.concat([map_data[map_data.NAME_EN.isin([
-        "France", "Spain", "Germany"
-        ])]
-    ])
-
+    # use special countries for this area 
+    legend = pd.concat([map_data[map_data.NAME_EN.isin(countries)]])
     legend = legend.sort_values("color")
 
     for i, row in legend.reset_index().iterrows():
-        ax = draw_legend_geometry(ax, row, -25, -20 - 3.5*i, 2.5)
-        ax.annotate(row.color[3:],
-                    (-22, -20 - 3.5*i),
-                    fontsize=28,
+        draw_legend_geometry(ax, row, legend_xy[0], legend_xy[1] - 1.6*i, 0.8)
+        ax.annotate(row.vote,
+                    (legend_title_xy[0], legend_title_xy[1] - 1.6*i),
+                    fontsize=24,
                     fontweight="bold",
                     va="center")
 
     fontstyles = {"fontweight": "bold", "ha": "left"}
     plt.annotate("Data source:",
-                 xy=(0.05, 0.32),
+                 xy=(subtitle[0], subtitle[1]),
                  fontsize=24,
-                 xycoords="axes fraction",
-                 **fontstyles)
+                 xycoords="axes fraction", **fontstyles)
     plt.annotate("naturalearthdata.com and gadebate.un.org",
-                 xy=(0.133, -0.32),
+                 xy=(subtitle_source[0], subtitle_source[1]),
                  fontsize=24,
                  xycoords="axes fraction",
-                 color="#1B998B",
-                 **fontstyles)
-    plt.title(f"UN votes on Ceasefire in Gaza in {continent}",
-              x=0.05,
-              y=0.29,
+                 color="#1B998B", **fontstyles)
+    plt.title(f"UNGA on Ceasefire in Gaza {continent}",
+              x=title[0], y=title[1],
               fontsize=42,
               **fontstyles)
 
 
-def draw_legend_geometry(ax, row, x_loc, y_loc, height):
+def draw_legend_geometry(ax: axes,
+                         row: pd.core.series.Series,
+                         x_loc: float,
+                         y_loc: float,
+                         height: float):
+    """
+    draw the legend geometry
+    """
     x = np.array(row.geometry.boundary.coords.xy[0])
     y = np.array(row.geometry.boundary.coords.xy[1])
     
@@ -92,5 +114,5 @@ def draw_legend_geometry(ax, row, x_loc, y_loc, height):
     
     ax.add_artist(Polygon(np.stack([x, y], axis=1),
                           facecolor=row.color,
-                          edgecolor=row.edgecolor,
-                          hatch=row.hatch))
+                          edgecolor=row.edgecolor))
+    # hatch=row.hatch))

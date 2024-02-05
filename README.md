@@ -10,3 +10,5 @@ You can do the same with the [download_geojson.sh](./download_geojson.sh) script
 ## Secondary features
 
 You can also generate geojson files for specific regions :)
+
+Colors selected from: https://davidmathlogic.com/colorblind

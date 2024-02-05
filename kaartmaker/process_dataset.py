@@ -20,9 +20,12 @@ def process_csv(data_frame: pd.DataFrame, dataset_csv_file: str = ""):
 
         if vote == "ABSTENTION":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#999999"
+            data_frame.loc[data_frame.NAME_EN == index, "vote"] = "ABSTENTION"
         elif vote == "IN FAVOR":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#648FFF"
+            data_frame.loc[data_frame.NAME_EN == index, "vote"] = "IN FAVOR"
         elif vote == "AGAINST":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = "#FFB000"
+            data_frame.loc[data_frame.NAME_EN == index, "vote"] = "AGAINST"
 
     return data_frame
