@@ -6,9 +6,26 @@ import numpy as np
 import pandas as pd
 
 legend_area = {
+        "africa": {
+            "legend": {
+                "geometry": [-24.5, -23.55],
+                "label": [-22.3, -23.55],
+                "size": 3.75,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.03, -0.05],
+            "subtitle": [0.03, -0.06],
+            "subtitle_source": [0.1, -0.06],
+            "countries": ["Chad", "Togo", "Liberia"]
+            },
         "europe": {
-            "legend_geometry": [-17.2, 40],
-            "legend": [-15.5, 40],
+            "legend": {
+                "geometry": [-17.2, 40],
+                "label": [-15.5, 40],
+                "size": 0.8,
+                "spacing": 1.6
+            },
             "title": [0.03, -0.05],
             "subtitle": [0.03, -0.06],
             "subtitle_source": [0.1, -0.06],
@@ -58,23 +75,35 @@ def do_legend(ax: axes, continent: str, map_data):
     """ 
     draw a legend and the title and subtitle
     """
-    # specific locations for this region
-    legend_xy = legend_area[continent]["legend_geometry"]
-    legend_title_xy = legend_area[continent]["legend"]
-    title = legend_area[continent]["title"]
-    subtitle = legend_area[continent]["subtitle"]
-    subtitle_source = legend_area[continent]["subtitle_source"]
+    # legend using specific locations for this region
     countries = legend_area[continent]['countries']
+    legend_dict = legend_area[continent]["legend"]
+    legend_xy = legend_dict["geometry"]
+    legend_label = legend_dict["label"]
+    legend_size = legend_dict["size"]
+    legend_spacing = legend_dict["spacing"]
+    legend_font = legend_dict.get("font_size", 24)
 
-    # use special countries for this area 
     legend = pd.concat([map_data[map_data.NAME_EN.isin(countries)]])
     legend = legend.sort_values("color")
 
+    # title and sources annotation
+    title = legend_area[continent]["title"]
+    subtitle = legend_area[continent]["subtitle"]
+    subtitle_source = legend_area[continent]["subtitle_source"]
+
+
     for i, row in legend.reset_index().iterrows():
-        draw_legend_geometry(ax, row, legend_xy[0], legend_xy[1] - 1.6*i, 0.8)
+        print(row)
+        draw_legend_geometry(ax,
+                             row,
+                             legend_xy[0],
+                             legend_xy[1] - legend_spacing*i,
+                             legend_size)
         ax.annotate(row.vote,
-                    (legend_title_xy[0], legend_title_xy[1] - 1.6*i),
-                    fontsize=24,
+                    (legend_label[0],
+                     legend_label[1] - legend_spacing*i),
+                    fontsize=legend_font,
                     fontweight="bold",
                     va="center")
 
