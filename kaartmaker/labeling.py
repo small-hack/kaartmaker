@@ -19,6 +19,19 @@ legend_area = {
             "subtitle_source": [0.1, -0.06],
             "countries": ["Chad", "Togo", "Liberia"]
             },
+        "south_america": {
+            "legend": {
+                "geometry": [-89, -43.7],
+                "label": [-86, -43.7],
+                "size": 3.75,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.01, -0.05],
+            "subtitle": [0.01, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["Bolivia", "Paraguay", "Uruguay"]
+            },
         "europe": {
             "legend": {
                 "geometry": [-17.2, 40],

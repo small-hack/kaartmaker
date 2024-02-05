@@ -53,9 +53,9 @@ continent_boundaries = {
                          "pad_right": 0.05},
                         "south america": 
                         {"pad_bottom": 0,
-                         "pad_top": 0,
+                         "pad_top": -0.035,
                          "pad_left": 0,
-                         "pad_right": 0},
+                         "pad_right": -0.06},
                         "western asia": 
                         {"pad_bottom": -0.02,
                          "pad_top": -0.02,
