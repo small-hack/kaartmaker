@@ -19,7 +19,20 @@ legend_area = {
             "subtitle_source": [0.1, -0.06],
             "countries": ["Chad", "Togo", "Liberia"]
             },
-        "south_america": {
+        "central america": {
+            "legend": {
+                "geometry": [-111.63, 14.08],
+                "label": [-110, 14.08],
+                "size": 3.75,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.01, -0.05],
+            "subtitle": [0.01, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["Guatemala", "Panama"]
+            },
+        "south america": {
             "legend": {
                 "geometry": [-89, -43.7],
                 "label": [-86, -43.7],
@@ -84,13 +97,13 @@ def add_label(ax,
     
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
-def do_legend(ax: axes, continent: str, map_data):
+def do_legend(ax: axes, region: str, map_data):
     """ 
     draw a legend and the title and subtitle
     """
     # legend using specific locations for this region
-    countries = legend_area[continent]['countries']
-    legend_dict = legend_area[continent]["legend"]
+    countries = legend_area[region]['countries']
+    legend_dict = legend_area[region]["legend"]
     legend_xy = legend_dict["geometry"]
     legend_label = legend_dict["label"]
     legend_size = legend_dict["size"]
@@ -101,9 +114,9 @@ def do_legend(ax: axes, continent: str, map_data):
     legend = legend.sort_values("color")
 
     # title and sources annotation
-    title = legend_area[continent]["title"]
-    subtitle = legend_area[continent]["subtitle"]
-    subtitle_source = legend_area[continent]["subtitle_source"]
+    title = legend_area[region]["title"]
+    subtitle = legend_area[region]["subtitle"]
+    subtitle_source = legend_area[region]["subtitle_source"]
 
 
     for i, row in legend.reset_index().iterrows():
@@ -130,7 +143,7 @@ def do_legend(ax: axes, continent: str, map_data):
                  fontsize=24,
                  xycoords="axes fraction",
                  color="#1B998B", **fontstyles)
-    plt.title(f"UNGA on Ceasefire in Gaza {continent}",
+    plt.title(f"UNGA on Ceasefire in Gaza ({region.title()})",
               x=title[0], y=title[1],
               fontsize=42,
               **fontstyles)

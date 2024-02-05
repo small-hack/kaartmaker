@@ -200,9 +200,11 @@ def main(
                   use_hatch_for_indexes=[2],
                   labels=labels)
 
-    region = region.lower().replace(" ", "_")
+    region = region.lower()
 
     do_legend(ax, region, map_data)
+
+    region = region.replace(" ", "_")
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:
