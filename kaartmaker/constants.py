@@ -278,14 +278,14 @@ country_labels = {
     {"label": "Venezuela", "xytext": (-65.73, 8.36)}
     ],
         "central america": [
-    {"label": "Belize", "xypin": (-89.0, 17.16), "xytext": (-86.9, 17.25)},
-    {"label": "Costa Rica", "xytext": (-85.1, 8.9), "xypin": (-84.20, 10.17)},
-    {"label": "El Salvador", "xypin": (-88.99, 13.64), "xytext": (-89.16, 12.61)},
-    {"label": "Guatemala", "xytext": (-90.42, 15.39)},
-    {"label": "Honduras", "xytext": (-86.88, 14.89)},
+    {"label": "Belize", "xypin": (-89.0, 17.16), "xytext": (-86.9, 17.25), "font_size": 28},
+    {"label": "Costa Rica", "xytext": (-85.1, 8.9), "xypin": (-84.20, 10.17), "font_size": 28},
+    {"label": "El Salvador", "xypin": (-88.99, 13.64), "xytext": (-89.16, 12.61), "font_size": 28},
+    {"label": "Guatemala", "xytext": (-90.42, 15.39), "font_size": 28},
+    {"label": "Honduras", "xytext": (-86.88, 14.89), "font_size": 28},
     {"label": "Mexico", "xytext": (-102.12, 22.99), "font_size": 28},
-    {"label": "Nicaragua", "xytext": (-85.2, 12.58)},
-    {"label": "Panama", "xypin": (-81.0, 8.61), "xytext": (-80.94, 10.22)},
+    {"label": "Nicaragua", "xytext": (-85.2, 12.58), "font_size": 28},
+    {"label": "Panama", "xypin": (-81.0, 8.61), "xytext": (-80.94, 10.22), "font_size": 28},
     ],
         "north america": [
     {"label": "Bahamas", "xytext": (-76.99, 24.94)},

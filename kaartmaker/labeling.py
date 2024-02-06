@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+
 legend_area = {
         "africa": {
             "legend": {
@@ -21,16 +22,16 @@ legend_area = {
             },
         "central america": {
             "legend": {
-                "geometry": [-111.63, 14.08],
-                "label": [-110, 14.08],
-                "size": 3.75,
+                "geometry": [-115, 13.05],
+                "label": [-112, 13.05],
+                "size": 2,
                 "font_size": 28,
-                "spacing": 4.5,
+                "spacing": 3,
             },
-            "title": [0.01, -0.05],
-            "subtitle": [0.01, -0.06],
+            "title": [0.02, -0.05],
+            "subtitle": [0.02, -0.06],
             "subtitle_source": [0.09, -0.06],
-            "countries": ["Guatemala", "Panama"]
+            "countries": ["Guatemala", "Mexico", "Panama"]
             },
         "south america": {
             "legend": {
@@ -58,6 +59,7 @@ legend_area = {
             "countries": ["Slovenia", "Hungary", "Austria"]
             }
         }
+
 
 def add_label(ax,
               label: dict,
@@ -96,6 +98,7 @@ def add_label(ax,
         })
     
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
+
 
 def do_legend(ax: axes, region: str, map_data):
     """ 
@@ -156,18 +159,38 @@ def draw_legend_geometry(ax: axes,
                          height: float):
     """
     draw the legend geometry
+    thank you: https://gis.stackexchange.com/a/378894
     """
-    x = np.array(row.geometry.boundary.coords.xy[0])
-    y = np.array(row.geometry.boundary.coords.xy[1])
-    
-    x = x - (row.geometry.centroid.x - x_loc)
-    y = y - (row.geometry.centroid.y - y_loc)
-    
-    ratio = height / (y.max() - y.min())
-    x = x * ratio + (x_loc - x_loc * ratio)
-    y = y * ratio + (y_loc - y_loc * ratio)
-    
-    ax.add_artist(Polygon(np.stack([x, y], axis=1),
-                          facecolor=row.color,
-                          edgecolor=row.edgecolor))
-    # hatch=row.hatch))
+    # some countries are a single blob
+    if row.geometry.geom_type == "Polygon":
+        # print("is polygon")
+        x = np.array(row.geometry.boundary.coords.xy[0])
+        y = np.array(row.geometry.boundary.coords.xy[1])
+        
+        x = x - (row.geometry.centroid.x - x_loc)
+        y = y - (row.geometry.centroid.y - y_loc)
+        
+        ratio = height / (y.max() - y.min())
+        x = x * ratio + (x_loc - x_loc * ratio)
+        y = y * ratio + (y_loc - y_loc * ratio)
+        
+        ax.add_artist(Polygon(np.stack([x, y], axis=1),
+                              facecolor=row.color,
+                              edgecolor=row.edgecolor))
+        # hatch=row.hatch))
+
+    # some countries are multi-polygon because they have islands
+    else:
+        x = np.array(row.geometry.geoms[0].boundary.coords.xy[0])
+        y = np.array(row.geometry.geoms[0].boundary.coords.xy[1])
+        
+        x = x - (row.geometry.geoms[0].centroid.x - x_loc)
+        y = y - (row.geometry.geoms[0].centroid.y - y_loc)
+        
+        ratio = height / (y.max() - y.min())
+        x = x * ratio + (x_loc - x_loc * ratio)
+        y = y * ratio + (y_loc - y_loc * ratio)
+        
+        ax.add_artist(Polygon(np.stack([x, y], axis=1),
+                              facecolor=row.color,
+                              edgecolor=row.edgecolor))
