@@ -3,7 +3,7 @@ from click import option, command
 import geopandas as gpd
 from kaartmaker.constants import VERSION, country_labels, continent_boundaries, PWD
 from kaartmaker.process_dataset import process_csv 
-from kaartmaker.labeling import add_label, do_legend
+from kaartmaker.labeling import add_label, draw_legend_and_title
 from os import path
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -16,7 +16,7 @@ HELP_SETTINGS = dict(help_option_names=["-h", "--help"])
 WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
 
 
-def determine_regional_area(world_map_data, region):
+def determine_regional_area(world_map_data, region: str):
     """
     determine what the actual name of the region is and which counries should
     be displayed. Returns dataframe with only the selected region
@@ -188,8 +188,8 @@ def main(
         boundary_index = 1
         labels = country_labels[region.lower()]
     else:
-        world_map_data = process_csv(world_map_data, csv)
-        maps = [world_map_data]
+        map_data = process_csv(world_map_data, csv)
+        maps = [map_data]
         boundary_index = 0
         labels = []
 
@@ -202,7 +202,7 @@ def main(
 
     region = region.lower()
 
-    do_legend(ax, region, map_data)
+    draw_legend_and_title(ax, region, map_data)
 
     region = region.replace(" ", "_")
 

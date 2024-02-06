@@ -1,3 +1,4 @@
+from geopandas.geodataframe import GeoDataFrame
 from matplotlib.patches import Polygon
 from matplotlib import axes
 import matplotlib.patheffects as PathEffects
@@ -19,6 +20,19 @@ legend_area = {
             "subtitle": [0.03, -0.06],
             "subtitle_source": [0.1, -0.06],
             "countries": ["Chad", "Togo", "Liberia"]
+            },
+        "caribbean": {
+            "legend": {
+                "geometry": [-77.6, 12.3],
+                "label": [-76.6, 12.3],
+                "size": 0.75,
+                "font_size": 28,
+                "spacing": 1,
+            },
+            "title": [0.02, -0.05],
+            "subtitle": [0.02, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["Jamaica", "Haiti"]
             },
         "central america": {
             "legend": {
@@ -108,7 +122,20 @@ legend_area = {
             "subtitle": [0.007, -0.04],
             "subtitle_source": [0.09, -0.04],
             "countries": ["Israel", "Georgia", "Jordan"]
-            }
+            },
+        "world": {
+            "legend": {
+                "geometry": [-152, -31],
+                "label": [-139.5, -31],
+                "size": 7.5,
+                "font_size": 28,
+                "spacing": 9.3,
+            },
+            "title": [0.02, -0.05],
+            "subtitle": [0.02, -0.075],
+            "subtitle_source": [0.085, -0.075],
+            "countries": ["Brazil", "United States of America", "Germany"]
+            },
         }
 
 
@@ -151,9 +178,9 @@ def add_label(ax,
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
 
-def do_legend(ax: axes, region: str, map_data):
+def draw_legend_and_title(ax: axes, region: str, map_data: GeoDataFrame):
     """ 
-    draw a legend and the title and subtitle
+    draw a legend using countries' shapes as the legend, title, and subtitle
     """
     # legend using specific locations for this region
     countries = legend_area[region]['countries']
@@ -187,6 +214,8 @@ def do_legend(ax: axes, region: str, map_data):
                     va="center")
 
     fontstyles = {"fontweight": "bold", "ha": "left"}
+
+    # data source and
     plt.annotate("Data source:",
                  xy=(subtitle[0], subtitle[1]),
                  fontsize=24,
@@ -196,7 +225,13 @@ def do_legend(ax: axes, region: str, map_data):
                  fontsize=24,
                  xycoords="axes fraction",
                  color="#1B998B", **fontstyles)
-    plt.title(f"UNGA on Ceasefire in Gaza ({region.title()})",
+
+    if region == "world":
+        title_region = ""
+    else:
+        title_region = f" ({region.title()})" 
+
+    plt.title(f"UNGA on Ceasefire in Gaza{title_region}",
               x=title[0], y=title[1],
               fontsize=42,
               **fontstyles)
