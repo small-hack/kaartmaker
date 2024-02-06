@@ -46,10 +46,36 @@ legend_area = {
             "subtitle_source": [0.09, -0.06],
             "countries": ["India"]
             },
+        "eastern asia": {
+            "legend": {
+                "geometry": [97, -9.7],
+                "label": [99, -9.7],
+                "size": 2,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.01, -0.05],
+            "subtitle": [0.01, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["Cambodia"]
+            },
+        "oceania": {
+            "legend": {
+                "geometry": [117, -48.5],
+                "label": [120, -48.5],
+                "size": 3,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.01, -0.05],
+            "subtitle": [0.01, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["Australia", "Papua New Guinea"]
+            },
         "south america": {
             "legend": {
-                "geometry": [-89, -43.7],
-                "label": [-86, -43.7],
+                "geometry": [-89, -45],
+                "label": [-86, -45],
                 "size": 3.75,
                 "font_size": 28,
                 "spacing": 4.5,
@@ -57,7 +83,7 @@ legend_area = {
             "title": [0.01, -0.05],
             "subtitle": [0.01, -0.06],
             "subtitle_source": [0.09, -0.06],
-            "countries": ["Bolivia", "Paraguay", "Uruguay"]
+            "countries": ["Brazil", "Paraguay", "Argentina"]
             },
         "europe": {
             "legend": {
