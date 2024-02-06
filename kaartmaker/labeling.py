@@ -33,6 +33,19 @@ legend_area = {
             "subtitle_source": [0.09, -0.06],
             "countries": ["Guatemala", "Mexico", "Panama"]
             },
+        "central asia": {
+            "legend": {
+                "geometry": [57, 7.75],
+                "label": [59.5, 7.75],
+                "size": 3.5,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.01, -0.05],
+            "subtitle": [0.01, -0.06],
+            "subtitle_source": [0.09, -0.06],
+            "countries": ["India"]
+            },
         "south america": {
             "legend": {
                 "geometry": [-89, -43.7],
@@ -57,6 +70,18 @@ legend_area = {
             "subtitle": [0.03, -0.06],
             "subtitle_source": [0.1, -0.06],
             "countries": ["Slovenia", "Hungary", "Austria"]
+            },
+        "western asia": {
+            "legend": {
+                "geometry": [32.25, 17],
+                "label": [33.75, 17],
+                "size": 1,
+                "spacing": 1.6
+            },
+            "title": [0.007, -0.03],
+            "subtitle": [0.007, -0.04],
+            "subtitle_source": [0.09, -0.04],
+            "countries": ["Israel", "Georgia", "Jordan"]
             }
         }
 
