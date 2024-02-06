@@ -1,7 +1,7 @@
 #!python3.12
 from click import option, command
 import geopandas as gpd
-from kaartmaker.constants import VERSION, country_labels, continent_boundaries, PWD
+from kaartmaker.constants import PWD, VERSION, country_labels, continent_boundaries
 from kaartmaker.process_dataset import process_csv 
 from kaartmaker.labeling import add_label, draw_legend_and_title
 from os import path
@@ -187,18 +187,21 @@ def main(
         maps = [world_map_data, map_data]
         boundary_index = 1
         labels = country_labels[region.lower()]
+        size = (40, 40)
     else:
         map_data = process_csv(world_map_data, csv)
         maps = [map_data]
         boundary_index = 0
         labels = []
+        size = (40, 19)
 
     ax = draw_map(maps_to_draw=maps,
                   boundry_map_index=boundary_index,
                   title=region.title(),
                   padding=continent_boundaries[region.lower()],
                   use_hatch_for_indexes=[2],
-                  labels=labels)
+                  labels=labels,
+                  figsize=size)
 
     region = region.lower()
 

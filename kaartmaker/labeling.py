@@ -8,6 +8,19 @@ import pandas as pd
 
 
 legend_area = {
+        "asia": {
+            "legend": {
+                "geometry": [-24.5, -23.55],
+                "label": [-22.3, -23.55],
+                "size": 3.75,
+                "font_size": 28,
+                "spacing": 4.5,
+            },
+            "title": [0.03, -0.05],
+            "subtitle": [0.03, -0.06],
+            "subtitle_source": [0.1, -0.06],
+            "countries": ["Israel"]
+            },
         "africa": {
             "legend": {
                 "geometry": [-24.5, -23.55],

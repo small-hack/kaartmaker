@@ -13,9 +13,9 @@ continent_boundaries = {
                          "pad_right": 0.02},
                         "asia": 
                         {"pad_bottom": 0,
-                         "pad_top": 0,
-                         "pad_left": 0,
-                         "pad_right": 0},
+                         "pad_top": -0.075,
+                         "pad_left": -0.576,
+                         "pad_right": -0.085},
                         "caribbean": 
                         {"pad_bottom": -0.01,
                          "pad_top": 0,
