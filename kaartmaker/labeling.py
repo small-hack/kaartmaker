@@ -123,7 +123,6 @@ def do_legend(ax: axes, region: str, map_data):
 
 
     for i, row in legend.reset_index().iterrows():
-        print(row)
         draw_legend_geometry(ax,
                              row,
                              legend_xy[0],
@@ -163,7 +162,6 @@ def draw_legend_geometry(ax: axes,
     """
     # some countries are a single blob
     if row.geometry.geom_type == "Polygon":
-        # print("is polygon")
         x = np.array(row.geometry.boundary.coords.xy[0])
         y = np.array(row.geometry.boundary.coords.xy[1])
         
