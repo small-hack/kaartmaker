@@ -255,7 +255,7 @@ def draw_legend_and_title(ax: axes,
 
     sources = "naturalearthdata.com"
     if source:
-        sources = sources + " and " + source
+        sources = sources + "\n" + source
     ax.annotate(sources,
                 (subtitle_source[0], subtitle_source[1]),
                 va="center",
