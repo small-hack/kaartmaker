@@ -152,6 +152,10 @@ def draw_map(
 @option("--source", "-s",
         help=HELP['source'],
         default="gadebate.un.org")
+@option("--reverse_colors", "-R",
+        help=HELP['reverse_colors'],
+        default=False,
+        is_flag=True)
 @option("--version", "-v",
         is_flag=True,
         help=HELP['version'])
@@ -162,7 +166,8 @@ def main(
         save_png: bool = True,
         version: bool = True,
         title: str = "UNGA",
-        source: str = "gadebate.un.org"
+        source: str = "gadebate.un.org",
+        reverse_colors: bool = False
         ):
     if version:
         print(VERSION)
@@ -188,7 +193,7 @@ def main(
         map_data = determine_regional_area(world_map_data, region.title())
 
         # process country properties to add to the world_map_data geojson dataframe
-        map_data = process_csv(map_data, csv)
+        map_data = process_csv(map_data, csv, reverse_colors=reverse_colors)
 
         # get labels for each country if applicable
         labels = country_labels[region.lower()]
@@ -201,7 +206,7 @@ def main(
             boundary_index = 1
             maps = [world_map_data, map_data]
     else:
-        map_data = process_csv(world_map_data, csv)
+        map_data = process_csv(world_map_data, csv, reverse_colors=reverse_colors)
         maps = [map_data]
         boundary_index = 0
         labels = []

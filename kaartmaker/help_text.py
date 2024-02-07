@@ -32,16 +32,18 @@ def options_help():
     Help text for all the options/switches for main()
     Returns a dict.
     """
-    region_choices = pretty_choices(["world", "europe", "africa", "asia", "oceania", 
-                                     "western asia", "central asia", "eastern asia",
-                                     "caribbean", "north america", "south america",
-                                     "central america"])
+    region_choices = pretty_choices([
+        "world", "europe", "africa", "asia", "oceania", "western asia",
+        "central asia", "eastern asia", "caribbean", "north america",
+        "south america", "central america"
+        ])
     help_dict = {
         'region':
         f'Region for map generation. {region_choices}',
 
         'csv':
-        'pass in a csv file with columns: NAME_EN and VOTES',
+        'pass in a csv file with columns: NAME_EN and VOTE. vote must be YES|NO'
+        ' or AGAINST|IN FAVOR',
 
         'save_geojson':
         'save a geojson for the given region',
@@ -56,7 +58,10 @@ def options_help():
         'Title to print above legend in generated map',
 
         'source':
-        'Source link to include in subtitle.'
+        'Source link to include in subtitle.',
+
+        'reverse_colors':
+        'Reverse colors to use blue for NO|AGAINST and orange for YES|IN FAVOR'
         }
 
     return help_dict
