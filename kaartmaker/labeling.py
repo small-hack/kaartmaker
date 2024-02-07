@@ -10,81 +10,93 @@ import pandas as pd
 legend_area = {
         "asia": {
             "legend": {
-                "geometry": [-24.5, -23.55],
-                "label": [-22.3, -23.55],
-                "size": 3.75,
+                "geometry": [35, 0.09],
+                "label": [42, 0.09],
+                "size": 3.4,
                 "font_size": 28,
                 "spacing": 4.5,
             },
-            "title": [0.03, -0.05],
-            "subtitle": [0.03, -0.06],
-            "subtitle_source": [0.1, -0.06],
-            "countries": ["Israel"]
+            "title": [29, 4],
+            "subtitle": [29, 3],
+            "subtitle_source": [37, 3],
+            "countries": ["Israel", "Russia", "Georgia"]
             },
         "africa": {
             "legend": {
-                "geometry": [-24.5, -23.55],
-                "label": [-22.3, -23.55],
-                "size": 3.75,
+                "geometry": [-23, -22],
+                "label": [-20, -22],
+                "size": 4.5,
                 "font_size": 28,
-                "spacing": 4.5,
+                "spacing": 5,
             },
-            "title": [0.03, -0.05],
-            "subtitle": [0.03, -0.06],
-            "subtitle_source": [0.1, -0.06],
+            "title": [-25, -17],
+            "subtitle": [-25, -18],
+            "subtitle_source": [-20, -18],
             "countries": ["Chad", "Togo", "Liberia"]
             },
         "caribbean": {
             "legend": {
-                "geometry": [-77.6, 12.3],
-                "label": [-76.6, 12.3],
+                "geometry": [-77.6, 13],
+                "label": [-76.6, 13],
                 "size": 0.75,
                 "font_size": 28,
                 "spacing": 1,
             },
-            "title": [0.02, -0.05],
-            "subtitle": [0.02, -0.06],
-            "subtitle_source": [0.09, -0.06],
+            "title": [-78.5, 14],
+            "subtitle": [-78.5, 13.75],
+            "subtitle_source": [-77, 13.75],
             "countries": ["Jamaica", "Haiti"]
             },
         "central america": {
             "legend": {
-                "geometry": [-115, 13.05],
-                "label": [-112, 13.05],
-                "size": 2,
+                "geometry": [-115, 11],
+                "label": [-112, 11],
+                "size": 1.5,
                 "font_size": 28,
-                "spacing": 3,
+                "spacing": 2.25,
             },
-            "title": [0.02, -0.05],
-            "subtitle": [0.02, -0.06],
-            "subtitle_source": [0.09, -0.06],
+            "title": [-117, 13],
+            "subtitle": [-117, 12.5],
+            "subtitle_source": [-114, 12.5],
             "countries": ["Guatemala", "Mexico", "Panama"]
             },
         "central asia": {
             "legend": {
-                "geometry": [57, 7.75],
-                "label": [59.5, 7.75],
+                "geometry": [54, 10],
+                "label": [57, 10],
                 "size": 3.5,
                 "font_size": 28,
                 "spacing": 4.5,
             },
-            "title": [0.01, -0.05],
-            "subtitle": [0.01, -0.06],
-            "subtitle_source": [0.09, -0.06],
+            "title": [51, 13],
+            "subtitle": [51, 12.5],
+            "subtitle_source": [56, 12.5],
             "countries": ["India"]
             },
         "eastern asia": {
             "legend": {
-                "geometry": [97, -9.7],
-                "label": [99, -9.7],
+                "geometry": [130, 16.8],
+                "label": [132, 16.8],
                 "size": 2,
                 "font_size": 28,
                 "spacing": 4.5,
             },
-            "title": [0.01, -0.05],
-            "subtitle": [0.01, -0.06],
-            "subtitle_source": [0.09, -0.06],
-            "countries": ["Cambodia"]
+            "title": [128.9, 20],
+            "subtitle": [128.9, 19],
+            "subtitle_source": [134, 19],
+            "countries": ["Vietnam"]
+            },
+        "europe": {
+            "legend": {
+                "geometry": [-18.2, 59],
+                "label": [-16.5, 59],
+                "size": 1.1,
+                "spacing": 1.6
+            },
+            "title": [-19.9, 60.5],
+            "subtitle": [-19.9, 60],
+            "subtitle_source": [-16, 60],
+            "countries": ["Slovenia", "Hungary", "Austria"]
             },
         "oceania": {
             "legend": {
@@ -94,35 +106,23 @@ legend_area = {
                 "font_size": 28,
                 "spacing": 4.5,
             },
-            "title": [0.01, -0.05],
-            "subtitle": [0.01, -0.06],
-            "subtitle_source": [0.09, -0.06],
+            "title": [115, -44.5],
+            "subtitle": [115, -45.5],
+            "subtitle_source": [120.5, -45.5],
             "countries": ["Australia", "Papua New Guinea"]
             },
         "south america": {
             "legend": {
-                "geometry": [-89, -45],
-                "label": [-86, -45],
+                "geometry": [-90, -30],
+                "label": [-87, -30],
                 "size": 3.75,
                 "font_size": 28,
                 "spacing": 4.5,
             },
-            "title": [0.01, -0.05],
-            "subtitle": [0.01, -0.06],
-            "subtitle_source": [0.09, -0.06],
+            "title": [-92, -26],
+            "subtitle": [-92, -27],
+            "subtitle_source": [-87, -27],
             "countries": ["Brazil", "Paraguay", "Argentina"]
-            },
-        "europe": {
-            "legend": {
-                "geometry": [-17.2, 40],
-                "label": [-15.5, 40],
-                "size": 0.8,
-                "spacing": 1.6
-            },
-            "title": [0.03, -0.05],
-            "subtitle": [0.03, -0.06],
-            "subtitle_source": [0.1, -0.06],
-            "countries": ["Slovenia", "Hungary", "Austria"]
             },
         "western asia": {
             "legend": {
@@ -131,22 +131,24 @@ legend_area = {
                 "size": 1,
                 "spacing": 1.6
             },
-            "title": [0.007, -0.03],
-            "subtitle": [0.007, -0.04],
-            "subtitle_source": [0.09, -0.04],
+            "title": [30.75, 18.5],
+            "subtitle": [30.75, 18],
+            "subtitle_source": [33.2, 18],
             "countries": ["Israel", "Georgia", "Jordan"]
             },
         "world": {
             "legend": {
-                "geometry": [-152, -31],
-                "label": [-139.5, -31],
+                "geometry": [-156, -31],
+                "label": [-142, -31],
                 "size": 7.5,
                 "font_size": 28,
-                "spacing": 9.3,
+                "spacing": 9.7,
             },
-            "title": [0.02, -0.05],
-            "subtitle": [0.02, -0.075],
-            "subtitle_source": [0.085, -0.075],
+            "title": [-165, -21],
+            "title_size": 32,
+            "subtitle": [-165, -24],
+            "subtitle_source": [-144, -24],
+            "subtitle_size": 22,
             "countries": ["Brazil", "United States of America", "Germany"]
             },
         }
@@ -191,7 +193,11 @@ def add_label(ax,
     annotation.set_path_effects([PathEffects.withStroke(linewidth=6, foreground='w')])
 
 
-def draw_legend_and_title(ax: axes, region: str, map_data: GeoDataFrame):
+def draw_legend_and_title(ax: axes,
+                          region: str,
+                          map_data: GeoDataFrame,
+                          legend_title: str = "",
+                          source: str = ""):
     """ 
     draw a legend using countries' shapes as the legend, title, and subtitle
     """
@@ -209,8 +215,10 @@ def draw_legend_and_title(ax: axes, region: str, map_data: GeoDataFrame):
 
     # title and sources annotation
     title = legend_area[region]["title"]
+    title_size = legend_area[region].get("title_size", 42)
     subtitle = legend_area[region]["subtitle"]
     subtitle_source = legend_area[region]["subtitle_source"]
+    subtitle_size = legend_area[region].get("subtitle_size", 24)
 
 
     for i, row in legend.reset_index().iterrows():
@@ -228,26 +236,32 @@ def draw_legend_and_title(ax: axes, region: str, map_data: GeoDataFrame):
 
     fontstyles = {"fontweight": "bold", "ha": "left"}
 
-    # data source and
-    plt.annotate("Data source:",
-                 xy=(subtitle[0], subtitle[1]),
-                 fontsize=24,
-                 xycoords="axes fraction", **fontstyles)
-    plt.annotate("naturalearthdata.com and gadebate.un.org",
-                 xy=(subtitle_source[0], subtitle_source[1]),
-                 fontsize=24,
-                 xycoords="axes fraction",
-                 color="#1B998B", **fontstyles)
-
     if region == "world":
         title_region = ""
+    elif region == "south america" or region == "western asia":
+        title_region = f"\n({region.title()})" 
     else:
         title_region = f" ({region.title()})" 
 
-    plt.title(f"UNGA on Ceasefire in Gaza{title_region}",
-              x=title[0], y=title[1],
-              fontsize=42,
-              **fontstyles)
+    ax.annotate(f"{legend_title}{title_region}",
+                (title[0], title[1]),
+                fontsize=title_size, **fontstyles)
+
+    # data source subtitle and actual sources
+    ax.annotate("Data source:",
+                (subtitle[0], subtitle[1]),
+                va="center",
+                fontsize=subtitle_size, **fontstyles)
+
+    sources = "naturalearthdata.com"
+    if source:
+        sources = sources + " and " + source
+    ax.annotate(sources,
+                (subtitle_source[0], subtitle_source[1]),
+                va="center",
+                color="#785EF0",
+                fontsize=subtitle_size, **fontstyles)
+
 
 
 def draw_legend_geometry(ax: axes,

@@ -32,10 +32,10 @@ def options_help():
     Help text for all the options/switches for main()
     Returns a dict.
     """
-    region_choices = pretty_choices(["europe", "africa", "western asia",
-                                     "central asia", "caribbean", "eastern asia",
-                                     "world", "north america", "oceania",
-                                     "south america", "central america"])
+    region_choices = pretty_choices(["world", "europe", "africa", "asia", "oceania", 
+                                     "western asia", "central asia", "eastern asia",
+                                     "caribbean", "north america", "south america",
+                                     "central america"])
     help_dict = {
         'region':
         f'Region for map generation. {region_choices}',
@@ -50,7 +50,13 @@ def options_help():
         'save a png for the given region',
 
         'version':
-        f'Print the version of kaartmaker (v{VERSION})'
+        f'Print the version of kaartmaker (v{VERSION})',
+
+        'title':
+        'Title to print above legend in generated map',
+
+        'source':
+        'Source link to include in subtitle.'
         }
 
     return help_dict

@@ -1,77 +1,173 @@
 from importlib.metadata import version as get_version
 from os import path
-PWD = path.dirname(__file__)
 
+# path the script is running from
+PWD = path.dirname(__file__)
 # version of kaartmaker
 VERSION = get_version('kaartmaker')
 
+
 continent_boundaries = {
-                        "africa": 
-                        {"pad_bottom": 0,
-                         "pad_top": 0.04,
-                         "pad_left": 0.04,
-                         "pad_right": 0.02},
-                        "asia": 
-                        {"pad_bottom": 0,
-                         "pad_top": -0.075,
-                         "pad_left": -0.576,
-                         "pad_right": -0.085},
-                        "caribbean": 
-                        {"pad_bottom": -0.01,
-                         "pad_top": 0,
-                         "pad_left": -0.24,
-                         "pad_right": 0},
-                        "central america": 
-                        {"pad_bottom": 0,
-                         "pad_top": 0,
-                         "pad_left": 0,
-                         "pad_right": 0},
-                        "central asia": 
-                        {"pad_bottom": -0.08,
-                         "pad_top": -0.36,
-                         "pad_left": -0.65,
-                         "pad_right": -0.23},
-                        "eastern asia": 
-                        {"pad_bottom": 0,
-                         "pad_top": -0.381,
-                         "pad_left": -0.763,
-                         "pad_right": -0.07},
-                        "europe": 
-                        {"pad_bottom": -0.03,
-                         "pad_top": -0.37,
-                         "pad_left": -0.04,
-                         "pad_right": -0.33},
-                        "north america": 
-                        {"pad_bottom": -0.23,
-                         "pad_top": -0.2,
-                         "pad_left": -0.15,
-                         "pad_right": -0.58},
-                        "oceania": 
-                        {"pad_bottom": 0,
-                         "pad_top": -0.076,
-                         "pad_left": -0.815,
-                         "pad_right": 0.05},
-                        "south america": 
-                        {"pad_bottom": 0,
-                         "pad_top": -0.035,
-                         "pad_left": 0,
-                         "pad_right": -0.06},
-                        "western asia": 
-                        {"pad_bottom": -0.02,
-                         "pad_top": -0.02,
-                         "pad_left": -0.15,
-                         "pad_right": -0.08},
-                        "world": 
-                        {"pad_bottom": -0.2,
-                         "pad_top": 0,
-                         "pad_left": -0.03,
-                         "pad_right": 0},
+                        "africa": {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": 0.04,
+                                "pad_left": 0.04,
+                                "pad_right": 0.02
+                                },
+                            "size": (40, 38)
+                         },
+                        "asia":  {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": -0.21,
+                                "pad_left": -0.576,
+                                "pad_right": -0.096
+                                },
+                            "size": (37, 28)
+                         },
+                        "caribbean":  {
+                            "padding": {
+                                "pad_bottom": -0.01,
+                                "pad_top": 0,
+                                "pad_left": -0.24,
+                                "pad_right": 0
+                                },
+                            "size": (40, 40)
+                         },
+                        "central america":  {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": 0,
+                                "pad_left": 0,
+                                "pad_right": 0
+                                },
+                            "size": (40, 29)
+                         },
+                        "central asia":  {
+                            "padding": {
+                                "pad_bottom": -0.08,
+                                "pad_top": -0.36,
+                                "pad_left": -0.64,
+                                "pad_right": -0.23
+                                },
+                            "size": (30, 39.5)
+                         },
+                        "eastern asia":  {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": -0.381,
+                                "pad_left": -0.755,
+                                "pad_right": -0.07
+                                },
+                            "size": (37, 40)
+                         },
+                        "europe":  {
+                            "padding": {
+                                "pad_bottom": -0.03,
+                                "pad_top": -0.37,
+                                "pad_left": -0.04,
+                                "pad_right": -0.33
+                                },
+                            "size": (40, 36.75)
+                         },
+                        "north america":  {
+                            "padding": {
+                                "pad_bottom": -0.23,
+                                "pad_top": -0.2,
+                                "pad_left": -0.15,
+                                "pad_right": -0.58
+                                },
+                            "size": (40, 40)
+                         },
+                        "oceania":  {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": -0.076,
+                                "pad_left": -0.815,
+                                "pad_right": 0.05
+                                },
+                            "size": (40, 40)
+                         },
+                        "south america":  {
+                            "padding": {
+                                "pad_bottom": 0,
+                                "pad_top": -0.035,
+                                "pad_left": 0,
+                                "pad_right": -0.06
+                                },
+                            "size": (35, 40)
+                         },
+                        "western asia":  {
+                            "padding": {
+                                "pad_bottom": -0.02,
+                                "pad_top": -0.02,
+                                "pad_left": -0.15,
+                                "pad_right": -0.08
+                                },
+                            "size": (35, 40)
+                         },
+                        "world":  {
+                            "padding": {
+                                "pad_bottom": -0.2,
+                                "pad_top": 0,
+                                "pad_left": -0.03,
+                                "pad_right": 0
+                                },
+                            "size": (40, 17.25)
+                         },
                         }
 
 country_labels = {
         "asia": [
-            {"label": "China", "xytext": (81.68, 38.74)},
+            {"label": "Afghanistan", "xytext": (65.5, 33.3)},
+            {"label": "Armenia", "xypin": (44.25, 40.53), "xytext": (43.5, 45)},
+            {"label": "Azerbaijan", "xypin": (47.62, 40.44), "xytext": (47.62, 43.25)},
+            {"label": "Bangladesh", "xytext": (89.89, 20), "xypin": (89.89, 24.51), "font_size": 20},
+            {"label": "Bhutan", "xytext": (90.46, 27.49), "font_size": 18},
+            {"label": "Brunei", "xypin": (114.59, 4.48), "xytext": (113.88, 6.06)},
+            {"label": "Cambodia", "xypin": (104.6, 12.79), "xytext": (104.5, 7.75)},
+            {"label": "China", "xytext": (96, 36), "font_size": 28},
+            {"label": "Cyprus", "xytext": (30, 35), "xypin": (33.18, 34.96), "font_size": 20},
+            {"label": "Georgia", "xytext": (36, 44), "xypin": (41.5, 43)},
+            {"label": "India", "xytext": (78.08, 21.4), "font_size": 28},
+            {"label": "Indonesia", "xytext": (113.9, -0.78), "xypin": (101.76, -0.62)},
+            {"label": "Indonesia", "xytext": (113.9, -0.78), "xypin": (138.87, -4.41)},
+            {"label": "Iran", "xytext": (55, 31.0), "font_size": 28},
+            {"label": "Iraq", "xytext": (42.53, 33.17)},
+            {"label": "Israel", "xytext": (31.15, 31.6), "xypin": (35.30, 32.72)},
             {"label": "Japan", "xytext": (138.40, 36.04)},
+            {"label": "Jordan", "xypin": (36.41, 30.5), "xytext": (31, 26)},
+            {"label": "Kazakhstan", "xytext": (68.32, 46)},
+            {"label": "Kyrgyzstan", "xytext": (74.52, 41.55), "font_size": 22},
+            {"label": "Kuwait", "xytext": (49.58, 28.71), "xypin": (47.4, 29), "font_size": 16},
+            {"label": "Lebanon", "xypin": (35.82, 33.95), "xytext": (31.4, 33.6)},
+            {"label": "Laos", "xytext": (102.46, 19.96), "font_size": 18},
+            {"label": "Malaysia", "xypin": (102, 4.19), "xytext": (96, 7)},
+            {"label": "Mongolia", "xytext": (101, 46)},
+            {"label": "Myanmar\n(Burma)", "xytext": (95.81, 21.43), "font_size": 22},
+            {"label": "Nepal", "xytext": (83.38, 28.385), "font_size": 20},
+            {"label": "North Korea", "xypin": (127, 39.89), "xytext": (135, 41)},
+            {"label": "Oman", "xytext": (55, 19)},
+            {"label": "Pakistan", "xytext": (67.2,28.30)},
+            {"label": "Palestine", "xytext": (31, 29), "xypin": (35.30, 31.97)},
+            {"label": "Palestine", "xytext": (31, 29), "xypin": (34.46, 31.50)},
+            {"label": "Philippines", "xypin": (121, 15.86), "xytext": (127, 16.55)},
+            {"label": "Qatar", "xytext": (53.5, 26), "xypin": (51.2, 25.5), "font_size": 18},
+            {"label": "Russia", "xytext": (93, 56), "font_size": 28},
+            {"label": "Saudi Arabia", "xytext": (44.02, 24.31), "font_size": 28},
+            {"label": "Singapore", "xypin": (103.9, 1.36), "xytext": (106.71, 3), "font_size": 22},
+            {"label": "South Korea", "xypin": (127.94, 36.50), "xytext": (133, 38)},
+            {"label": "Sri Lanka", "xypin": (80.71, 7.56), "xytext": (84.5, 9.27)},
+            {"label": "Syria", "xytext": (38.55, 35.20)},
+            {"label": "Tajikistan", "xytext": (70.66, 38.73), "font_size": 22},
+            {"label": "Thailand", "xytext": (101.5, 16.18)},
+            {"label": "Turkmenistan", "xytext": (59, 39)},
+            {"label": "Turkey", "xytext": (34.44, 38.77), "font_size": 28},
+            {"label": "Uzbekistan", "xytext": (62, 42.6), "font_size": 22},
+            {"label": "United\nArab\nEmirates", "xytext": (64, 22), "xypin": (54.03, 23.67), "font_size": 22},
+            {"label": "Vietnam", "xypin": (108.6, 13.9), "xytext": (113, 14.0)},
+            {"label": "Yemen", "xytext": (46.72, 15.77), "font_size": 28},
             ],
         "central asia": [
             {"label": "Afghanistan", "xytext": (65.80, 33.3), "font_size": 28},
@@ -265,21 +361,21 @@ country_labels = {
     {"label": "United\nKingdom", "xytext": (-1.37, 52.83)}
     ],
         "south america": [
-    {"label": "Agentina", "xytext": (-64.59, -35.23)},
-    {"label": "Bolivia", "xytext": (-64.68, -16.80)},
-    {"label": "Brazil", "xytext": (-54.13, -9.28)},
-    {"label": "Chile", "xytext": (-75.23, -23.71), "xypin": (-69.13, -23.45)},
-    {"label": "Colombia", "xytext": (-73.64, 4.15)},
-    {"label": "Ecuador", "xypin": (-78.58, -1.04), "xytext": (-82.70, 1.49)},
-    {"label": "Ecuador", "xypin": (-91.04, -0.74), "xytext": (-82.70, 1.49)},
-    {"label": "Falkland Islands", "xypin": (-58.86, -51.60), "xytext": (-59.49, -50.12)},
-    {"label": "French Guiana", "xypin": (-52.76, 4.62), "xytext": (-50.10, 6.53)},
-    {"label": "Guyana", "xypin": (-58.97, 5.97), "xytext": (-57.13, 9.47)},
-    {"label": "Paraguay", "xytext": (-58.22, -22.96)},
-    {"label": "Peru", "xytext": (-76.03, -9.31)},
-    {"label": "Suriname", "xytext": (-54.01, 8.26), "xypin": (-55.59, 4.85)},
-    {"label": "Uruguay", "xytext": (-55.96, -32.81)},
-    {"label": "Venezuela", "xytext": (-65.73, 8.36)}
+    {"label": "Agentina", "xytext": (-64.59, -35.23), "font_size": 28},
+    {"label": "Bolivia", "xytext": (-64.68, -16.80), "font_size": 28},
+    {"label": "Brazil", "xytext": (-54.13, -9.28), "font_size": 28},
+    {"label": "Chile", "xytext": (-75.23, -20), "xypin": (-69.13, -23.45), "font_size": 28},
+    {"label": "Colombia", "xytext": (-73.64, 4.15), "font_size": 28},
+    {"label": "Ecuador", "xypin": (-78.58, -1.04), "xytext": (-82.70, 1.49), "font_size": 28},
+    {"label": "Ecuador", "xypin": (-91.04, -0.74), "xytext": (-82.70, 1.49), "font_size": 28},
+    {"label": "Falkland Islands", "xypin": (-58.86, -51.60), "xytext": (-59.49, -50.12), "font_size": 28},
+    {"label": "French Guiana", "xypin": (-52.76, 4.62), "xytext": (-50.10, 6.53), "font_size": 28},
+    {"label": "Guyana", "xypin": (-58.97, 5.97), "xytext": (-57.13, 9.47), "font_size": 28},
+    {"label": "Paraguay", "xytext": (-58.22, -22.96), "font_size": 28},
+    {"label": "Peru", "xytext": (-76.03, -9.31), "font_size": 28},
+    {"label": "Suriname", "xytext": (-54.01, 8.26), "xypin": (-55.59, 4.85), "font_size": 28},
+    {"label": "Uruguay", "xytext": (-55.96, -32.81), "font_size": 28},
+    {"label": "Venezuela", "xytext": (-65.73, 8.36), "font_size": 28}
     ],
         "central america": [
     {"label": "Belize", "xypin": (-89.0, 17.16), "xytext": (-86.9, 17.25), "font_size": 28},
