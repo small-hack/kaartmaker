@@ -1,14 +1,32 @@
-# Make labeled maps of continental regions
+# Kaartmaker
+Make world and regional labeled maps based on voting. Most commonly used for representing UN General Assembly votes.
 
-I got the data from https://www.naturalearthdata.com/
+![Map of world Ukraine votes](./examples/world_UNGA_vote_on_ceasefire_in_Ukraine.png)
 
-I downloaded the map sovereignty, units, subunits, and disputed areas from:
+![Map of world Gaza votes](./examples/world_UNGA_vote_on_ceasefire_in_Gaza.png)
+
+
+Maps (sovereignty, units, subunits, and disputed areas) downloaded from:
 https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/
 
-You can do the same with the [download_geojson.sh](./download_geojson.sh) script in this repo.
+### Secondary features
 
-## Secondary features
+- You can do download geojson files with the [download_geojson.sh](./download_geojson.sh) script in this repo.
 
-You can also generate geojson files for specific regions :)
+- generate geojson files for specific regions :)
 
-Colors selected from: https://davidmathlogic.com/colorblind
+- Colors are colorblind friendly, selected from: https://davidmathlogic.com/colorblind
+
+## How To
+
+To use `kaartmaker`, you'll need to provide a CSV file with columns called `NAME_EN` and `VOTE`. Valid votes are `YES`|`NO` or `AGAINST`|`ABSTENTION`|`IN FAVOR` Example when documenting :
+
+```csv
+NAME_EN,VOTE
+Brazil,IN FAVOR
+Czechia,AGAINST
+Germany,ABSTENTION
+```
+
+# status
+Mostly stable, but happy to take a look at Issues and Pull Requests :)
