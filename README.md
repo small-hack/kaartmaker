@@ -1,10 +1,19 @@
 # Kaartmaker
 Make world and regional labeled maps based on voting. Most commonly used for representing UN General Assembly votes.
 
+```bash
+kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_ukraine_votes.csv -t "UNGA vote on ceasefire in Ukraine" -s "gadebate.un.org"
+```
 ![Map of world Ukraine votes](./examples/world_UNGA_vote_on_ceasefire_in_Ukraine.png)
 
+```bash
+kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_palestine_votes.csv -t "UNGA on Ceasefire in Gaza" -s "gadebate.un.org" -r world
+```
 ![Map of world Gaza votes](./examples/world_UNGA_vote_on_ceasefire_in_Gaza.png)
 
+```bash
+kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_palestine_votes.csv -t "UNGA on Ceasefire in Gaza" -s "gadebate.un.org" -r europe
+```
 ![Map of Europe Gaza votes](./examples/europe_UNGA_on_Ceasefire_in_Gaza.png)
 
 
@@ -17,6 +26,9 @@ Make world and regional labeled maps based on voting. Most commonly used for rep
 
 ## How To
 
+```bash
+kaartmaker --help
+```
 ![SVG showing the full help text when you run kaartmaker --help](./examples/help_text.svg)
 
 
