@@ -149,7 +149,7 @@ legend_area = {
             "subtitle": [-165, -24],
             "subtitle_source": [-144, -24],
             "subtitle_size": 22,
-            "countries": ["Brazil", "United States of America", "Germany"]
+            "countries": ["Spain", "United States of America", "Austria"]
             },
         }
 
