@@ -19,6 +19,8 @@ https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-deta
 
 ## How To
 
+![SVG showing the full help text when you run kaartmaker --help](./examples/help_text.svg)
+
 To use `kaartmaker`, you'll need to provide a CSV file with columns called `NAME_EN` and `VOTE`. Valid votes are `YES`|`NO` or `AGAINST`|`ABSTENTION`|`IN FAVOR` Example when documenting :
 
 ```csv

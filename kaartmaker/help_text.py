@@ -151,4 +151,4 @@ class RichCommand(click.Command):
 
         # I use this to print a pretty svg at the end sometimes
         if RECORD:
-            console.save_svg("screenshots/help_text.svg", title="term")
+            console.save_svg("examples/help_text.svg", title="term")
