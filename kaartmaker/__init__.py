@@ -146,6 +146,7 @@ def draw_map(
         default=True,
         help=HELP['save_png'])
 @option("--title", "-t",
+        metavar="TITLE",
         help=HELP['title'],
         type=str)
 @option("--source", "-s",
@@ -161,6 +162,7 @@ def draw_map(
         default=False,
         is_flag=True)
 @option("--legend_countries", "-l",
+        metavar="COUNTRIES",
         help=HELP['legend_countries'],
         type=list
         )
