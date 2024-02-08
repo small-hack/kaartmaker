@@ -1,0 +1,1327 @@
+{
+    "asia": [
+        {
+            "label": "Afghanistan",
+            "xytext": [65.5, 33.3]
+        },
+        {
+            "label": "Armenia",
+            "xypin": [44.25, 40.53],
+            "xytext": [43.5, 45]
+        },
+        {
+            "label": "Azerbaijan",
+            "xypin": [47.62, 40.44],
+            "xytext": [47.62, 43.25]
+        },
+        {
+            "label": "Bangladesh",
+            "xytext": [89.89, 20],
+            "xypin": [89.89, 24.51],
+            "font_size": 20
+        },
+        {
+            "label": "Bhutan",
+            "xytext": [90.46, 27.49],
+            "font_size": 18
+        },
+        {
+            "label": "Brunei",
+            "xypin": [114.59, 4.48],
+            "xytext": [113.88, 6.06]
+        },
+        {
+            "label": "Cambodia",
+            "xypin": [104.6, 12.79],
+            "xytext": [104.5, 7.75]
+        },
+        {
+            "label": "China",
+            "xytext": [96, 36],
+            "font_size": 28
+        },
+        {
+            "label": "Cyprus",
+            "xytext": [30, 35],
+            "xypin": [33.18, 34.96],
+            "font_size": 20
+        },
+        {
+            "label": "Georgia",
+            "xytext": [36, 44],
+            "xypin": [41.5, 43]
+        },
+        {
+            "label": "India",
+            "xytext": [78.08, 21.4],
+            "font_size": 28
+        },
+        {
+            "label": "Indonesia",
+            "xytext": [113.9, -0.78],
+            "xypin": [101.76, -0.62]
+        },
+        {
+            "label": "Indonesia",
+            "xytext": [113.9, -0.78],
+            "xypin": [138.87, -4.41]
+        },
+        {
+            "label": "Iran",
+            "xytext": [55, 31.0],
+            "font_size": 28
+        },
+        {
+            "label": "Iraq",
+            "xytext": [42.53, 33.17]
+        },
+        {
+            "label": "Israel",
+            "xytext": [31.15, 31.6],
+            "xypin": [35.3, 32.72]
+        },
+        {
+            "label": "Japan",
+            "xytext": [138.4, 36.04]
+        },
+        {
+            "label": "Jordan",
+            "xypin": [36.41, 30.5],
+            "xytext": [31, 26]
+        },
+        {
+            "label": "Kazakhstan",
+            "xytext": [68.32, 46]
+        },
+        {
+            "label": "Kyrgyzstan",
+            "xytext": [74.52, 41.55],
+            "font_size": 22
+        },
+        {
+            "label": "Kuwait",
+            "xytext": [49.58, 28.71],
+            "xypin": [47.4, 29],
+            "font_size": 16
+        },
+        {
+            "label": "Lebanon",
+            "xypin": [35.82, 33.95],
+            "xytext": [31.4, 33.6]
+        },
+        {
+            "label": "Laos",
+            "xytext": [102.46, 19.96],
+            "font_size": 18
+        },
+        {
+            "label": "Malaysia",
+            "xypin": [102, 4.19],
+            "xytext": [96, 7]
+        },
+        {
+            "label": "Mongolia",
+            "xytext": [101, 46]
+        },
+        {
+            "label": "Myanmar\n(Burma)",
+            "xytext": [95.81, 21.43],
+            "font_size": 22
+        },
+        {
+            "label": "Nepal",
+            "xytext": [83.38, 28.385],
+            "font_size": 20
+        },
+        {
+            "label": "North Korea",
+            "xypin": [127, 39.89],
+            "xytext": [135, 41]
+        },
+        {
+            "label": "Oman",
+            "xytext": [55, 19]
+        },
+        {
+            "label": "Pakistan",
+            "xytext": [67.2, 28.3]
+        },
+        {
+            "label": "Palestine",
+            "xytext": [31, 29],
+            "xypin": [35.3, 31.97]
+        },
+        {
+            "label": "Palestine",
+            "xytext": [31, 29],
+            "xypin": [34.46, 31.5]
+        },
+        {
+            "label": "Philippines",
+            "xypin": [121, 15.86],
+            "xytext": [127, 16.55]
+        },
+        {
+            "label": "Qatar",
+            "xytext": [53.5, 26],
+            "xypin": [51.2, 25.5],
+            "font_size": 18
+        },
+        {
+            "label": "Russia",
+            "xytext": [93, 56],
+            "font_size": 28
+        },
+        {
+            "label": "Saudi Arabia",
+            "xytext": [44.02, 24.31],
+            "font_size": 28
+        },
+        {
+            "label": "Singapore",
+            "xypin": [103.9, 1.36],
+            "xytext": [106.71, 3],
+            "font_size": 22
+        },
+        {
+            "label": "South Korea",
+            "xypin": [127.94, 36.5],
+            "xytext": [133, 38]
+        },
+        {
+            "label": "Sri Lanka",
+            "xypin": [80.71, 7.56],
+            "xytext": [84.5, 9.27]
+        },
+        {
+            "label": "Syria",
+            "xytext": [38.55, 35.2]
+        },
+        {
+            "label": "Tajikistan",
+            "xytext": [70.66, 38.73],
+            "font_size": 22
+        },
+        {
+            "label": "Thailand",
+            "xytext": [101.5, 16.18]
+        },
+        {
+            "label": "Turkmenistan",
+            "xytext": [59, 39]
+        },
+        {
+            "label": "Turkey",
+            "xytext": [34.44, 38.77],
+            "font_size": 28
+        },
+        {
+            "label": "Uzbekistan",
+            "xytext": [62, 42.6],
+            "font_size": 22
+        },
+        {
+            "label": "United\nArab\nEmirates",
+            "xytext": [64, 22],
+            "xypin": [54.03, 23.67],
+            "font_size": 22
+        },
+        {
+            "label": "Vietnam",
+            "xypin": [108.6, 13.9],
+            "xytext": [113, 14.0]
+        },
+        {
+            "label": "Yemen",
+            "xytext": [46.72, 15.77],
+            "font_size": 28
+        }
+   ],
+    "central asia": [
+        {
+            "label": "Afghanistan",
+            "xytext": [65.8, 33.3],
+            "font_size": 28
+        },
+        {
+            "label": "Bangladesh",
+            "xytext": [89.89, 24.51],
+            "font_size": 20
+        },
+        {
+            "label": "Bhutan",
+            "xytext": [90.46, 27.49],
+            "font_size": 18
+        },
+        {
+            "label": "China",
+            "xytext": [87, 37],
+            "font_size": 28
+        },
+        {
+            "label": "India",
+            "xytext": [78.08, 21.4],
+            "font_size": 28
+        },
+        {
+            "label": "Iran",
+            "xytext": [57.8, 31.0],
+            "font_size": 28
+        },
+        {
+            "label": "Kazakhstan",
+            "xytext": [68.32, 45],
+            "font_size": 28
+        },
+        {
+            "label": "Kyrgyzstan",
+            "xytext": [74.52, 41.53]
+        },
+        {
+            "label": "Mongolia",
+            "xytext": [92.98, 47.99]
+        },
+        {
+            "label": "Myanmar\n(Burma)",
+            "xytext": [95.17, 21.43],
+            "font_size": 22
+        },
+        {
+            "label": "Nepal",
+            "xytext": [83.38, 28.385],
+            "font_size": 22
+        },
+        {
+            "label": "Pakistan",
+            "xytext": [67.51, 28.3],
+            "font_size": 28
+        },
+        {
+            "label": "Russia",
+            "xytext": [87.0, 51.2],
+            "font_size": 28
+        },
+        {
+            "label": "Sri Lanka",
+            "xypin": [80.71, 7.56],
+            "xytext": [83.17, 9.27]
+        },
+        {
+            "label": "Tajikistan",
+            "xytext": [70.66, 38.73]
+        },
+        {
+            "label": "Turkmenistan",
+            "xytext": [60.69, 38.57]
+        },
+        {
+            "label": "Uzbekistan",
+            "xytext": [62.66, 42.1]
+        }
+   ],
+    "eastern asia": [
+        {
+            "label": "Brunei",
+            "xypin": [114.59, 4.48],
+            "xytext": [113.88, 6.06]
+        },
+        {
+            "label": "China",
+            "xytext": [108.4, 29.7]
+        },
+        {
+            "label": "Cambodia",
+            "xytext": [104.84, 12.79]
+        },
+        {
+            "label": "Indonesia",
+            "xytext": [113.92, -0.78],
+            "xypin": [101.76, -0.62]
+        },
+        {
+            "label": "Indonesia",
+            "xytext": [113.92, -0.78],
+            "xypin": [138.87, -4.41]
+        },
+        {
+            "label": "Japan",
+            "xytext": [138.4, 36.04]
+        },
+        {
+            "label": "Laos",
+            "xytext": [102.46, 19.96]
+        },
+        {
+            "label": "Malaysia",
+            "xypin": [102, 4.19],
+            "xytext": [105.5, 4.5]
+        },
+        {
+            "label": "Mongolia",
+            "xytext": [105.4, 44.8]
+        },
+        {
+            "label": "Myanmar\n(Burma)",
+            "xytext": [97.15, 21.43]
+        },
+        {
+            "label": "North Korea",
+            "xypin": [126.69, 39.89],
+            "xytext": [131.94, 39.96]
+        },
+        {
+            "label": "Philippines",
+            "xypin": [121.19, 15.86],
+            "xytext": [124.95, 16.55]
+        },
+        {
+            "label": "Russia",
+            "xytext": [132.9, 44.1]
+        },
+        {
+            "label": "Singapore",
+            "xypin": [103.9, 1.36],
+            "xytext": [106.71, 1.9],
+            "font_size": 22
+        },
+        {
+            "label": "South Korea",
+            "xypin": [127.94, 36.5],
+            "xytext": [123.06, 35.33]
+        },
+        {
+            "label": "Thailand",
+            "xytext": [101.1, 16.18]
+        },
+        {
+            "label": "Vietnam",
+            "xypin": [108.6, 13.9],
+            "xytext": [111.4, 14.0]
+        }
+   ],
+    "caribbean": [
+        {
+            "label": "Aruba",
+            "xypin": [-69.97, 12.5],
+            "xytext": [-70.04, 13.05]
+        },
+        {
+            "label": "Antigua\nand\nBarbuda",
+            "xypin": [-61.79, 17.08],
+            "xytext": [-61.09, 17.15],
+            "font_size": 22
+        },
+        {
+            "label": "Antigua\nand\nBarbuda",
+            "xypin": [-61.78, 17.67],
+            "xytext": [-61.09, 17.15],
+            "font_size": 22
+        },
+        {
+            "label": "Bahamas",
+            "xypin": [-78.04, 24.79],
+            "xytext": [-77, 24.8]
+        },
+        {
+            "label": "Barbados",
+            "xypin": [-59.56, 13.16],
+            "xytext": [-60.5, 12.5],
+            "font_size": 28
+        },
+        {
+            "label": "BES\nIslands",
+            "xypin": [-68.31, 12.19],
+            "xytext": [-67, 12.57]
+        },
+        {
+            "label": "Curaçao",
+            "xypin": [-69.1, 12.31],
+            "xytext": [-69.01, 12.94]
+        },
+        {
+            "label": "Cuba",
+            "xytext": [-76.19, 20.51],
+            "font_size": 28
+        },
+        {
+            "label": "Dominican Republic",
+            "xytext": [-70.55, 18.8],
+            "font_size": 28
+        },
+        {
+            "label": "Dominica",
+            "xypin": [-61.35, 15.45],
+            "xytext": [-62.5, 15.5],
+            "font_size": 28
+        },
+        {
+            "label": "Guadeloupe",
+            "xypin": [-61.47, 16.27],
+            "xytext": [-62.64, 16.01],
+            "font_size": 28
+        },
+        {
+            "label": "Grenada",
+            "xypin": [-61.67, 12.12],
+            "xytext": [-63, 12.16],
+            "font_size": 28
+        },
+        {
+            "label": "Haiti",
+            "xytext": [-72.24, 19.13],
+            "font_size": 28
+        },
+        {
+            "label": "Jamaica",
+            "xypin": [-77, 18.19],
+            "xytext": [-77, 19.21],
+            "font_size": 28
+        },
+        {
+            "label": "Martinique",
+            "xypin": [-61.04, 14.71],
+            "xytext": [-62.27, 14.78]
+        },
+        {
+            "label": "Puerto Rico",
+            "xypin": [-66.53, 18.21],
+            "xytext": [-66.84, 19.09],
+            "font_size": 28
+        },
+        {
+            "label": "Saint Lucia",
+            "xypin": [-60.95, 13.91],
+            "xytext": [-62.02, 14.09]
+        },
+        {
+            "label": "Saint Vincent\nand\nthe Grenadines",
+            "xypin": [-61.18, 13.27],
+            "xytext": [-62.43, 13]
+        },
+        {
+            "label": "Trinidad\nand\nTobago",
+            "xypin": [-61.21, 10.47],
+            "xytext": [-61.95, 11.14]
+        },
+        {
+            "label": "Trinidad\nand\nTobago",
+            "xypin": [-60.67, 11.25],
+            "xytext": [-61.95, 11.14]
+        }
+   ],
+    "oceania": [
+        {
+            "label": "Australia",
+            "xytext": [144, -27.04],
+            "font_size": 32
+        },
+        {
+            "label": "Federated States of Micronesia",
+            "xypin": [151.63, 7.35],
+            "xytext": [153, 6]
+        },
+        {
+            "label": "Fiji",
+            "xypin": [178, -17.81],
+            "xytext": [178, -15],
+            "font_size": 28
+        },
+        {
+            "label": "Guam",
+            "xypin": [144.75, 13.42],
+            "xytext": [146, 12]
+        },
+        {
+            "label": "Marshall Islands",
+            "xypin": [166.8, 11.16],
+            "xytext": [166.87, 10]
+        },
+        {
+            "label": "New Caledonia",
+            "xypin": [166, -21.5],
+            "xytext": [161, -23],
+            "font_size": 28
+        },
+        {
+            "label": "New Zealand",
+            "xypin": [170.5, -43.86],
+            "xytext": [162.31, -40.63],
+            "font_size": 28
+        },
+        {
+            "label": "Palau",
+            "xytext": [137, 7.11],
+            "xypin": [134.55, 7.5],
+            "font_size": 28
+        },
+        {
+            "label": "Papua New Guinea",
+            "xypin": [143, -6.1],
+            "xytext": [143, -1],
+            "font_size": 28
+        },
+        {
+            "label": "Soloman Islands",
+            "xypin": [160.01, -9.58],
+            "xytext": [157.6, -10.94]
+        },
+        {
+            "label": "Samoa",
+            "xypin": [172.4, -13.56],
+            "xytext": [172.4, -13.56]
+        },
+        {
+            "label": "Tonga",
+            "xypin": [185, -21.12],
+            "xytext": [182, -20]
+        },
+        {
+            "label": "Vanuatu",
+            "xypin": [167.57, -16.36],
+            "xytext": [170.9, -16.24],
+            "font_size": 28
+        }
+   ],
+    "western asia": [
+        {
+            "label": "Armenia",
+            "xytext": [44.59, 40.53]
+        },
+        {
+            "label": "Azerbaijan",
+            "xytext": [47.62, 40.44],
+            "font_size": 28
+        },
+        {
+            "label": "Cyprus",
+            "xytext": [31.4, 35.5],
+            "xypin": [33.18, 34.96],
+            "font_size": 28
+        },
+        {
+            "label": "Egypt",
+            "xytext": [32.34, 30.5],
+            "font_size": 32
+        },
+        {
+            "label": "Georgia",
+            "xytext": [43.39, 42.17],
+            "font_size": 28
+        },
+        {
+            "label": "Iran",
+            "xytext": [53.72, 32.47],
+            "font_size": 32
+        },
+        {
+            "label": "Iraq",
+            "xytext": [42.53, 33.17],
+            "font_size": 32
+        },
+        {
+            "label": "Israel",
+            "xytext": [33.57, 33.19],
+            "xypin": [35.3, 32.72]
+        },
+        {
+            "label": "Jordan",
+            "xytext": [36.41, 30.93],
+            "font_size": 28
+        },
+        {
+            "label": "Kuwait",
+            "xytext": [49.58, 28.71],
+            "xypin": [47.65, 29.44],
+            "font_size": 32
+        },
+        {
+            "label": "Lebanon",
+            "xypin": [35.82, 33.95],
+            "xytext": [34.5, 34.18],
+            "font_size": 28
+        },
+        {
+            "label": "Oman",
+            "xytext": [56.52, 20.58],
+            "font_size": 32
+        },
+        {
+            "label": "Palestine",
+            "xytext": [32.81, 32.62],
+            "xypin": [35.3, 31.97],
+            "font_size": 32
+        },
+        {
+            "label": "Palestine",
+            "xytext": [32.81, 32.62],
+            "xypin": [34.46, 31.5],
+            "font_size": 32
+        },
+        {
+            "label": "Qatar",
+            "xytext": [50.96, 26.98],
+            "xypin": [51.34, 25.7],
+            "font_size": 32
+        },
+        {
+            "label": "Saudi Arabia",
+            "xytext": [44.02, 24.31],
+            "font_size": 32
+        },
+        {
+            "label": "Syria",
+            "xytext": [38.55, 35.2],
+            "font_size": 32
+        },
+        {
+            "label": "Turkey",
+            "xytext": [34.44, 38.77],
+            "font_size": 32
+        },
+        {
+            "label": "United\nArab Emirates",
+            "xytext": [53.44, 25.64],
+            "xypin": [54.03, 23.67],
+            "font_size": 28
+        },
+        {
+            "label": "Yemen",
+            "xytext": [46.72, 15.77],
+            "font_size": 32
+        }
+   ],
+    "africa": [
+        {
+            "label": "Algeria",
+            "xytext": [2.0, 27.5],
+            "font_size": 28
+        },
+        {
+            "label": "Angola",
+            "xytext": [17.7, -13.1],
+            "font_size": 28
+        },
+        {
+            "label": "Benin",
+            "xytext": [3.2, 5.4],
+            "xypin": [2.3, 7.6],
+            "font_size": 28
+        },
+        {
+            "label": "Botswana",
+            "xytext": [24.4, -22.3],
+            "font_size": 28
+        },
+        {
+            "label": "Burkina\nFaso",
+            "xytext": [-1.4, 12.6]
+        },
+        {
+            "label": "Burundi",
+            "xytext": [43.3, -4.9],
+            "xypin": [29.8, -3.6]
+        },
+        {
+            "label": "Cameroon",
+            "xytext": [12.5, 5.2]
+        },
+        {
+            "label": "Cape Verde",
+            "xytext": [-23.7, 19],
+            "xypin": [-23.7, 16]
+        },
+        {
+            "label": "central african\nRepublic",
+            "xytext": [21.1, 6.5]
+        },
+        {
+            "label": "Chad",
+            "xytext": [18.5, 16.0],
+            "font_size": 28
+        },
+        {
+            "label": "Comoros",
+            "xytext": [46.8, -9.6],
+            "xypin": [43.3, -11.7]
+        },
+        {
+            "label": "Cote\nd'Ivoire",
+            "xytext": [-5.5, 8.5]
+        },
+        {
+            "label": "Democratic\nRepublic of\nthe Congo",
+            "xytext": [23.3, -2.7],
+            "font_size": 28
+        },
+        {
+            "label": "Djibouti",
+            "xytext": [47.0, 13.4],
+            "xypin": [43.0, 12.2]
+        },
+        {
+            "label": "Egypt",
+            "xytext": [29.2, 26.6],
+            "font_size": 28
+        },
+        {
+            "label": "Equatorial\nGuinea",
+            "xytext": [5.9, -2.5],
+            "xypin": [10.5, 1.6]
+        },
+        {
+            "label": "Eritrea",
+            "xytext": [43.0, 16.9],
+            "xypin": [38.5, 16.2]
+        },
+        {
+            "label": "Lesotho",
+            "xytext": [35.0, -31.0],
+            "xypin": [28.4, -29.5]
+        },
+        {
+            "label": "Ethiopia",
+            "xytext": [39.9, 8.5],
+            "font_size": 28
+        },
+        {
+            "label": "Gabon",
+            "xytext": [11.8, -0.7],
+            "font_size": 28
+        },
+        {
+            "label": "Ghana",
+            "xytext": [-1.3, 6.6]
+        },
+        {
+            "label": "Guinea",
+            "xytext": [-11.6, 11.0]
+        },
+        {
+            "label": "Guinea-\nBissau",
+            "xytext": [-20.3, 10.3],
+            "xypin": [-14.5, 12.2]
+        },
+        {
+            "label": "Kenya",
+            "xytext": [37.9, 0.5],
+            "font_size": 28
+        },
+        {
+            "label": "Eswantini",
+            "xytext": [35.5, -29.3],
+            "xypin": [31.5, -26.8]
+        },
+        {
+            "label": "Liberia",
+            "xytext": [-10.6, 3.6],
+            "xypin": [-9.6, 6.7]
+        },
+        {
+            "label": "Libya",
+            "xytext": [17.5, 27.5],
+            "font_size": 28
+        },
+        {
+            "label": "Madagascar",
+            "xytext": [46.7, -19.6]
+        },
+        {
+            "label": "Malawi",
+            "xytext": [38.9, -21.3],
+            "xypin": [35.0, -15.6]
+        },
+        {
+            "label": "Mali",
+            "xytext": [-1.9, 17.8],
+            "font_size": 28
+        },
+        {
+            "label": "Mauritania",
+            "xytext": [-11.1, 19.6],
+            "font_size": 28
+        },
+        {
+            "label": "Morocco",
+            "xytext": [-6.9, 31.3]
+        },
+        {
+            "label": "Mozambique",
+            "xytext": [37.9, -13]
+        },
+        {
+            "label": "Namibia",
+            "xytext": [17.3, -20.7],
+            "font_size": 28
+        },
+        {
+            "label": "Niger",
+            "xytext": [9.8, 17.5],
+            "font_size": 28
+        },
+        {
+            "label": "Nigera",
+            "xytext": [7.8, 9.8],
+            "font_size": 28
+        },
+        {
+            "label": "Republic of\nthe Congo",
+            "xytext": [7.8, -7.2],
+            "xypin": [12.0, -4.1]
+        },
+        {
+            "label": "Rwanda",
+            "xytext": [43.8, -3.6],
+            "xypin": [30.1, -2.0]
+        },
+        {
+            "label": "São Tomé and\nPríncipe",
+            "xytext": [-0.9, 0.2],
+            "xypin": [6.8, 0.2]
+        },
+        {
+            "label": "Senegal",
+            "xytext": [-15.0, 14.7]
+        },
+        {
+            "label": "Seychelles",
+            "xytext": [55.6, -2],
+            "xypin": [55.6, -4.5]
+        },
+        {
+            "label": "Sierra Leone",
+            "xytext": [-16.4, 6.3],
+            "xypin": [-12.0, 8.5]
+        },
+        {
+            "label": "Somalia",
+            "xytext": [44, 2.7]
+        },
+        {
+            "label": "South\nAfrica",
+            "xytext": [22.4, -31.0]
+        },
+        {
+            "label": "South\nSudan",
+            "xytext": [30.2, 7.0],
+            "font_size": 28
+        },
+        {
+            "label": "Sudan",
+            "xytext": [29.7, 16.0],
+            "font_size": 28
+        },
+        {
+            "label": "Tanzania",
+            "xytext": [35.0, -6.7],
+            "font_size": 28
+        },
+        {
+            "label": "The\nGambia",
+            "xytext": [-20.3, 13.6],
+            "xypin": [-15.4, 13.6]
+        },
+        {
+            "label": "Togo",
+            "xytext": [1.0, 4.1],
+            "xypin": [1.0, 7.5],
+            "font_size": 28
+        },
+        {
+            "label": "Tunisia",
+            "xytext": [9.3, 38.9],
+            "xypin": [9.3, 35.7]
+        },
+        {
+            "label": "Uganda",
+            "xytext": [32.6, 0.9]
+        },
+        {
+            "label": "Zambia",
+            "xytext": [26.1, -14.9],
+            "font_size": 28
+        },
+        {
+            "label": "Zimbawe",
+            "xytext": [29.7, -19.1]
+        }
+   ],
+    "europe": [
+        {
+            "label": "Albania",
+            "xytext": [19.2, 39.23],
+            "xypin": [20.16, 40.73],
+            "font_size": 18
+        },
+        {
+            "label": "Austria",
+            "xytext": [14.65, 47.58]
+        },
+        {
+            "label": "Czechia",
+            "xytext": [14.71, 49.84]
+        },
+        {
+            "label": "Croatia",
+            "xytext": [16.76, 45.57],
+            "font_size": 22
+        },
+        {
+            "label": "Belarus",
+            "xytext": [27.53, 53.45],
+            "font_size": 28
+        },
+        {
+            "label": "Belgium",
+            "xytext": [4.29, 50.75],
+            "font_size": 22
+        },
+        {
+            "label": "Bosnia\nand\nHertzegovina",
+            "xytext": [15.43, 42.98],
+            "xypin": [17.64, 44.35],
+            "font_size": 16
+        },
+        {
+            "label": "Estonia",
+            "xytext": [25.58, 58.82]
+        },
+        {
+            "label": "Bulgaria",
+            "xytext": [24.61, 42.58]
+        },
+        {
+            "label": "Denmark",
+            "xytext": [4.7, 56.63],
+            "xypin": [9.16, 56.1]
+        },
+        {
+            "label": "Finland",
+            "xytext": [25.56, 62.38],
+            "font_size": 28
+        },
+        {
+            "label": "France",
+            "xytext": [2.4, 46.8],
+            "font_size": 32
+        },
+        {
+            "label": "Greece",
+            "xytext": [21.65, 39.69],
+            "font_size": 22
+        },
+        {
+            "label": "Germany",
+            "xytext": [9.8, 51.3],
+            "font_size": 28
+        },
+        {
+            "label": "Hungary",
+            "xytext": [19.1, 47.06]
+        },
+        {
+            "label": "Iceland",
+            "xytext": [-18.15, 64.1]
+        },
+        {
+            "label": "Ireland",
+            "xytext": [-8.0, 53.7]
+        },
+        {
+            "label": "Italy",
+            "xytext": [12.3, 42.9],
+            "font_size": 28
+        },
+        {
+            "label": "Latvia",
+            "xytext": [25.26, 56.7]
+        },
+        {
+            "label": "Lithuania",
+            "xytext": [23.91, 55.38]
+        },
+        {
+            "label": "Poland",
+            "xytext": [19.2, 52.2],
+            "font_size": 28
+        },
+        {
+            "label": "Portugal",
+            "xytext": [-10.48, 42],
+            "xypin": [-8.2, 41]
+        },
+        {
+            "label": "Moldova",
+            "xytext": [31.02, 44.85],
+            "xypin": [28.6, 47.17],
+            "font_size": 22
+        },
+        {
+            "label": "Montenegro",
+            "xytext": [17.8, 41.89],
+            "xypin": [19.25, 42.7],
+            "font_size": 18
+        },
+        {
+            "label": "Netherlands",
+            "xytext": [3.91, 53.9],
+            "xypin": [5.45, 52.33],
+            "font_size": 22
+        },
+        {
+            "label": "Norway",
+            "xytext": [9.56, 61.15],
+            "font_size": 28
+        },
+        {
+            "label": "North\nMacedonia",
+            "xytext": [18.1, 41.27],
+            "xypin": [21.61, 41.64],
+            "font_size": 16
+        },
+        {
+            "label": "Romania",
+            "xytext": [24.86, 45.95],
+            "font_size": 28
+        },
+        {
+            "label": "Russia",
+            "xytext": [34.38, 55.0],
+            "font_size": 32
+        },
+        {
+            "label": "Serbia",
+            "xytext": [20.89, 43.61]
+        },
+        {
+            "label": "Slovakia",
+            "xytext": [19.23, 48.74],
+            "font_size": 22
+        },
+        {
+            "label": "Slovenia",
+            "xytext": [14.58, 46.12],
+            "font_size": 18
+        },
+        {
+            "label": "Spain",
+            "xytext": [-3.7, 40.5],
+            "font_size": 32
+        },
+        {
+            "label": "Switzerland",
+            "xytext": [8.06, 46.79],
+            "font_size": 18
+        },
+        {
+            "label": "Sweden",
+            "xytext": [15.184, 59.82],
+            "font_size": 28
+        },
+        {
+            "label": "Ukraine",
+            "xytext": [31.06, 49.36],
+            "font_size": 28
+        },
+        {
+            "label": "United\nKingdom",
+            "xytext": [-1.37, 52.83]
+        }
+   ],
+    "south america": [
+        {
+            "label": "Agentina",
+            "xytext": [-64.59, -35.23],
+            "font_size": 28
+        },
+        {
+            "label": "Bolivia",
+            "xytext": [-64.68, -16.8],
+            "font_size": 28
+        },
+        {
+            "label": "Brazil",
+            "xytext": [-54.13, -9.28],
+            "font_size": 28
+        },
+        {
+            "label": "Chile",
+            "xytext": [-75.23, -20],
+            "xypin": [-69.13, -23.45],
+            "font_size": 28
+        },
+        {
+            "label": "Colombia",
+            "xytext": [-73.64, 4.15],
+            "font_size": 28
+        },
+        {
+            "label": "Ecuador",
+            "xypin": [-78.58, -1.04],
+            "xytext": [-82.7, 1.49],
+            "font_size": 28
+        },
+        {
+            "label": "Ecuador",
+            "xypin": [-91.04, -0.74],
+            "xytext": [-82.7, 1.49],
+            "font_size": 28
+        },
+        {
+            "label": "Falkland Islands",
+            "xypin": [-58.86, -51.6],
+            "xytext": [-59.49, -50.12],
+            "font_size": 28
+        },
+        {
+            "label": "French Guiana",
+            "xypin": [-52.76, 4.62],
+            "xytext": [-50.1, 6.53],
+            "font_size": 28
+        },
+        {
+            "label": "Guyana",
+            "xypin": [-58.97, 5.97],
+            "xytext": [-57.13, 9.47],
+            "font_size": 28
+        },
+        {
+            "label": "Paraguay",
+            "xytext": [-58.22, -22.96],
+            "font_size": 28
+        },
+        {
+            "label": "Peru",
+            "xytext": [-76.03, -9.31],
+            "font_size": 28
+        },
+        {
+            "label": "Suriname",
+            "xytext": [-54.01, 8.26],
+            "xypin": [-55.59, 4.85],
+            "font_size": 28
+        },
+        {
+            "label": "Uruguay",
+            "xytext": [-55.96, -32.81],
+            "font_size": 28
+        },
+        {
+            "label": "Venezuela",
+            "xytext": [-65.73, 8.36],
+            "font_size": 28
+        }
+   ],
+    "central america": [
+        {
+            "label": "Belize",
+            "xypin": [-89.0, 17.16],
+            "xytext": [-86.9, 17.25],
+            "font_size": 28
+        },
+        {
+            "label": "Costa Rica",
+            "xytext": [-85.1, 8.9],
+            "xypin": [-84.2, 10.17],
+            "font_size": 28
+        },
+        {
+            "label": "El Salvador",
+            "xypin": [-88.99, 13.64],
+            "xytext": [-89.16, 12.61],
+            "font_size": 28
+        },
+        {
+            "label": "Guatemala",
+            "xytext": [-90.42, 15.39],
+            "font_size": 28
+        },
+        {
+            "label": "Honduras",
+            "xytext": [-86.88, 14.89],
+            "font_size": 28
+        },
+        {
+            "label": "Mexico",
+            "xytext": [-102.12, 22.99],
+            "font_size": 28
+        },
+        {
+            "label": "Nicaragua",
+            "xytext": [-85.2, 12.58],
+            "font_size": 28
+        },
+        {
+            "label": "Panama",
+            "xypin": [-81.0, 8.61],
+            "xytext": [-80.94, 10.22],
+            "font_size": 28
+        }
+   ],
+    "north america": [
+        {
+            "label": "Bahamas",
+            "xytext": [-76.99, 24.94]
+        },
+        {
+            "label": "Canada",
+            "xytext": [-108.93, 54.68],
+            "font_size": 32
+        },
+        {
+            "label": "Greenland",
+            "xytext": [-46.18, 66.5],
+            "font_size": 28
+        },
+        {
+            "label": "Mexico",
+            "xytext": [-103, 26],
+            "font_size": 32
+        },
+        {
+            "label": "United States",
+            "xytext": [-100.9, 38.37],
+            "font_size": 32
+        }
+   ],
+    "world": [
+        {
+            "label": "Australia",
+            "xytext": [133.64, -24.99],
+            "font_size": 32
+        },
+        {
+            "label": "Brazil",
+            "xytext": [-52.41, -10.67],
+            "font_size": 32
+        },
+        {
+            "label": "Canada",
+            "xytext": [-108.93, 54.68],
+            "font_size": 32
+        },
+        {
+            "label": "China",
+            "xytext": [101.93, 34.85],
+            "font_size": 32
+        },
+        {
+            "label": "India",
+            "xytext": [78.25, 22.82]
+        },
+        {
+            "label": "Mexico",
+            "xytext": [-103, 26],
+            "font_size": 18
+        },
+        {
+            "label": "Russia",
+            "xytext": [93.42, 63.12],
+            "font_size": 32
+        },
+        {
+            "label": "United States",
+            "xytext": [-100.9, 38.37],
+            "font_size": 28
+        }
+   ]
+}

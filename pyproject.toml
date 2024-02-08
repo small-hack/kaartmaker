@@ -6,9 +6,13 @@ authors     = ["jesse hitch"]
 license     = "AGPL-3.0-or-later"
 readme      = "README.md"
 packages    = [{include = "kaartmaker"}]
-include     = ["./kaartmaker/geojson/europe.geo.json",
-               "./kaartmaker/geojson/world.geo.json",
-               "./kaartmaker/datasets/world_palestine_votes_minus_unknown.csv"]
+include     = [
+    "./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_palestine_votes.csv",
+    "./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_ukraine_votes.csv",
+    "./kaartmaker/config/legend.json",
+    "./kaartmaker/config/boundaries.json",
+    "./kaartmaker/config/country_labels.json"
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"

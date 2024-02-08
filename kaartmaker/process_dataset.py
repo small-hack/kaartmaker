@@ -33,6 +33,8 @@ def process_csv(data_frame: pd.DataFrame,
             data_frame.loc[data_frame.NAME_EN == index, "color"] = yes_color
         elif vote == "AGAINST" or vote == "NO":
             data_frame.loc[data_frame.NAME_EN == index, "color"] = no_color
+        else:
+            vote = "ABSENT"
 
         data_frame.loc[data_frame.NAME_EN == index, "vote"] = vote
 

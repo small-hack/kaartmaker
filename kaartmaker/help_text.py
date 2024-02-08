@@ -61,7 +61,15 @@ def options_help():
         'Source link to include in subtitle.',
 
         'reverse_colors':
-        'Reverse colors to use blue for NO|AGAINST and orange for YES|IN FAVOR'
+        'Reverse colors to use blue for NO|AGAINST and orange for YES|IN FAVOR',
+
+        'use_sub_units':
+        'Use sub units instead of sovereignty. Useful to distinguish colonial '
+        'territories. e.g. scotland, wales, northern ireland, '
+        'british virgin islands, instead of just the UK',
+
+        'legend_countries':
+        "Countries to use for the legend. otherwise, we'll guess which may cause duplicates"
         }
 
     return help_dict

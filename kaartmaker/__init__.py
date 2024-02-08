@@ -1,8 +1,8 @@
 #!python3.12
 from click import option, command
 import geopandas as gpd
-from kaartmaker.constants import (PWD, VERSION, country_labels,
-                                  continent_boundaries)
+from kaartmaker.constants import (PWD, VERSION, LABELS, COUNTRY_BOUNDARIES,
+                                  WORLD_SUBUNITS_JSON, WORLD_SOVEREIGNTY_JSON)
 from kaartmaker.process_dataset import process_csv 
 from kaartmaker.labeling import add_label, draw_legend_and_title
 from os import path
@@ -13,8 +13,6 @@ from kaartmaker.help_text import RichCommand, options_help
 
 HELP = options_help()
 HELP_SETTINGS = dict(help_option_names=["-h", "--help"])
-
-WORLD_JSON = path.join(PWD, 'geojson/world_subunits.geojson')
 
 
 def determine_regional_area(world_map_data, region: str):
@@ -148,14 +146,24 @@ def draw_map(
         default=True,
         help=HELP['save_png'])
 @option("--title", "-t",
-        help=HELP['title'])
+        help=HELP['title'],
+        type=str)
 @option("--source", "-s",
         help=HELP['source'],
-        default="gadebate.un.org")
+        default="gadebate.un.org",
+        type=str)
 @option("--reverse_colors", "-R",
         help=HELP['reverse_colors'],
         default=False,
         is_flag=True)
+@option("--use_sub_units", "-u",
+        help=HELP['use_sub_units'],
+        default=False,
+        is_flag=True)
+@option("--legend_countries", "-l",
+        help=HELP['legend_countries'],
+        type=list
+        )
 @option("--version", "-v",
         is_flag=True,
         help=HELP['version'])
@@ -164,10 +172,12 @@ def main(
         csv: str = "",
         save_geojson: bool = False,
         save_png: bool = True,
-        version: bool = True,
         title: str = "UNGA",
         source: str = "gadebate.un.org",
-        reverse_colors: bool = False
+        reverse_colors: bool = False,
+        use_sub_units: bool = False,
+        legend_countries: list = [],
+        version: bool = True
         ):
     if version:
         print(VERSION)
@@ -184,7 +194,11 @@ def main(
         "text.color": text_color,
     })
 
-    world_map_data = gpd.read_file(WORLD_JSON)
+    if use_sub_units:
+        world_map_data = gpd.read_file(WORLD_SUBUNITS_JSON)
+    else:
+        world_map_data = gpd.read_file(WORLD_SOVEREIGNTY_JSON)
+
     world_map_data["color"] = "#f0f0f0"
     world_map_data["edgecolor"] = "#c0c0c0"
 
@@ -196,7 +210,7 @@ def main(
         map_data = process_csv(map_data, csv, reverse_colors=reverse_colors)
 
         # get labels for each country if applicable
-        labels = country_labels[region.lower()]
+        labels = LABELS[region.lower()]
 
         # if region is asia, we'll do a smaller size and leave out world map
         if region == "asia":
@@ -213,27 +227,28 @@ def main(
 
     ax = draw_map(maps_to_draw=maps,
                   boundry_map_index=boundary_index,
-                  padding=continent_boundaries[region.lower()]["padding"],
+                  padding=COUNTRY_BOUNDARIES[region.lower()]["padding"],
                   use_hatch_for_indexes=[2],
                   labels=labels,
-                  figsize=continent_boundaries[region.lower()]["size"])
+                  figsize=COUNTRY_BOUNDARIES[region.lower()]["size"])
 
     region = region.lower()
 
     draw_legend_and_title(ax, region, map_data, title, source)
 
     region = region.replace(" ", "_")
+    title = title.replace(" ", "_")
 
     # we can save the final geojson so the use can use it interactively
     if save_geojson:
-        json_file = path.join(PWD, f'geojson/{region}.geojson')
+        json_file = path.join(PWD, f'geojson/{region}_{title}.geojson')
         map_data.to_file(json_file, driver="GeoJSON")  
 
     # assumably we want to save this as a png
     if save_png:
         # hide most standard chart components when drawing maps
         plt.axis("off")
-        plt.savefig(f'{region}.png')
+        plt.savefig(f'{region}_{title}.png')
 
 
 if __name__ == '__main__':
