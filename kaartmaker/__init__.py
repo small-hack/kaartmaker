@@ -202,9 +202,9 @@ def main(
         world_map_data = gpd.read_file(WORLD_SOVEREIGNTY_JSON)
 
     world_map_data["color"] = "#f0f0f0"
-    world_map_data["edgecolor"] = "#c0c0c0"
 
     if region.title() != "World":
+        world_map_data["edgecolor"] = "#c0c0c0"
         # process out which countries should be shown on the map per region
         map_data = determine_regional_area(world_map_data, region.title())
 
@@ -222,6 +222,7 @@ def main(
             boundary_index = 1
             maps = [world_map_data, map_data]
     else:
+        world_map_data["edgecolor"] = "#5c5c5c"
         map_data = process_csv(world_map_data, csv, reverse_colors=reverse_colors)
         maps = [map_data]
         boundary_index = 0
