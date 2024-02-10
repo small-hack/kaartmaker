@@ -1,4 +1,5 @@
 NAME_EN,vote
+Venezuela,ABSENT
 Afghanistan,IN FAVOR
 Albania,IN FAVOR
 Andorra,IN FAVOR
@@ -9,11 +10,14 @@ Austria,IN FAVOR
 Bahamas,IN FAVOR
 Bahrain,IN FAVOR
 Barbados,IN FAVOR
-Belgium,IN FAVOR
+Burkina Faso,ABSENT
+Walloon Brabant,IN FAVOR
+Flemish Brabant,IN FAVOR
 Belize,IN FAVOR
 Benin,IN FAVOR
 Bhutan,IN FAVOR
-Bosnia and Herzegovina,IN FAVOR
+Federation of Bosnia and Herzegovina,IN FAVOR
+Republika Srpska,IN FAVOR
 Botswana,IN FAVOR
 Brazil,IN FAVOR
 Brunei,IN FAVOR
@@ -26,11 +30,12 @@ Chile,IN FAVOR
 Colombia,IN FAVOR
 Comoros,IN FAVOR
 Costa Rica,IN FAVOR
-Côte d'Ivoire,IN FAVOR
+Ivory Coast,IN FAVOR
 Croatia,IN FAVOR
 Cyprus,IN FAVOR
 Czech Republic,IN FAVOR
 Democratic Republic of the Congo,IN FAVOR
+Republic of the Congo,ABSTENTION
 Denmark,IN FAVOR
 Djibouti,IN FAVOR
 Dominica,IN FAVOR
@@ -38,13 +43,16 @@ Dominican Republic,IN FAVOR
 Ecuador,IN FAVOR
 Egypt,IN FAVOR
 Estonia,IN FAVOR
+Eswantini,ABSENT
 Fiji,IN FAVOR
 Finland,IN FAVOR
 France,IN FAVOR
 Gabon,IN FAVOR
-Gambia,IN FAVOR
+The Gambia,IN FAVOR
+Ethiopia,ABSTENTION
 Georgia,IN FAVOR
 Germany,IN FAVOR
+Sao Tome and Principe,IN FAVOR
 Ghana,IN FAVOR
 Greece,IN FAVOR
 Grenada,IN FAVOR
@@ -97,13 +105,17 @@ Oman,IN FAVOR
 Palau,IN FAVOR
 Panama,IN FAVOR
 Papua New Guinea,IN FAVOR
+Guinea,ABSTENTION
+Guinea Bissau,ABSENT
 Paraguay,IN FAVOR
 Peru,IN FAVOR
 Philippines,IN FAVOR
 Poland,IN FAVOR
 Portugal,IN FAVOR
+Togo,ABSTENTION
 Qatar,IN FAVOR
 South Korea,IN FAVOR
+Cameroon,ABSENT
 Romania,IN FAVOR
 Rwanda,IN FAVOR
 Saint Kitts and Nevis,IN FAVOR
@@ -114,6 +126,7 @@ San Marino,IN FAVOR
 São Tomé and Príncipe,IN FAVOR
 Saudi Arabia,IN FAVOR
 Serbia,IN FAVOR
+Vojvodina,IN FAVOR
 Seychelles,IN FAVOR
 Sierra Leone,IN FAVOR
 Singapore,IN FAVOR
@@ -127,6 +140,7 @@ Sweden,IN FAVOR
 Switzerland,IN FAVOR
 Thailand,IN FAVOR
 Timor-Leste,IN FAVOR
+Morocco,IN FAVOR
 Tonga,IN FAVOR
 Trinidad and Tobago,IN FAVOR
 Tunisia,IN FAVOR
@@ -134,11 +148,11 @@ Turkey,IN FAVOR
 Tuvalu,IN FAVOR
 Ukraine,IN FAVOR
 United Arab Emirates,IN FAVOR
-England,IN FAVOR
 Northern Ireland,IN FAVOR
 Wales,IN FAVOR
 Scotland,IN FAVOR
 United States of America,IN FAVOR
+United Kingdom,IN FAVOR
 Uruguay,IN FAVOR
 Vanuatu,IN FAVOR
 Yemen,IN FAVOR
@@ -159,7 +173,7 @@ China,ABSTENTION
 Congo,ABSTENTION
 Cuba,ABSTENTION
 El Salvador,ABSTENTION
-Equatorial Guinea,ABSTENTION
+Equatorial Guinea,ABSENT
 India,ABSTENTION
 Iran,ABSTENTION
 Iraq,ABSTENTION
@@ -179,7 +193,7 @@ South Sudan,ABSTENTION
 Sri Lanka,ABSTENTION
 Sudan,ABSTENTION
 Tajikistan,ABSTENTION
-Tanzania,ABSTENTION
+United Republic of Tanzania,ABSTENTION
 Uganda,ABSTENTION
 Vietnam,ABSTENTION
 Zimbabwe,ABSTENTION

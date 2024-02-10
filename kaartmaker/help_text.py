@@ -64,12 +64,13 @@ def options_help():
         'Reverse colors to use blue for NO|AGAINST and orange for YES|IN FAVOR',
 
         'use_sub_units':
-        'Use sub units instead of sovereignty. Useful to distinguish colonial '
-        'territories. e.g. scotland, wales, northern ireland, '
-        'british virgin islands, instead of just the UK',
+        'Use sub units instead of sovereignty. Useful to distinguish '
+        'countries of the UK. e.g. Scotland, Wales, Northern Ireland, british virgin islands,'
+        ' instead of just the UK',
 
         'legend_countries':
-        "Countries to use for the legend. otherwise, we'll guess which may cause duplicates"
+        "Commas separated list of countries to use for the map legend. "
+        '(Otherwise, we pick them for you by vote type.)'
         }
 
     return help_dict

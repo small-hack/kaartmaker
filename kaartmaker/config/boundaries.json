@@ -1,110 +1,242 @@
 {
     "africa": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": 0.04,
-            "pad_left": 0.04,
-            "pad_right": 0.02
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": 0.04,
+                "pad_left": 0.04,
+                "pad_right": 0.02
+            },
+            "size": [40, 38]
         },
-        "size": [40, 38]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": 0.04,
+                "pad_left": 0.04,
+                "pad_right": 0.02
+            },
+            "size": [40, 38]
+        }
     },
     "asia": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": -0.21,
-            "pad_left": -0.576,
-            "pad_right": -0.096
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.21,
+                "pad_left": -0.576,
+                "pad_right": -0.096
+            },
+            "size": [37, 28]
         },
-        "size": [37, 28]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.21,
+                "pad_left": -0.576,
+                "pad_right": -0.096
+            },
+            "size": [37, 28]
+        }
     },
     "caribbean": {
-        "padding": {
-            "pad_bottom": -0.01,
-            "pad_top": 0,
-            "pad_left": -0.24,
-            "pad_right": 0
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.01,
+                "pad_top": 0,
+                "pad_left": -0.24,
+                "pad_right": 0
+            },
+            "size": [40, 40]
         },
-        "size": [40, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.01,
+                "pad_top": 0,
+                "pad_left": -0.24,
+                "pad_right": 0
+            },
+            "size": [40, 40]
+        }
     },
     "central america": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": 0,
-            "pad_left": 0,
-            "pad_right": 0
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": 0,
+                "pad_left": 0,
+                "pad_right": 0
+            },
+            "size": [40, 29]
         },
-        "size": [40, 29]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": 0,
+                "pad_left": 0,
+                "pad_right": 0
+            },
+            "size": [40, 29]
+        }
     },
     "central asia": {
-        "padding": {
-            "pad_bottom": -0.08,
-            "pad_top": -0.36,
-            "pad_left": -0.64,
-            "pad_right": -0.23
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.08,
+                "pad_top": -0.36,
+                "pad_left": -0.64,
+                "pad_right": -0.23
+            },
+            "size": [30, 39.5]
         },
-        "size": [30, 39.5]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.08,
+                "pad_top": -0.36,
+                "pad_left": -0.64,
+                "pad_right": -0.23
+            },
+            "size": [30, 39.5]
+        }
     },
     "eastern asia": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": -0.381,
-            "pad_left": -0.755,
-            "pad_right": -0.07
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.381,
+                "pad_left": -0.755,
+                "pad_right": -0.07
+            },
+            "size": [37, 40]
         },
-        "size": [37, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.381,
+                "pad_left": -0.755,
+                "pad_right": -0.07
+            },
+            "size": [37, 40]
+        }
     },
     "europe": {
-        "padding": {
-            "pad_bottom": -0.03,
-            "pad_top": -0.37,
-            "pad_left": -0.04,
-            "pad_right": -0.33
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.03,
+                "pad_top": -0.37,
+                "pad_left": -0.04,
+                "pad_right": -0.33
+            },
+            "size": [40, 36.75]
         },
-        "size": [40, 36.75]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.159,
+                "pad_top": -0.32,
+                "pad_left": -0.443,
+                "pad_right": -0.4
+            },
+            "size": [40, 28.4]
+        }
     },
     "north america": {
-        "padding": {
-            "pad_bottom": -0.23,
-            "pad_top": -0.2,
-            "pad_left": -0.15,
-            "pad_right": -0.58
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.23,
+                "pad_top": -0.2,
+                "pad_left": -0.15,
+                "pad_right": -0.58
+            },
+            "size": [40, 40]
         },
-        "size": [40, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.23,
+                "pad_top": -0.2,
+                "pad_left": -0.15,
+                "pad_right": -0.58
+            },
+            "size": [40, 40]
+        }
     },
     "oceania": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": -0.076,
-            "pad_left": -0.815,
-            "pad_right": 0.05
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.076,
+                "pad_left": -0.815,
+                "pad_right": 0.05
+            },
+            "size": [40, 40]
         },
-        "size": [40, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.076,
+                "pad_left": -0.815,
+                "pad_right": 0.05
+            },
+            "size": [40, 40]
+        }
     },
     "south america": {
-        "padding": {
-            "pad_bottom": 0,
-            "pad_top": -0.035,
-            "pad_left": 0,
-            "pad_right": -0.06
+        "sub_units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.035,
+                "pad_left": 0,
+                "pad_right": -0.06
+            },
+            "size": [35, 40]
         },
-        "size": [35, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": 0,
+                "pad_top": -0.035,
+                "pad_left": 0,
+                "pad_right": -0.06
+            },
+            "size": [35, 40]
+        }
     },
     "western asia": {
-        "padding": {
-            "pad_bottom": -0.02,
-            "pad_top": -0.02,
-            "pad_left": -0.15,
-            "pad_right": -0.08
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.02,
+                "pad_top": -0.02,
+                "pad_left": -0.15,
+                "pad_right": -0.08
+            },
+            "size": [35, 40]
         },
-        "size": [35, 40]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.02,
+                "pad_top": -0.02,
+                "pad_left": -0.15,
+                "pad_right": -0.08
+            },
+            "size": [35, 40]
+        }
     },
     "world": {
-        "padding": {
-            "pad_bottom": -0.2,
-            "pad_top": 0,
-            "pad_left": -0.03,
-            "pad_right": 0
+        "sub_units": {
+            "padding": {
+                "pad_bottom": -0.2,
+                "pad_top": 0,
+                "pad_left": -0.03,
+                "pad_right": 0
+            },
+            "size": [40, 17.25]
         },
-        "size": [40, 17.25]
+        "units": {
+            "padding": {
+                "pad_bottom": -0.2,
+                "pad_top": 0,
+                "pad_left": -0.03,
+                "pad_right": 0
+            },
+            "size": [40, 23]
+        }
     }
 }

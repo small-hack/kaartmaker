@@ -51,25 +51,37 @@ def draw_legend_and_title(ax: axes,
                           region: str,
                           map_data: GeoDataFrame,
                           legend_title: str = "",
-                          source: str = ""):
+                          source: str = "",
+                          legend_countries: list = []):
     """ 
     draw a legend using countries' shapes as the legend, title, and subtitle
     """
+
+    # example countries to use for the map's legend
+    if legend_countries:
+        # make sure the first letter of every country is capital for matching it
+        for index, country in enumerate(legend_countries):
+           legend_countries[index] = country.title() 
+
+        countries = legend_countries
+    else:
+        countries = []
+
+    # get all present kinds of votes: abstention, in favor, absent, yes, no
+    all_votes = map_data['vote'].unique()
+    # for each kind of vote, grab an example country
+    for vote_type in all_votes:
+        names = map_data.loc[map_data.vote == vote_type].NAME_EN.reset_index(drop=True)
+        if names.any():
+            countries.append(names[0])
+
     # legend using specific locations for this region
-    countries = LEGEND[region]['countries']
     legend_dict = LEGEND[region]["legend"]
     legend_xy = legend_dict["geometry"]
     legend_label = legend_dict["label"]
     legend_size = legend_dict["size"]
     legend_spacing = legend_dict["spacing"]
     legend_font = legend_dict.get("font_size", 24)
-
-    all_votes = map_data['vote'].unique()
-    print(all_votes)
-    for vote_type in all_votes:
-        print(vote_type)
-        print(map_data.loc[map_data.vote == vote_type])
-        print("---------------------------")
 
     legend = pd.concat([map_data[map_data.NAME_EN.isin(countries)]])
     legend = legend.sort_values("color")

@@ -9,8 +9,7 @@
         },
         "title": [29, 4],
         "subtitle": [29, 3],
-        "subtitle_source": [37, 3],
-        "countries": ["Israel", "Russia", "Georgia"]
+        "subtitle_source": [37, 3]
     },
     "africa": {
         "legend": {
@@ -22,8 +21,7 @@
         },
         "title": [-25, -17],
         "subtitle": [-25, -18],
-        "subtitle_source": [-20, -18],
-        "countries": ["Chad", "Togo", "Liberia"]
+        "subtitle_source": [-20, -18]
     },
     "caribbean": {
         "legend": {
@@ -35,8 +33,7 @@
         },
         "title": [-78.5, 14],
         "subtitle": [-78.5, 13.75],
-        "subtitle_source": [-77, 13.75],
-        "countries": ["Jamaica", "Haiti"]
+        "subtitle_source": [-77, 13.75]
     },
     "central america": {
         "legend": {
@@ -48,8 +45,7 @@
         },
         "title": [-117, 13],
         "subtitle": [-117, 12.5],
-        "subtitle_source": [-114, 12.5],
-        "countries": ["Guatemala", "Mexico", "Panama"]
+        "subtitle_source": [-114, 12.5]
     },
     "central asia": {
         "legend": {
@@ -61,8 +57,7 @@
         },
         "title": [51, 13],
         "subtitle": [51, 12.5],
-        "subtitle_source": [56, 12.5],
-        "countries": ["India"]
+        "subtitle_source": [56, 12.5]
     },
     "eastern asia": {
         "legend": {
@@ -74,20 +69,18 @@
         },
         "title": [128.9, 20],
         "subtitle": [128.9, 19],
-        "subtitle_source": [134, 19],
-        "countries": ["Vietnam"]
+        "subtitle_source": [134, 19]
     },
     "europe": {
         "legend": {
-            "geometry": [-18.2, 59],
-            "label": [-16.5, 59],
+            "geometry": [-18.3, 59.2],
+            "label": [-16.51, 59.2],
             "size": 1.1,
             "spacing": 1.6
         },
-        "title": [-19.9, 60.5],
-        "subtitle": [-19.9, 60],
-        "subtitle_source": [-16, 60],
-        "countries": ["Slovenia", "Hungary", "Austria"]
+        "title": [-20.35, 60.8],
+        "subtitle": [-20.35, 60.36],
+        "subtitle_source": [-16.35, 60.36]
     },
     "oceania": {
         "legend": {
@@ -99,8 +92,7 @@
         },
         "title": [115, -44.5],
         "subtitle": [115, -45.5],
-        "subtitle_source": [120.5, -45.5],
-        "countries": ["Australia", "Papua New Guinea"]
+        "subtitle_source": [120.5, -45.5]
     },
     "south america": {
         "legend": {
@@ -112,8 +104,7 @@
         },
         "title": [-92, -26],
         "subtitle": [-92, -27],
-        "subtitle_source": [-87, -27],
-        "countries": ["Brazil", "Paraguay", "Argentina"]
+        "subtitle_source": [-87, -27]
     },
     "western asia": {
         "legend": {
@@ -124,8 +115,7 @@
         },
         "title": [30.75, 18.5],
         "subtitle": [30.75, 18],
-        "subtitle_source": [33.2, 18],
-        "countries": ["Israel", "Georgia", "Jordan"]
+        "subtitle_source": [33.2, 18]
     },
     "world": {
         "legend": {
@@ -139,7 +129,6 @@
         "title_size": 32,
         "subtitle": [-165, -24],
         "subtitle_source": [-144, -24],
-        "subtitle_size": 22,
-        "countries": ["Belarus", "United States of America", "Burkina Faso"]
+        "subtitle_size": 22
     }
 }

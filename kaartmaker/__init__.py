@@ -1,8 +1,10 @@
 #!python3.12
 from click import option, command
+# from collections import deque
 import geopandas as gpd
 from kaartmaker.constants import (PWD, VERSION, LABELS, COUNTRY_BOUNDARIES,
-                                  WORLD_SUBUNITS_JSON, WORLD_SOVEREIGNTY_JSON)
+                                  WORLD_SUBUNITS_JSON)
+
 from kaartmaker.process_dataset import process_csv 
 from kaartmaker.labeling import add_label, draw_legend_and_title
 from os import path
@@ -97,12 +99,10 @@ def draw_map(
     use_hatch_for_indexes: list = [],
     padding: dict = {},
     figsize: tuple|list = (40, 40),
-    labels: list = []
-    ):
+    labels: list = []):
     """
     Takes a list of geojson dataframes to use for drawing a map and returns an ax obj
     """
-    
     assert "color" in maps_to_draw[0].columns, "Missing color column in map dataframe"
     assert "edgecolor" in maps_to_draw[0].columns, "Missing edgecolor column in map dataframe"
     
@@ -164,8 +164,8 @@ def draw_map(
 @option("--legend_countries", "-l",
         metavar="COUNTRIES",
         help=HELP['legend_countries'],
-        type=list
-        )
+        default="",
+        type=str)
 @option("--version", "-v",
         is_flag=True,
         help=HELP['version'])
@@ -178,11 +178,14 @@ def main(
         source: str = "gadebate.un.org",
         reverse_colors: bool = False,
         use_sub_units: bool = False,
-        legend_countries: list = [],
+        legend_countries: str = "",
         version: bool = True
         ):
     if version:
         print(VERSION)
+
+    if ',' in legend_countries:
+        legend_countries = legend_countries.split(',')
 
     # seaborn style
     font_family = "sans"
@@ -196,10 +199,9 @@ def main(
         "text.color": text_color,
     })
 
-    if use_sub_units:
-        world_map_data = gpd.read_file(WORLD_SUBUNITS_JSON)
-    else:
-        world_map_data = gpd.read_file(WORLD_SOVEREIGNTY_JSON)
+    world_map_data = gpd.read_file(WORLD_SUBUNITS_JSON)
+    fig_padding = COUNTRY_BOUNDARIES[region.lower()]["sub_units"]["padding"]
+    fig_size = COUNTRY_BOUNDARIES[region.lower()]["sub_units"]["size"]
 
     world_map_data["color"] = "#f0f0f0"
 
@@ -209,7 +211,8 @@ def main(
         map_data = determine_regional_area(world_map_data, region.title())
 
         # process country properties to add to the world_map_data geojson dataframe
-        map_data = process_csv(map_data, csv, reverse_colors=reverse_colors)
+        map_data = process_csv(map_data, csv, reverse_colors=reverse_colors,
+                               sub_units=use_sub_units)
 
         # get labels for each country if applicable
         labels = LABELS[region.lower()]
@@ -223,21 +226,29 @@ def main(
             maps = [world_map_data, map_data]
     else:
         world_map_data["edgecolor"] = "#5c5c5c"
-        map_data = process_csv(world_map_data, csv, reverse_colors=reverse_colors)
+        map_data = process_csv(world_map_data, csv, reverse_colors=reverse_colors,
+                               sub_units=use_sub_units)
         maps = [map_data]
         boundary_index = 0
         labels = []
 
+    # this takes care of crimea
+    # if region.lower() == "europe" or region.lower() == "world":
+    #     crimea = world_map_data[world_map_data.NAME_EN == "Autonomous Republic of Crimea"].reset_index(drop=True)
+    #     crimea["color"] = "#f0f0f0"
+    #     crimea["edgecolor"] = "#c0c0c0"
+    #     maps.append(crimea)
+
     ax = draw_map(maps_to_draw=maps,
                   boundry_map_index=boundary_index,
-                  padding=COUNTRY_BOUNDARIES[region.lower()]["padding"],
+                  padding=fig_padding,
                   use_hatch_for_indexes=[2],
                   labels=labels,
-                  figsize=COUNTRY_BOUNDARIES[region.lower()]["size"])
+                  figsize=fig_size)
 
     region = region.lower()
 
-    draw_legend_and_title(ax, region, map_data, title, source)
+    draw_legend_and_title(ax, region, map_data, title, source, legend_countries)
 
     region = region.replace(" ", "_")
     title = title.replace(" ", "_")
