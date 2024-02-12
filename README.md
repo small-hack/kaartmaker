@@ -16,6 +16,12 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_p
 ```
 ![Map of Europe Gaza votes](./examples/europe_UNGA_on_Ceasefire_in_Gaza.png)
 
+```bash
+kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_ukraine_votes.csv -t "UNGA vote on ceasefire in Ukraine" -s "gadebate.un.org" -r europe
+```
+
+![Map of Europe Ukraine votes](./examples/europe_UNGA_on_Ceasefire_in_Ukraine.png)
+
 
 ### Secondary features
 
