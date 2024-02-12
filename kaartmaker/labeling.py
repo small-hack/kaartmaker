@@ -66,14 +66,13 @@ def draw_legend_and_title(ax: axes,
         countries = legend_countries
     else:
         countries = []
-
-    # get all present kinds of votes: abstention, in favor, absent, yes, no
-    all_votes = map_data['vote'].unique()
-    # for each kind of vote, grab an example country
-    for vote_type in all_votes:
-        names = map_data.loc[map_data.vote == vote_type].NAME_EN.reset_index(drop=True)
-        if names.any():
-            countries.append(names[0])
+        # get all present kinds of votes: abstention, in favor, absent, yes, no
+        all_votes = map_data['vote'].unique()
+        # for each kind of vote, grab an example country
+        for vote_type in all_votes:
+            names = map_data.loc[map_data.vote == vote_type].NAME_EN.reset_index(drop=True)
+            if names.any():
+                countries.append(names[0])
 
     # legend using specific locations for this region
     legend_dict = LEGEND[region]["legend"]
@@ -93,8 +92,9 @@ def draw_legend_and_title(ax: axes,
     subtitle_source = LEGEND[region]["subtitle_source"]
     subtitle_size = LEGEND[region].get("subtitle_size", 24)
 
-
+    # print(countries)
     for i, row in legend.reset_index().iterrows():
+        # print(row.NAME_EN)
         draw_legend_geometry(ax,
                              row,
                              legend_xy[0],
