@@ -22,6 +22,8 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_u
 
 ![Map of Europe Ukraine votes](./examples/europe_UNGA_on_Ceasefire_in_Ukraine.png)
 
+If you'd like to see more examples, please check them out [here](./examples/README.md).
+
 
 ### Secondary features
 
@@ -29,6 +31,17 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_u
 
 - Colors are colorblind friendly, selected from [here](https://davidmathlogic.com/colorblind) can also be reversed
 
+
+## Installation
+
+Make sure you have at least Python 3.12 and poetry installed, then you can do:
+
+```bash
+# install kaartmaker
+poetry install
+# open a virtual env 
+poetry shell
+```
 
 ## How To
 
