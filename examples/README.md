@@ -111,6 +111,9 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_p
 ![Map of Oceania Gaza votes](./oceania_america_UNGA_on_Ceasefire_in_Gaza.png)
 
 ## United Nations General Assembly vote on Russia Ukraine War ceasefire
+<b>Date</b>: 2 March 2022
+<b>Data Source</b>: https://news.un.org/en/story/2023/02/1133847
+<b>Resolution Text</b>: See [resolution_text.pdf](../kaartmaker/datasets/UN_general_assembly/russia_ceasefire/resolution_text.pdf)
 
 
 ### World
