@@ -1,4 +1,8 @@
 # Kaartmaker
+<a href="https://github.com/small-hack/kaartmaker/releases">
+  <img src="https://img.shields.io/github/v/release/small-hack/kaartmaker?style=plastic&labelColor=484848&color=3CA324&logo=GitHub&logoColor=white">
+</a>
+
 Make world and regional labeled maps based on voting. Most commonly used for representing UN General Assembly votes.
 
 ```bash
