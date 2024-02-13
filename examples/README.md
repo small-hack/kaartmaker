@@ -22,7 +22,7 @@ Below you'll find examples of voting patterns illustrated using the `kaartmaker`
 
 ## United Nations General Assembly vote on Israel Palestine War ceasefire
 
-<b>Date</b>: 12 December 2023 4:26 PM
+<b>Date</b>: 12 December 2023 4:26 PM <br></br>
 <b>Data Source</b>: https://news.un.org/en/story/2023/12/1144717
 
 <details>
@@ -111,8 +111,8 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_p
 ![Map of Oceania Gaza votes](./oceania_america_UNGA_on_Ceasefire_in_Gaza.png)
 
 ## United Nations General Assembly vote on Russia Ukraine War ceasefire
-<b>Date</b>: 2 March 2022
-<b>Data Source</b>: https://news.un.org/en/story/2023/02/1133847
+<b>Date</b>: 2 March 2022<br></br>
+<b>Data Source</b>: https://news.un.org/en/story/2023/02/1133847<br></br>
 <b>Resolution Text</b>: See [resolution_text.pdf](../kaartmaker/datasets/UN_general_assembly/russia_ceasefire/resolution_text.pdf)
 
 
