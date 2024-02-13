@@ -1,14 +1,3 @@
 **/.DS_Store
-**/africa.png
-**/asia.png
-**/caribbean.png
-**/central_America.png
-**/central_Asia.png
-**/eastern_Asia.png
-**/europe.png
-**/north_America.png
-**/oceania.png
-**/south_America.png
-**/southern_Asia.png
-**/western_Asia.png
-**/world.png
+**/oceania.geojson
+**/central_america.geojson
