@@ -38,6 +38,13 @@ If you'd like to see more examples, please check them out [here](./examples/READ
 
 ## Installation
 
+```bash
+pip install kaartmaker
+```
+
+
+### Development
+
 Make sure you have at least Python 3.12 and poetry installed, then you can do:
 
 ```bash
