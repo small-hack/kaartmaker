@@ -101,14 +101,14 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_p
 ```bash
 kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_palestine_votes.csv -t "UNGA on Ceasefire in Gaza" -s "gadebate.un.org" -r caribbean
 ```
-![Map of Caribbean Gaza votes](./caribbean_america_UNGA_on_Ceasefire_in_Gaza.png)
+![Map of Caribbean Gaza votes](./caribbean_UNGA_on_Ceasefire_in_Gaza.png)
 
 ### Oceania
 
 ```bash
 kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/israel_ceasefire/world_palestine_votes.csv -t "UNGA on Ceasefire in Gaza" -s "gadebate.un.org" -r oceania
 ```
-![Map of Oceania Gaza votes](./oceania_america_UNGA_on_Ceasefire_in_Gaza.png)
+![Map of Oceania Gaza votes](./oceania_UNGA_on_Ceasefire_in_Gaza.png)
 
 ## United Nations General Assembly vote on Russia Ukraine War ceasefire
 <b>Date</b>: 2 March 2022<br></br>
