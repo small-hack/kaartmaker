@@ -38,19 +38,30 @@ If you'd like to see more examples, please check them out [here](./examples/READ
 
 ## Installation
 
+#### Prereqs
+- Python 3.12 or higher
+- [pip], [pipx], or [poetry]
+
+### Install with pipx (recommended for end users)
+
+We recommend using [pipx] to install kaartmaker into an isolated python environment. 
+
+### Install with pip
+This will break your system packages on Debian.
+
 ```bash
-pip install kaartmaker
+pip install kaartmaker --break-system-packages
 ```
 
+### Install with poetry (recommended for development)
 
-### Development
-
-Make sure you have at least Python 3.12 and poetry installed, then you can do:
+Clone the repo and cd into the root directory of the repo, then run:
 
 ```bash
 # install kaartmaker
 poetry install
-# open a virtual env 
+
+# open a virtual env and then you can run kaartmaker
 poetry shell
 ```
 
@@ -84,3 +95,9 @@ Germany,ABSTENTION
 
 # status
 Mostly stable, but happy to take a look at Issues and Pull Requests :)
+
+
+<!--- ref links -->
+[pipx]: https://github.com/pypa/pipx "pipx is a python installer that uses virtual environments"
+[pip]: https://pip.pypa.io/en/stable/installation/ "default installer for python"
+[poetry]: https://python-poetry.org/docs/#installation "development tool for python installations in virtual envs"
