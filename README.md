@@ -29,11 +29,27 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_u
 If you'd like to see more examples, please check them out [here](./examples/README.md).
 
 
-### Secondary features
+* [Secondary features](#secondary-features)
+* [Installation](#installation)
+    * [Prereqs](#prereqs)
+    * [Install with pipx (recommended for end users)](#install-with-pipx-recommended-for-end-users)
+    * [Install with pip](#install-with-pip)
+    * [Install with poetry (recommended for development)](#install-with-poetry-recommended-for-development)
+* [How To](#how-to)
+    * [Donwload your geojson data](#donwload-your-geojson-data)
+    * [Using a comma separated list (CSV) file](#using-a-comma-separated-list-csv-file)
+* [status](#status)
 
-- Generate geojson files for specific regions :)
 
-- Colors are colorblind friendly, selected from [here](https://davidmathlogic.com/colorblind) can also be reversed
+## Features
+
+- Use your own csv datasets to generate maps for the world, or specific regions
+
+- Generate geojson files for specific regions with your vote data :)
+
+- Colors are colorblind friendly, selected from [here](https://davidmathlogic.com/colorblind) can also be reversed for vote types
+
+- Use sovereignty (default) or subunits to get more granularity on countries e.g. Scotland, North Ireland, Wales, and Isle of Man distinguished from the United Kingdom
 
 
 ## Installation
@@ -44,7 +60,11 @@ If you'd like to see more examples, please check them out [here](./examples/READ
 
 ### Install with pipx (recommended for end users)
 
-We recommend using [pipx] to install kaartmaker into an isolated python environment. 
+We recommend using [pipx] to install kaartmaker into an isolated python environment.
+
+```bash
+pipx install kaartmaker
+```
 
 ### Install with pip
 This will break your system packages on Debian.
