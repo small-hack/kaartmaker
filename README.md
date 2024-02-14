@@ -29,7 +29,7 @@ kaartmaker -C ./kaartmaker/datasets/UN_general_assembly/russia_ceasefire/world_u
 If you'd like to see more examples, please check them out [here](./examples/README.md).
 
 
-* [Secondary features](#secondary-features)
+* [Features](#features)
 * [Installation](#installation)
     * [Prereqs](#prereqs)
     * [Install with pipx (recommended for end users)](#install-with-pipx-recommended-for-end-users)
