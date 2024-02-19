@@ -116,6 +116,8 @@ Germany,ABSTENTION
 # status
 Mostly stable, but happy to take a look at Issues and Pull Requests :)
 
+Please star the repo if you find it interesting!
+
 
 <!--- ref links -->
 [pipx]: https://github.com/pypa/pipx "pipx is a python installer that uses virtual environments"
