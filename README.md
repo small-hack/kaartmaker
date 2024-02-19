@@ -98,7 +98,7 @@ kaartmaker --help
 Maps (sovereignty, units, subunits, and disputed areas) can be downloaded from:
 https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/
 
-You can also download geojson files with the [download_geojson.sh](./download_geojson.sh) script in this repo.
+You can also download geojson files with the [download_geojson.sh](./download_geojson.sh) or [download_geojson.py](./download_geojson.py) scripts in this repo.
 
 
 ### Using a comma separated list (CSV) file
