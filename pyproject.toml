@@ -1,6 +1,6 @@
 [tool.poetry]
 name        = "kaartmaker"
-version     = "0.1.2"
+version     = "0.1.3"
 description = "world map making tool based on votes from locations such as the UN"
 authors     = ["Jesse Hitch <jessebot@linux.com>"]
 license     = "AGPL-3.0-or-later"
@@ -28,16 +28,16 @@ classifiers   = ["Development Status :: 3 - Alpha",
 
 [tool.poetry.dependencies]
 python = "^3.12"
-numpy = "^1.26.4"
-pandas = "^2.2.0"
-seaborn = "^0.13.2"
-geopandas = "^0.14.3"
-matplotlib = "^3.8.2"
-pyqt5-sip = "^12.11.1"
-plotly = "^5.20.0"
-click = "^8.1.7"
-rich = "^13.7.0"
-fake-useragent = "^1.5.0"
+numpy = "^1.26"
+pandas = "^2.2"
+seaborn = "^0.13"
+geopandas = "^0.14"
+matplotlib = "^3.8"
+pyqt5-sip = "^12.11"
+plotly = "^5.20"
+click = "^8.1"
+rich = "^13.7"
+fake-useragent = "^1.5"
 
 [tool.poetry.plugins."kaartmaker.application.plugin"]
 "kaartmaker" = "kaartmaker:main"
