@@ -1,6 +1,6 @@
 [tool.poetry]
 name        = "kaartmaker"
-version     = "0.1.4"
+version     = "0.1.5"
 description = "world map making tool based on votes from locations such as the UN"
 authors     = ["Jesse Hitch <jessebot@linux.com>"]
 license     = "AGPL-3.0-or-later"
