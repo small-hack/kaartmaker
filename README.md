@@ -1,3 +1,15 @@
+# ⚠️ Notice of migration
+
+## This repo has been migrated to:
+
+https://git.smallhack.org/small-hack/kaartmaker
+
+**Which is also mirrored to:**
+
+https://codeberg.org/small-hack/kaartmaker
+
+If you'd like to submit an Issue or PR, please do so at the codeberg.org location.
+
 # Kaartmaker
 <a href="https://github.com/small-hack/kaartmaker/releases">
   <img src="https://img.shields.io/github/v/release/small-hack/kaartmaker?style=plastic&labelColor=484848&color=3CA324&logo=GitHub&logoColor=white">
